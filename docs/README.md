@@ -1,10 +1,10 @@
 # Small
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
+[Live site][heroku] **Note:** This should be a link to your production site
 
 [Trello link][trello]
 
-[heroku]: https://pangburn-small.herokuapp.com/
+[heroku]: https://small-project.herokuapp.com/
 [trello]: https://trello.com/b/JaDQgzbK/small
 
 ## Minimum Viable Product
