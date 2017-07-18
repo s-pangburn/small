@@ -37,7 +37,14 @@
 
 ### Follows
 
-- `GET /api/follows/:follower_id`: get all follows for a user
-- `GET /api/follows/:followee_id`: get all followers for a user
+- `GET /api/follows/:followerId`: get all follows for a user
+- `GET /api/follows/:followeeId`: get all followers for a user
 - `POST /api/follows`
-- `DELETE /api/follows/follow_id`
+- `DELETE /api/follows/:id`
+
+### Likes
+
+- `GET /api/likes/:userId`: get all likes for a user
+- `GET /api/likes/:postId`: get all likes for a post
+- `POST /api/likes`
+- `DELETE /api/likes/id`

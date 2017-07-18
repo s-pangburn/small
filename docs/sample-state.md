@@ -23,7 +23,7 @@
   stories: {
     1: {
       title: "Napoleon",
-      body: "If you cannot do great things, do small things in a great way",
+      body: "If you cannot do great things, do small things in a great way.",
       author_id: 1,
       image_url: "./tiny_horse.png"
       comments: {
