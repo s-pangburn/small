@@ -1,6 +1,6 @@
 # Small
 
-[Live site][heroku] 
+[Live site][heroku]
 
 [Trello link][trello]
 
@@ -63,3 +63,4 @@ the API.
 ### Bonus Features (TBD)
 - [ ] Topics/Categories
 - [ ] Bookmarks
+- [ ] User Profiles
