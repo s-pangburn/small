@@ -3,16 +3,18 @@
   currentUser: {
     id: 1,
     username: "smalls"
-    follows: {
-      1: {
-        followee_id: 2
+    follows: [
+      {
+        id: 2,
+        username: "biggs"
       }
-    }
-    followers: {
-      1: {
-        follower_id: 2
+    ]
+    followers: [
+      {
+        id: 3,
+        username: "extra-large"
       }
-    }
+    ]
   },
   forms: {
     signUp: {errors: []},
@@ -26,17 +28,18 @@
       body: "If you cannot do great things, do small things in a great way.",
       author_id: 1,
       image_url: "./tiny_horse.png"
-      comments: {
-        1: {
+      comments: [
+        {
           body: "That's deep, bro.",
           author_id: 2,
         }
-      }
-      likes: {
-        1: {
-          user_id: 2
+      ]
+      likes: [
+        {
+          id: 2,
+          username: "biggs"
         }
-      }
+      ]
     }
   }
 }

@@ -33,7 +33,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 body        | text      | not null
 author_id   | integer   | not null, foreign key (references users), indexed
-post_id     | integer   | not null, foreign key (references posts), indexed
+story_id    | integer   | not null, foreign key (references posts), indexed
 
 ```rb
 belongs_to :author, :post
@@ -55,7 +55,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
-post_id     | integer   | not null, foreign key (references users), indexed
+story_id    | integer   | not null, foreign key (references users), indexed
 
 ```rb
 belongs_to :liker, :post
