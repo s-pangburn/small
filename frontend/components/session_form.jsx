@@ -2,11 +2,16 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
 class SessionForm extends React.Component {
+  componentWillUnmount() {
+    this.props.resetErrors();
+  }
+
   constructor(props) {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      email: ""
     };
 
     this.update = this.update.bind(this);
@@ -20,6 +25,23 @@ class SessionForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.processForm(this.state);
+    this.state = {
+      username: "",
+      password: "",
+      email: ""
+    };
+  }
+
+  renderEmailForm() {
+    return (
+      <div>
+        <label>Email:
+          <input type="text" value={this.state.email}
+            onChange={this.update("email")}/>
+        </label>
+        <br/>
+      </div>
+    );
   }
 
   render() {
@@ -32,6 +54,7 @@ class SessionForm extends React.Component {
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>
 
+        {isLoginForm ? null : this.renderEmailForm()}
         <label>Username:
           <input type="text" value={this.state.username}
             onChange={this.update("username")}/>
