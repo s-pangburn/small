@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20170718160539) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["password_digest"], name: "index_users_on_password_digest", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end
