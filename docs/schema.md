@@ -12,7 +12,6 @@ session_token   | string    | not null, indexed, unique
 has_many :stories, :comments, :likes, :follows, :followers
 
 ## stories
-belongs_to :author, has_many :likes, :comments
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
@@ -21,8 +20,9 @@ body        | text      | not null
 author_id   | integer   | not null, foreign key (references users), indexed
 image_url   | string    | not null
 
+belongs_to :author, has_many :likes, :comments
+
 ## comments
-belongs_to :author, :post
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
@@ -30,18 +30,22 @@ body        | text      | not null
 author_id   | integer   | not null, foreign key (references users), indexed
 post_id     | integer   | not null, foreign key (references posts), indexed
 
+belongs_to :author, :post
+
 ## follows
-belongs_to :follower, :followee
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 follower_id | integer   | not null, foreign key (references users), indexed
 followee_id | integer   | not null, foreign key (references users), indexed
 
+belongs_to :follower, :followee
+
 ## likes
-belongs_to :liker, :post
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
 post_id     | integer   | not null, foreign key (references users), indexed
+
+belongs_to :liker, :post
