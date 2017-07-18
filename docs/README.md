@@ -1,6 +1,6 @@
 # Small
 
-[Live site][heroku] **Note:** This should be a link to your production site
+[Live site][heroku] 
 
 [Trello link][trello]
 
@@ -39,7 +39,7 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (3 days)
+### Phase 1: Backend setup and Front End User Authentication (2 days)
 
 **Objective:** Functioning rails project with front-end Authentication
 
