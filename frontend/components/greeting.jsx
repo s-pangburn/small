@@ -41,9 +41,9 @@ class Greeting extends React.Component {
     }
     return (
       <div className="login-signup">
-        <Link className="link" onClick={this.openModal('/login')} to='/login'>Login</Link>
+        <Link onClick={this.openModal('/login')} to='/login'>Login</Link>
         &nbsp;
-        <Link className="link" onClick={this.openModal('/signup')} to='/signup'>Sign Up</Link>
+        <Link onClick={this.openModal('/signup')} to='/signup'>Sign Up</Link>
         <Modal
           className="modal"
           overlayClassName="modal-overlay"

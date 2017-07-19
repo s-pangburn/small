@@ -10,11 +10,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Arial;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+header h1 {
+  font-size: 1.5em;
+  color: rgb(50, 100, 255);
+  // font-family: 'Titillium Web', sans-serif;
+  font-family: 'Megrim', cursive;
+  font-weight: 100;
 }
 
 a {
-  font-weight: bold;
+  font-weight: 100;
+  color: rgb(50, 100, 255);
   text-decoration: none;
   margin-left: 5px;
+}
+
+a:hover {
+  color: rgb(50, 200, 100);
 }

@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
 
   renderGuestLogin() {
     return (
-      <button onClick={this.handleGuestLogin}>Demo Login</button>
+      <Link onClick={this.handleGuestLogin} to="/">Demo Login</Link>
     );
   }
 
@@ -82,9 +82,9 @@ class SessionForm extends React.Component {
             onChange={this.update("password")}/>
         </label>
         <br/>
-        <button onClick={this.handleSubmit}>
+        <Link onClick={this.handleSubmit} to="/">
           { isLoginForm ? "Login" : "Sign Up" }
-        </button>
+        </Link>
         { isLoginForm ? this.renderGuestLogin() : null }
       </form>
     );
