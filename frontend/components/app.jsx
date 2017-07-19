@@ -8,11 +8,11 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>Small</h1>
-      <GreetingContainer/>
+      <h1>small</h1>
+      <nav>
+        <Route path="/" component={GreetingContainer}/>
+      </nav>
     </header>
-
-
   </div>
 );
 

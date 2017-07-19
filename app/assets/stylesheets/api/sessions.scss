@@ -2,11 +2,50 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(150, 150, 150, 0.75);
+  width: 100%;
+  height: 100%;
+}
+
 .modal {
   margin: auto;
   margin-top: 50px;
   padding: 30px;
-  width: 300px;
-  height: 200px;
-  border: 3px solid black;
+  padding-left: 60px;
+  padding-right: 60px;
+  width: 200px;
+  border: none;
+  background-color: white;
+  opacity: 1;
+  border-radius: 10px;
+  overflow: auto;
+  font-family: Arial;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+.modal h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal label, input, button {
+  font-size: 12px;
+  display: block;
+  margin: auto;
+  margin-top: 3px;
+}
+
+.modal input {
+  width: 100%
 }

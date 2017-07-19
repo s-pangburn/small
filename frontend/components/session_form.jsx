@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
   renderEmailForm() {
     return (
       <div>
-        <label>Email:
+        <label>Email Address:
           <input type="text" value={this.state.email}
             onChange={this.update("email")}/>
         </label>
@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
 
     return (
       <form className="sessionForm">
-        <h1>{ isLoginForm ? "Login" : "Sign Up" }</h1>
+        <h1>{ /*isLoginForm ? "Login" : "Sign Up"*/ }small</h1>
         <ul className="errors">
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>
@@ -74,7 +74,7 @@ class SessionForm extends React.Component {
         { isLoginForm ? null : this.renderEmailForm() }
         <label>Username:
           <input type="text" value={this.state.username}
-            onChange={this.update("username")}/>
+            onChange={this.update("username")} />
         </label>
         <br/>
         <label>Password:

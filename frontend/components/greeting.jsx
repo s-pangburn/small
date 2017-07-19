@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Modal from 'react-modal';
 
 import SessionFormContainer from './session_form_container';
@@ -9,7 +9,8 @@ class Greeting extends React.Component {
     super(props);
 
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      pagePath: this.props.pagePath
     };
     this.formType = '';
 
@@ -26,6 +27,7 @@ class Greeting extends React.Component {
 
   closeModal() {
     this.setState({ modalIsOpen: false });
+    this.props.history.push({pathname: this.state.pagePath});
   }
 
   render() {
@@ -39,14 +41,15 @@ class Greeting extends React.Component {
     }
     return (
       <div className="login-signup">
-        <Link onClick={this.openModal('/login')} to='/login'>Login</Link>
+        <Link className="link" onClick={this.openModal('/login')} to='/login'>Login</Link>
         &nbsp;
-        <Link onClick={this.openModal('/signup')} to='/signup'>Sign Up</Link>
-        <Modal className="modal"
+        <Link className="link" onClick={this.openModal('/signup')} to='/signup'>Sign Up</Link>
+        <Modal
+          className="modal"
+          overlayClassName="modal-overlay"
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
-          contentLabel="Login Modal"
-        >
+          contentLabel="Login Modal">
           <SessionFormContainer formType={this.formType} />
         </Modal>
       </div>
