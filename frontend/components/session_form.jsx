@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import Modal from 'react-modal';
 
 class SessionForm extends React.Component {
   componentWillUnmount() {
@@ -16,20 +17,32 @@ class SessionForm extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   update(item) {
     return event => this.setState({ [item]: event.currentTarget.value });
   }
 
-  handleSubmit(event) {
+  handleSubmit(event, state) {
+    state = (state instanceof Event) ? this.state : state;
     event.preventDefault();
-    this.props.processForm(this.state);
+    this.props.processForm(state);
     this.state = {
       username: "",
       password: "",
       email: ""
     };
+  }
+
+  handleGuestLogin(event) {
+    event.preventDefault();
+    const guest = {
+      username: "guest",
+      password: "password",
+      email: "guest@example.com"
+    };
+    this.handleSubmit(event, guest);
   }
 
   renderEmailForm() {
@@ -44,17 +57,23 @@ class SessionForm extends React.Component {
     );
   }
 
+  renderGuestLogin() {
+    return (
+      <button onClick={this.handleGuestLogin}>Demo Login</button>
+    );
+  }
+
   render() {
     const isLoginForm = (this.props.formType === '/login');
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1>{isLoginForm ? "Login" : "Sign Up"}</h1>
+      <form className="sessionForm">
+        <h1>{ isLoginForm ? "Login" : "Sign Up" }</h1>
         <ul className="errors">
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>
 
-        {isLoginForm ? null : this.renderEmailForm()}
+        { isLoginForm ? null : this.renderEmailForm() }
         <label>Username:
           <input type="text" value={this.state.username}
             onChange={this.update("username")}/>
@@ -65,7 +84,10 @@ class SessionForm extends React.Component {
             onChange={this.update("password")}/>
         </label>
         <br/>
-        <button>{isLoginForm ? "Login" : "Sign Up"}</button>
+        <button onClick={this.handleSubmit}>
+          { isLoginForm ? "Login" : "Sign Up" }
+        </button>
+        { isLoginForm ? this.renderGuestLogin() : null }
       </form>
     );
   }
