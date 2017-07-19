@@ -1,26 +1,13 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "smalls"
-    follows: [
-      {
-        id: 2,
-        username: "biggs"
-      }
-    ]
-    followers: [
-      {
-        id: 3,
-        username: "extra-large"
-      }
-    ]
-  },
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createStory: {errors: ["body can't be blank"]}
-    addComment: {errors: ["user must be logged in to continue"]}
+  session: {
+    currentUser: {
+      id: 1,
+      username: "smalls"
+      follows: [2, 3, 5]
+      followers: [2]
+    },
+    errors: []
   },
   stories: {
     1: {
@@ -41,6 +28,27 @@
         }
       ]
     }
+  },
+  comments: {
+    1: {
+      id: 1,
+      body: "That's deep, bro"
+      author_id: 2,
+      story_id: 1
+    }
+  },
+  follows: {
+    1: {
+      follower_id: 1,
+      followee_id: 2
+    }
+  },
+  likes: {
+    1: {
+      user_id: 2,
+      story_id: 1
+    }
   }
+
 }
 ```
