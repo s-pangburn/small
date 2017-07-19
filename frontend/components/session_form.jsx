@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Modal from 'react-modal';
 
 class SessionForm extends React.Component {
   componentWillUnmount() {

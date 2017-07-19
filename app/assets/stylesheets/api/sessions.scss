@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.sessionForm {
-  font-family: Helvetica;
+.modal {
+  margin: auto;
+  margin-top: 50px;
+  padding: 30px;
+  width: 300px;
+  height: 200px;
+  border: 3px solid black;
 }

@@ -12,9 +12,15 @@ const App = () => (
       <GreetingContainer/>
     </header>
 
-    <AuthRoute path="/login" component={ SessionFormContainer } />
-    <AuthRoute path="/signup" component={ SessionFormContainer } />
+
   </div>
 );
 
 export default App;
+
+let temp = (
+  <div>
+    <AuthRoute path="/login" component={ SessionFormContainer } />
+    <AuthRoute path="/signup" component={ SessionFormContainer } />
+  </div>
+);

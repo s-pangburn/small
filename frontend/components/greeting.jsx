@@ -1,7 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+
+import SessionFormContainer from './session_form_container';
 
 class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      modalIsOpen: false
+    };
+    this.formType = '';
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal(formType) {
+    return () => {
+      this.formType = formType;
+      this.setState({ modalIsOpen: true });
+    };
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
+  }
 
   render() {
     if (this.props.currentUser) {
@@ -14,9 +39,16 @@ class Greeting extends React.Component {
     }
     return (
       <div className="login-signup">
-        <Link to='/login'>Login</Link>
+        <Link onClick={this.openModal('/login')} to='/login'>Login</Link>
         &nbsp;
-        <Link to='/signup'>Sign Up</Link>
+        <Link onClick={this.openModal('/signup')} to='/signup'>Sign Up</Link>
+        <Modal className="modal"
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          contentLabel="Login Modal"
+        >
+          <SessionFormContainer formType={this.formType} />
+        </Modal>
       </div>
     );
   }
