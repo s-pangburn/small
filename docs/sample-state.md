@@ -21,12 +21,7 @@
           author_id: 2,
         }
       ]
-      likes: [
-        {
-          id: 2,
-          username: "biggs"
-        }
-      ]
+      likes: [2, 3]
     }
   },
   comments: {

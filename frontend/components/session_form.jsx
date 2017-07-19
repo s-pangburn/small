@@ -28,15 +28,14 @@ class SessionForm extends React.Component {
     state = (state instanceof Event) ? this.state : state;
     event.preventDefault();
     this.props.processForm(state);
-    this.state = {
+    this.setState({
       username: "",
       password: "",
       email: ""
-    };
+    });
   }
 
   handleGuestLogin(event) {
-    event.preventDefault();
     const guest = {
       username: "guest",
       password: "password",
