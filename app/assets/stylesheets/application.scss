@@ -28,3 +28,8 @@
  a:focus {
    outline: none;
  }
+
+ ::selection {
+   background-color: rgb(50, 235, 160);
+   color: black;
+ }
