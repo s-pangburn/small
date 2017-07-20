@@ -74,3 +74,14 @@
   text-align: center;
   margin-bottom: 7px;
 }
+
+.footnote {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+}
+.footnote, .footnote a {
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+}

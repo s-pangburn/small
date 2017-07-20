@@ -6,12 +6,17 @@ class SessionForm extends React.Component {
     this.props.resetErrors();
   }
 
+  componentDidMount() {
+    this.focusFirstElement();
+  }
+
   constructor(props) {
     super(props);
     this.state = {
       username: "",
       password: "",
-      email: ""
+      email: "",
+      formType: this.props.formType
     };
 
     this.update = this.update.bind(this);
@@ -24,6 +29,16 @@ class SessionForm extends React.Component {
     return event => this.setState({ [item]: event.currentTarget.value });
   }
 
+  setForm(formType) {
+    return () => {
+      this.setState({ formType });
+    };
+  }
+
+  focusFirstElement() {
+    document.forms[0].elements[0].focus();
+  }
+
   checkSubmit(event) {
     const charCode = event.keyCode || event.which;
     if (charCode === 13) this.handleSubmit(event, this.state);
@@ -31,9 +46,10 @@ class SessionForm extends React.Component {
 
   handleSubmit(event, state) {
     state = state || this.state;
-    console.log(state);
     event.preventDefault();
+
     this.props.processForm(state);
+
     this.setState({
       username: "",
       password: "",
@@ -69,7 +85,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const isLoginForm = (this.props.formType === '/login');
+    const isLoginForm = (this.state.formType === '/login');
 
     return (
       <form className="sessionForm">
@@ -92,7 +108,18 @@ class SessionForm extends React.Component {
         <Link onClick={this.handleSubmit} to="/">
           { isLoginForm ? "Login" : "Sign Up" }
         </Link>
-        { isLoginForm ? this.renderGuestLogin() : null }
+        <span className='footnote'>
+          { isLoginForm ? (
+            <div>
+              Don't have an account? <Link onClick={this.setForm("/signup")} to="/signup">Sign Up</Link>
+            </div>
+          ) : (
+            <div>
+              Already have an account? <Link onClick={this.setForm("/login")} to="/login">Login</Link>
+            </div>
+          )}
+          { this.renderGuestLogin() }
+        </span>
       </form>
     );
   }

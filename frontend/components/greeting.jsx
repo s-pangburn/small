@@ -9,8 +9,7 @@ class Greeting extends React.Component {
     super(props);
 
     this.state = {
-      modalIsOpen: false,
-      pagePath: this.props.pagePath
+      modalIsOpen: (this.props.pagePath === "/") ? false : true,
     };
     this.formType = '';
 
@@ -27,7 +26,7 @@ class Greeting extends React.Component {
 
   closeModal() {
     this.setState({ modalIsOpen: false });
-    this.props.history.push({pathname: this.state.pagePath});
+    this.props.history.push({pathname: "/"});
   }
 
   render() {
