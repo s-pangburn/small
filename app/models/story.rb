@@ -12,7 +12,7 @@
 #
 
 class Story < ActiveRecord::Base
-  validates :title, :body, :author_id, presence: true
+  validates :title, :body, :author, presence: true
 
   belongs_to :author,
     primary_key: :id,

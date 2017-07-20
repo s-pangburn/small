@@ -33,14 +33,19 @@ class Api::StoriesController < ApplicationController
         render json: @story.errors.full_messages, status: 422
       end
     else
-      render json: ["Current user does not match post author"]
+      render json: ["Current user does not match post author"], status: 422
     end
   end
 
   def destroy
     @story = Story.find_by_id(params[:id])
-    @story.destroy
-    render :show
+
+    if @story.author_id == current_user.id
+      @story.destroy
+      render :show
+    else
+      render json: ["Current user does not match post author"], status: 422
+    end
   end
 
   private
