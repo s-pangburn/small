@@ -48,6 +48,7 @@ class SessionForm extends React.Component {
     state = state || this.state;
     event.preventDefault();
 
+    this.props.history.push({pathname: "/"});
     this.props.processForm(state);
 
     this.setState({

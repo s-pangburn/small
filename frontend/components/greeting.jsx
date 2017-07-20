@@ -49,7 +49,11 @@ class Greeting extends React.Component {
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
           contentLabel="Login Modal">
-          <SessionFormContainer formType={this.formType} />
+
+          <SessionFormContainer
+            history={this.props.history}
+            formType={this.formType} />
+
         </Modal>
       </div>
     );
