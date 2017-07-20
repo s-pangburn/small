@@ -34,8 +34,8 @@ class Greeting extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className="greeting">
-          <span>Welcome {this.props.currentUser.username}!</span>
-          <button onClick={this.props.logout}>Logout</button>
+          <span>Welcome, {this.props.currentUser.username}!</span>
+          <Link onClick={this.props.logout} to="/">Logout</Link>
         </div>
       );
     }

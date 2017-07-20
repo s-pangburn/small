@@ -28,6 +28,10 @@ a {
   margin-left: 5px;
 }
 
-a:hover {
-  color: rgb(50, 200, 100);
+a:hover, .logo:hover {
+  color: rgb(50, 235, 160);
+}
+
+.greeting span {
+  margin-right: 20px;
 }

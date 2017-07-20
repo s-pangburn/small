@@ -20,11 +20,16 @@ class SessionForm extends React.Component {
   }
 
   update(item) {
-    return event => this.setState({ [item]: event.currentTarget.value });
+    return event => {
+      this.setState({ [item]: event.currentTarget.value });
+      var charCode = event.keyCode || event.which;
+      console.log(charCode);
+    };
   }
 
   handleSubmit(event, state) {
-    state = (state instanceof Event) ? this.state : state;
+    state = state || this.state;
+    console.log(state);
     event.preventDefault();
     this.props.processForm(state);
     this.setState({
@@ -66,7 +71,7 @@ class SessionForm extends React.Component {
 
     return (
       <form className="sessionForm">
-        <h1>{ /*isLoginForm ? "Login" : "Sign Up"*/ }small</h1>
+        <h1>small</h1>
         <ul className="errors">
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 import GreetingContainer from './greeting_container';
 import SessionFormContainer from './session_form_container';
@@ -8,7 +8,9 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>small</h1>
+      <Link to="/">
+        <h1 className="logo">small</h1>
+      </Link>
       <nav>
         <Route path="/" component={GreetingContainer}/>
       </nav>
