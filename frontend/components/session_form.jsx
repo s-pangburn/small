@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
 
   setForm(formType) {
     return () => {
-      this.setState({ formType });
+      this.setState({ formType }, () => this.focusFirstElement());
     };
   }
 
