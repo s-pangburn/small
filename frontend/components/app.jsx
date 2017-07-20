@@ -7,14 +7,14 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <header>
-      <Link to="/">
-        <h1 className="logo">small</h1>
-      </Link>
-      <nav>
-        <Route path="/" component={GreetingContainer}/>
-      </nav>
-    </header>
+    <nav className="outerNav">
+      <header>
+        <Link to="/">
+          <h1 className="logo">small</h1>
+        </Link>
+          <Route path="/" component={GreetingContainer}/>
+      </header>
+    </nav>
   </div>
 );
 
