@@ -9,9 +9,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(150, 150, 150, 0.75);
+  background-color: rgba(150, 150, 150, 0.5);
   width: 100%;
   height: 100%;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
 }
 
 .modal {
@@ -27,6 +29,18 @@
   border-radius: 10px;
   overflow: auto;
   font-family: 'Titillium Web', sans-serif;
+  animation-name: fromTop;
+  animation-duration: 0.75s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fromTop {
+  0% {transform: translateY(100px) }
+  100% {transform: translateY(0) }
 }
 
 .modal:focus {
