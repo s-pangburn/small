@@ -4,6 +4,13 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 import { signup, login, logout } from './actions/session_actions';
+import {
+  fetchAllStories,
+  fetchStory,
+  createStory,
+  updateStory,
+  deleteStory
+} from './util/story_api_util';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
@@ -12,8 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.login = login;
-  window.logout = logout;
+
+  window.fetchAllStories = fetchAllStories;
+  window.fetchStory = fetchStory;
+  window.createStory = createStory;
+  window.updateStory = updateStory;
+  window.deleteStory = deleteStory;
 });
 
 const createStore = () => {

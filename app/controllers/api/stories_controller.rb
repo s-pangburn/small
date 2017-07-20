@@ -1,4 +1,5 @@
 class Api::StoriesController < ApplicationController
+  before_action :require_login, only: [:create, :update, :destroy]
 
   def index
     # if current_user
@@ -9,6 +10,7 @@ class Api::StoriesController < ApplicationController
 
   def create
     @story = Story.new(story_params)
+    @story.author_id = current_user.id
 
     if @story.save
       render :show
@@ -24,10 +26,14 @@ class Api::StoriesController < ApplicationController
   def update
     @story = Story.find_by_id(params[:id])
 
-    if @story.update_attributes(story_params)
-      render :show
+    if @story.author_id == current_user.id
+      if @story.update_attributes(story_params)
+        render :show
+      else
+        render json: @story.errors.full_messages, status: 422
+      end
     else
-      render json: @story.errors.full_messages, status: 422
+      render json: ["Current user does not match post author"]
     end
   end
 
