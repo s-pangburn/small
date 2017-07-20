@@ -54,12 +54,6 @@ class SessionForm extends React.Component {
     } else {
       this.props.signup(state);
     }
-
-    this.setState({
-      username: "",
-      password: "",
-      email: ""
-    });
   }
 
   handleGuestLogin(event) {
