@@ -17,14 +17,16 @@ class SessionForm extends React.Component {
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
+    this.checkSubmit = this.checkSubmit.bind(this);
   }
 
   update(item) {
-    return event => {
-      this.setState({ [item]: event.currentTarget.value });
-      var charCode = event.keyCode || event.which;
-      console.log(charCode);
-    };
+    return event => this.setState({ [item]: event.currentTarget.value });
+  }
+
+  checkSubmit(event) {
+    const charCode = event.keyCode || event.which;
+    if (charCode === 13) this.handleSubmit(event, this.state);
   }
 
   handleSubmit(event, state) {
@@ -79,12 +81,12 @@ class SessionForm extends React.Component {
         { isLoginForm ? null : this.renderEmailForm() }
         <label>Username:
           <input type="text" value={this.state.username}
-            onChange={this.update("username")} />
+            onChange={this.update("username")} onKeyPress={this.checkSubmit}/>
         </label>
         <br/>
         <label>Password:
           <input type="password" value={this.state.password}
-            onChange={this.update("password")}/>
+            onChange={this.update("password")} onKeyPress={this.checkSubmit}/>
         </label>
         <br/>
         <Link onClick={this.handleSubmit} to="/">
