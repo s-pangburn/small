@@ -49,7 +49,11 @@ class SessionForm extends React.Component {
     event.preventDefault();
 
     this.props.history.push({pathname: "/"});
-    this.props.processForm(state);
+    if (this.state.formType === "/login") {
+      this.props.login(state);
+    } else {
+      this.props.signup(state);
+    }
 
     this.setState({
       username: "",
