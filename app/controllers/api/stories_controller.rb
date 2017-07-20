@@ -1,5 +1,12 @@
 class Api::StoriesController < ApplicationController
 
+  def index
+    # if current_user
+    #   # Select feed based on follows
+    # end
+    @stories = Story.all
+  end
+
   def create
     @story = Story.new(story_params)
 
