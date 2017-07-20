@@ -70,12 +70,13 @@
 }
 
 .modal label {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .modal a {
   text-align: center;
-  margin-top: 10px
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .modal input:focus {
@@ -86,8 +87,9 @@
 .errors {
   color: red;
   text-align: center;
-  margin-bottom: 7px;
+  margin-bottom: 20px;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .errors li {
@@ -102,5 +104,5 @@
 .footnote, .footnote a {
   display: inline-block;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
 }

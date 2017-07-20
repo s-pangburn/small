@@ -31,7 +31,10 @@ class SessionForm extends React.Component {
 
   setForm(formType) {
     return () => {
-      this.setState({ formType }, () => this.focusFirstElement());
+      this.setState({ formType }, () => {
+        this.props.resetErrors();
+        this.focusFirstElement();
+      });
     };
   }
 
@@ -88,7 +91,9 @@ class SessionForm extends React.Component {
 
     return (
       <form className="sessionForm">
+
         <h1>small</h1>
+
         <ul className="errors">
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>
@@ -104,9 +109,11 @@ class SessionForm extends React.Component {
             onChange={this.update("password")} onKeyPress={this.checkSubmit}/>
         </label>
         <br/>
+
         <Link onClick={this.handleSubmit} to="/">
           { isLoginForm ? "Login" : "Sign Up" }
         </Link>
+
         <span className='footnote'>
           { isLoginForm ? (
             <div>
