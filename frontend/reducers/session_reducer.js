@@ -7,8 +7,7 @@ import {
 } from '../actions/session_actions';
 
 const _nullUser = {
-  currentUser: null,
-  errors: []
+  currentUser: null
 };
 
 const SessionReducer = (state = _nullUser, action) => {
@@ -16,10 +15,6 @@ const SessionReducer = (state = _nullUser, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       return merge({}, { currentUser: action.user, errors: [] });
-    case RECEIVE_ERRORS:
-      return merge({}, { currentUser: null, errors: action.errors});
-    case RESET_ERRORS:
-      return merge({}, { currentUser: state.currentUser, errors: [] });
     default:
       return state;
   }
