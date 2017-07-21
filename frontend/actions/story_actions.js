@@ -1,5 +1,5 @@
 import * as APIUtil from '../util/story_api_util';
-import { receiveErrors, resetErrors } from './error_actions';
+import { receiveErrors } from './error_actions';
 
 export const RECEIVE_STORIES = 'RECEIVE_STORIES';
 export const RECEIVE_STORY = 'RECEIVE_STORY';
