@@ -5,12 +5,12 @@ import configureStore from './store/store';
 
 import { signup, login, logout } from './actions/session_actions';
 import {
-  fetchAllStories,
-  fetchStory,
+  requestAllStories,
+  requestStory,
   createStory,
   updateStory,
   deleteStory
-} from './util/story_api_util';
+} from './actions/story_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
-  window.fetchAllStories = fetchAllStories;
-  window.fetchStory = fetchStory;
+  window.requestAllStories = requestAllStories;
+  window.requestStory = requestStory;
   window.createStory = createStory;
   window.updateStory = updateStory;
   window.deleteStory = deleteStory;
