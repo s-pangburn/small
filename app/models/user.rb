@@ -18,7 +18,11 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
-  has_many :stories, dependent: :destroy
+  has_many :stories,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Story,
+    dependent: :destroy
 
   after_initialize :ensure_session_token
 

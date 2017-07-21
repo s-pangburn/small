@@ -12,10 +12,11 @@ class Feed extends React.Component {
   }
 
   render() {
-    console.log("Feedprops: ", this.props);
     if (this.props.stories.length > 0) {
       return (
-        <FeedItem story={this.props.stories[0]}/>
+        <div>
+          <FeedItem story={this.props.stories[0]}/>
+        </div>
       );
     } else {
       return null;

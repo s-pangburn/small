@@ -8,11 +8,19 @@
 
 # Users (including guest)
 
-User.create(username: "guest", password: "password", email: "guest@example.com")
-User.create(username: "Stephen", password: "123123", email: "stephen@small.app")
+User.destroy_all
+Story.destroy_all
 
-Story.create(
+ActiveRecord::Base.transaction do
+
+user1 = User.create!(username: "guest", password: "password", email: "guest@example.com")
+user2 = User.create!(username: "Stephen", password: "123123", email: "stephen@small.app")
+
+Story.create!(
   title: "Tiny horse tries his best",
   body: "If he can do it, you can too!",
-  image_url: "tiny_horse1.jpg"
+  image_url: "tiny_horse1.jpg",
+  author_id: user2.id
 )
+
+end

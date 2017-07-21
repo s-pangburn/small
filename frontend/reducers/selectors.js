@@ -1,3 +1,3 @@
 import { values } from 'lodash';
 
-export const selectAllStories = ({ stories }) => values(stories.entities);
+export const selectAllStories = ({ stories }) => values(stories);

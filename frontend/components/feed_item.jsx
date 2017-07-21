@@ -13,7 +13,9 @@ class FeedItem extends React.Component {
     console.log(this.state.story);
     return (
       <div>
-        { this.state.story.title }
+        <img src={this.props.story.image_url} />
+        <h2>{ this.state.story.title }</h2>
+        <span>{ this.state.story.body }</span>
       </div>
     );
   }
