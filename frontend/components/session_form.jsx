@@ -51,11 +51,12 @@ class SessionForm extends React.Component {
     state = state || this.state;
     event.preventDefault();
 
-    this.props.history.push({pathname: "/"});
     if (this.state.formType === "/login") {
-      this.props.login(state);
+      this.props.login(state)
+        .then(() => this.props.history.push({pathname: "/"}));
     } else {
-      this.props.signup(state);
+      this.props.signup(state)
+        .then(() => this.props.history.push({pathname: "/"}));
     }
   }
 
@@ -65,7 +66,8 @@ class SessionForm extends React.Component {
       password: "password",
       email: "guest@example.com"
     };
-    this.handleSubmit(event, guest);
+    this.props.login(guest)
+      .then(() => this.props.history.push({pathname: "/"}));
   }
 
   renderEmailForm() {

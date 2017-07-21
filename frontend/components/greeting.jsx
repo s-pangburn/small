@@ -15,6 +15,7 @@ class Greeting extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   openModal(formType) {
@@ -29,13 +30,17 @@ class Greeting extends React.Component {
     this.props.history.push({pathname: "/"});
   }
 
+  logout() {
+    this.setState({ modalIsOpen: false });
+    this.props.logout();
+  }
+
   render() {
     if (this.props.currentUser) {
-      this.setState({ modalIsOpen: false });
       return (
         <div className="greeting">
           <span>Welcome, {this.props.currentUser.username}!</span>
-          <Link onClick={this.props.logout} to="/">Logout</Link>
+          <Link onClick={this.logout} to="/">Logout</Link>
         </div>
       );
     }
