@@ -10,3 +10,9 @@
 
 User.create(username: "guest", password: "password", email: "guest@example.com")
 User.create(username: "Stephen", password: "123123", email: "stephen@small.app")
+
+Story.create(
+  title: "Tiny horse tries his best",
+  body: "If he can do it, you can too!",
+  image_url: "tiny_horse1.jpg"
+)
