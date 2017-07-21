@@ -31,6 +31,7 @@ class Greeting extends React.Component {
 
   render() {
     if (this.props.currentUser) {
+      this.setState({ modalIsOpen: false });
       return (
         <div className="greeting">
           <span>Welcome, {this.props.currentUser.username}!</span>
