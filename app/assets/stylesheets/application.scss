@@ -14,8 +14,16 @@
  *= require_self
  */
 
- a {
+ body {
+   font-family: 'Titillium Web', sans-serif;
+   font-weight: 100;
+ }
+
+ h2 {
    font-weight: normal;
+ }
+
+ a {
    color: rgb(50, 100, 255);
    text-decoration: none;
  }

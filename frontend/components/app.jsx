@@ -16,9 +16,8 @@ const App = () => (
         <Route path="/" component={GreetingContainer}/>
       </header>
     </nav>
-    <section className="feed">
-      <FeedContainer />
-    </section>
+
+    <FeedContainer />
   </div>
 );
 

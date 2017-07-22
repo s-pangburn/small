@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class FeedItem extends React.Component {
   constructor(props) {
@@ -12,10 +13,21 @@ class FeedItem extends React.Component {
   render() {
     console.log(this.state.story);
     return (
-      <div>
-        <img src={this.props.story.image_url} />
-        <h2>{ this.state.story.title }</h2>
-        <span>{ this.state.story.body }</span>
+      <div className="feedItem">
+        <Link to={`/stories/${this.state.story.id}`}>
+          <div className="imageContainer">
+            <img src={this.props.story.image_url}
+              alt={ this.state.story.title }/>
+          </div>
+        </Link>
+        <section className="description">
+          <Link to={`/stories/${this.state.story.id}`}>
+            <h2>{ this.state.story.title }</h2>
+          </Link>
+          <Link to={`/stories/${this.state.story.id}`}>
+            <span>{ this.state.story.body }</span>
+          </Link>
+        </section>
       </div>
     );
   }

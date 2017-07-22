@@ -23,4 +23,11 @@ Story.create!(
   author_id: user2.id
 )
 
+Story.create!(
+  title: "Ecclesiastes",
+  body: "There is nothing new under the sun",
+  image_url: "pixel_landscape.jpg",
+  author_id: user2.id
+)
+
 end

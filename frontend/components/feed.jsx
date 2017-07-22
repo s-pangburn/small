@@ -14,9 +14,9 @@ class Feed extends React.Component {
   render() {
     if (this.props.stories.length > 0) {
       return (
-        <div>
-          <FeedItem story={this.props.stories[0]}/>
-        </div>
+        <section className="feed">
+          <FeedItem story={this.props.stories[1]}/>
+        </section>
       );
     } else {
       return null;

@@ -1,3 +1,56 @@
 // Place all the styles related to the Api::Stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.feed {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 75px;
+  font-family: 'Titillium Web';
+}
+
+.feedItem {
+  display: inline-block;
+  width: 1000px;
+  height: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: 0.75s fadeInFromTop;
+}
+
+@keyframes fadeInFromTop {
+  0% { transform: translateY(50px); opacity: 0 }
+  100% { transform: translateY(0); opacity: 1 }
+}
+
+.feedItem .description {
+  position: static;
+  margin-top: 600px;
+  margin-left: 30px;
+}
+
+.feedItem .imageContainer {
+  position: absolute;
+  width: 1000px;
+  height: 560px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.feedItem img {
+  width: 1000px;
+}
+
+.description h2 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'PT Sans';
+  color: black;
+}
+
+.description span {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+}
