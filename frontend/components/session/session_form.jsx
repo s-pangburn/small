@@ -51,12 +51,10 @@ class SessionForm extends React.Component {
     state = state || this.state;
     event.preventDefault();
 
-    if (this.state.formType === "/login") {
-      this.props.login(state)
-        .then(() => this.props.history.push({pathname: "/"}));
+    if (this.state.formType === "login") {
+      this.props.login(state);
     } else {
-      this.props.signup(state)
-        .then(() => this.props.history.push({pathname: "/"}));
+      this.props.signup(state);
     }
   }
 
@@ -66,8 +64,7 @@ class SessionForm extends React.Component {
       password: "password",
       email: "guest@example.com"
     };
-    this.props.login(guest)
-      .then(() => this.props.history.push({pathname: "/"}));
+    this.props.login(guest);
   }
 
   renderEmailForm() {
@@ -89,7 +86,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const isLoginForm = (this.state.formType === '/login');
+    const isLoginForm = (this.state.formType === 'login');
 
     return (
       <form className="sessionForm">
@@ -112,18 +109,20 @@ class SessionForm extends React.Component {
         </label>
         <br/>
 
-        <Link onClick={this.handleSubmit} to="/">
+        <span className="link" onClick={this.handleSubmit}>
           { isLoginForm ? "Login" : "Sign Up" }
-        </Link>
+        </span>
 
         <span className='footnote'>
           { isLoginForm ? (
             <div>
-              Don't have an account? <Link onClick={this.setForm("/signup")} to="/signup">Sign Up</Link>
+              Don't have an account? <span className="link"
+                onClick={this.setForm("signup")}>Sign Up</span>
             </div>
           ) : (
             <div>
-              Already have an account? <Link onClick={this.setForm("/login")} to="/login">Login</Link>
+              Already have an account? <span className="link"
+                onClick={this.setForm("login")}> Login</span>
             </div>
           )}
           { this.renderGuestLogin() }

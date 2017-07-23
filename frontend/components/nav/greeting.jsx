@@ -10,8 +10,8 @@ class Greeting extends React.Component {
 
     this.state = {
       modalIsOpen: (
-        this.props.pagePath === "/login" ||
-        this.props.pagePath === "/signup"
+        this.props.pagePath === "login" ||
+        this.props.pagePath === "signup"
       ) ? true : false,
     };
     this.formType = '';
@@ -30,7 +30,6 @@ class Greeting extends React.Component {
 
   closeModal() {
     this.setState({ modalIsOpen: false });
-    this.props.history.push({pathname: "/"});
   }
 
   logout() {
@@ -49,9 +48,11 @@ class Greeting extends React.Component {
     }
     return (
       <div className="login-signup">
-        <Link onClick={this.openModal('/login')} to='login'>Login</Link>
+        <span className="link"
+          onClick={this.openModal('login')}>Login</span>
         &nbsp;
-        <Link onClick={this.openModal('/signup')} to='signup'>Sign Up</Link>
+        <span className="link"
+          onClick={this.openModal('signup')}>Sign Up</span>
         <Modal
           className="modal"
           overlayClassName="modal-overlay"
