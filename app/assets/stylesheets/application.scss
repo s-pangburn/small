@@ -23,16 +23,17 @@
    font-weight: normal;
  }
 
- a {
+ a, .link {
    color: rgb(50, 100, 255);
    text-decoration: none;
  }
 
- a:hover {
+ a:hover, .link:hover {
    color: rgb(50, 235, 160);
+   cursor: pointer;
  }
 
- a:focus {
+ a:focus, .link:focus {
    outline: none;
  }
 

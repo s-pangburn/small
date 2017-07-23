@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 
 import GreetingContainer from './nav/greeting_container';
 import SessionFormContainer from './session/session_form_container';
@@ -18,8 +18,10 @@ const App = () => (
       </header>
     </nav>
 
-    <Route exact path="/" component={ FeedContainer }/>
-    <Route path="/stories/:storyId" component={ StoryViewContainer }/>
+    <Switch>
+      <Route path="/stories/:storyId/" component={ StoryViewContainer }/>
+      <Route path="/" component={ FeedContainer }/>
+    </Switch>
   </div>
 );
 
