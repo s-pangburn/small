@@ -4,6 +4,7 @@ import { Route, Link } from 'react-router-dom';
 import GreetingContainer from './nav/greeting_container';
 import SessionFormContainer from './session/session_form_container';
 import FeedContainer from './feed/feed_container';
+import StoryViewContainer from './stories/story_view_container';
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
@@ -17,7 +18,8 @@ const App = () => (
       </header>
     </nav>
 
-    <FeedContainer />
+    <Route exact path="/" component={ FeedContainer }/>
+    <Route path="/stories/:storyId" component={ StoryViewContainer }/>
   </div>
 );
 

@@ -9,7 +9,10 @@ class Greeting extends React.Component {
     super(props);
 
     this.state = {
-      modalIsOpen: (this.props.pagePath === "/") ? false : true,
+      modalIsOpen: (
+        this.props.pagePath === "/login" ||
+        this.props.pagePath === "/signup"
+      ) ? true : false,
     };
     this.formType = '';
 
