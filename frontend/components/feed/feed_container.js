@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Feed from './feed';
-import { selectAllStories } from '../reducers/selectors';
-import { requestAllStories } from '../actions/story_actions';
+import { selectAllStories } from '../../reducers/selectors';
+import { requestAllStories } from '../../actions/story_actions';
 
 const mapStateToProps = state => ({
   stories: selectAllStories(state)
