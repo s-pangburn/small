@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-import GreetingContainer from './greeting_container';
-import SessionFormContainer from './session_form_container';
-import FeedContainer from './feed_container';
+import GreetingContainer from './nav/greeting_container';
+import SessionFormContainer from './session/session_form_container';
+import FeedContainer from './feed/feed_container';
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (

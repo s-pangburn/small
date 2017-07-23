@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Modal from 'react-modal';
 
-import SessionFormContainer from './session_form_container';
+import SessionFormContainer from '../session/session_form_container';
 
 class Greeting extends React.Component {
   constructor(props) {
