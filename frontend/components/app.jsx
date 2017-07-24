@@ -24,7 +24,7 @@ const App = () => (
       <AuthRoute path="/stories/new"
         component = { StoryFormContainer } formType="new"/>
 
-      <Route path="/stories/:storyId/" component={ StoryViewContainer }/>
+      <Route exact path="/stories/:storyId/" component={ StoryViewContainer }/>
 
       <AuthRoute path="/stories/:storyId/edit"
         component={ StoryFormContainer} formType="edit"/>

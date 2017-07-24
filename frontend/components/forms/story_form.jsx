@@ -16,23 +16,13 @@ class StoryForm extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.story) {
-      this.state = {
-        title: this.props.story.title,
-        description: this.props.story.description,
-        body: this.props.story.body,
-        image_url: this.props.story.image_url,
-        formType: "edit"
-      };
-    } else {
-      this.state = {
-        title: "",
-        description: "",
-        body: "",
-        image_url: "",
-        formType: "new"
-      };
-    }
+    this.state = {
+      title: "",
+      description: "",
+      body: "",
+      image_url: "",
+      formType: "new"
+    };
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -64,7 +54,15 @@ class StoryForm extends React.Component {
   }
 
   render() {
-    const isEdit = (this.state.formType === 'edit');
+    if (this.props.story) {
+      this.state = {
+        title: this.props.story.title,
+        description: this.props.story.description,
+        body: this.props.story.body,
+        image_url: this.props.story.image_url,
+        formType: "edit"
+      };
+    }
 
     return (
       <form className="storyForm">
@@ -72,21 +70,23 @@ class StoryForm extends React.Component {
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>
 
-        <label>Title:
+        <label>Title:<br/>
           <input type="text" value={this.state.title}
             onChange={this.update("title")} onKeyPress={this.checkSubmit}/>
         </label>
         <br/>
-        <label>Description:
+        <label>Description:<br/>
           <input type="text" value={this.state.description}
             onChange={this.update("description")} onKeyPress={this.checkSubmit}/>
         </label>
-        <label>Body:
-          <textarea onChange={this.update("body")}
-            onKeyPress={this.checkSubmit}>{this.props.body}</textarea>
+        <br/>
+        <label>Body:<br/>
+          <textarea onChange={this.update("body")} rows="30" cols="90"
+            onKeyPress={this.checkSubmit} value={this.state.body}></textarea>
         </label>
+        <br/>
         <span className="link" onClick={this.handleSubmit}>
-          { isEdit ? "Edit Story" : "Publish Story" }
+          { (this.state.formType === 'edit') ? "Edit Story" : "Publish Story" }
         </span>
       </form>
     );
