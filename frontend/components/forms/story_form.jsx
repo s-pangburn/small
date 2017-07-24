@@ -109,7 +109,7 @@ class StoryForm extends React.Component {
         <br/>
         <label>Body:<br/>
           <textarea onChange={this.update("body")} rows="30" cols="90"
-            onKeyPress={this.checkSubmit} value={this.state.body}></textarea>
+            value={this.state.body}></textarea>
         </label>
         <br/>
         <span className="link" onClick={this.handleSubmit}>

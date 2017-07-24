@@ -21,13 +21,20 @@ class FeedItem extends React.Component {
             </div>
           </Link>
         ) : null }
-        <section className="description">
-          <Link to={storyUrl}>
-            <h2>{ this.state.story.title }</h2>
-          </Link>
-          <Link to={storyUrl}>
-            <span>{ this.state.story.description }</span>
-          </Link>
+        <section className="storyInfo">
+          <section className="description">
+            <Link to={storyUrl}>
+              <h2>{ this.state.story.title }</h2>
+            </Link>
+            <Link to={storyUrl}>
+              <span>{ this.state.story.description }</span>
+            </Link>
+          </section>
+          <section className="author">
+            <span>{this.state.story.author.username}</span>
+            <br/>
+            <span>{this.state.story.created_at.slice(0, 10)}</span>
+          </section>
         </section>
       </div>
     );
