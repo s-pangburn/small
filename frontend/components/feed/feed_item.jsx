@@ -13,12 +13,14 @@ class FeedItem extends React.Component {
     const storyUrl = `/stories/${this.state.story.id}`;
     return (
       <div className="feedItem">
-        <Link to={storyUrl}>
-          <div className="imageContainer">
-            <img src={this.props.story.image_url}
-              alt={ this.state.story.title }/>
-          </div>
-        </Link>
+        {(this.props.story.image_url) ? (
+          <Link to={storyUrl}>
+            <div className="imageContainer">
+              <img src={this.props.story.image_url}
+                alt={ this.state.story.title }/>
+            </div>
+          </Link>
+        ) : null }
         <section className="description">
           <Link to={storyUrl}>
             <h2>{ this.state.story.title }</h2>

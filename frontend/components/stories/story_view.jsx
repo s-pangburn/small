@@ -31,27 +31,27 @@ class StoryView extends React.Component {
     if (this.props.story) {
       return (
         <section className="story">
-        <br/>
           <Link to="/">{"<<Back"}</Link>
           <p className="authorWidget">
             AuthorName placeholder
             &nbsp;|&nbsp;
-            <span className="link"
-              onClick={this.handleEdit}>Edit Story</span>
+            <Link to={`/stories/${this.props.story.id}/edit`}>Edit Story</Link>
             &nbsp;|&nbsp;
             <span className="link"
               onClick={this.handleDelete}>Delete Story</span>
           </p>
 
-          <figure>
-            <div className="imageContainer">
+          {(this.props.story.image_url) ? (
+            <figure>
+              <div className="imageContainer">
+                <img src={this.props.story.image_url}/>
+              </div>
               <img src={this.props.story.image_url}/>
-            </div>
-            <img src={this.props.story.image_url}/>
-          </figure>
+            </figure>
+          ) : null }
 
           <h1>{this.props.story.title}</h1>
-          <section className="body">
+          <section className="body" style={{"whiteSpace": "pre-wrap"}}>
             <p>{this.props.story.body}</p>
           </section>
 

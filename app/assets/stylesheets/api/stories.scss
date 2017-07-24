@@ -58,6 +58,9 @@
 .story {
   width: 1000px;
   margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .story h1 {
@@ -69,10 +72,20 @@
 
 .story .imageContainer {
   position: absolute;
-  width: 1000px;
-  height: 560px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right:auto;
+  width: 850px;
+  height: 476px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.story img {
+  display: block;
+  margin: 0 auto;
+  width: 850px;
 }
 
 .story .authorWidget {
@@ -82,10 +95,6 @@
 .story figure {
   margin-top: 30px;
   margin-bottom: 40px;
-}
-
-.story img {
-  width: 1000px;
 }
 
 .story p, .story span {

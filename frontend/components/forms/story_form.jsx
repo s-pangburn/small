@@ -8,7 +8,8 @@ class StoryForm extends React.Component {
 
   componentDidMount() {
     if (this.props.match.params.storyId) {
-      this.props.requestStory(this.props.match.params.storyId);
+      this.props.requestStory(this.props.match.params.storyId)
+        .then(() => this.populateFields());
     }
     this.focusFirstElement();
   }
@@ -16,21 +17,45 @@ class StoryForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      title: "",
-      description: "",
-      body: "",
-      image_url: "",
-      formType: "new"
-    };
+    if (this.props.story) {
+      this.state = {
+        id: this.props.story.id,
+        title: this.props.story.title,
+        description: this.props.story.description,
+        body: this.props.story.body,
+        image_url: this.props.story.image_url,
+        formType: "edit"
+      };
+    } else {
+      this.state = {
+        id: undefined,
+        title: "",
+        description: "",
+        body: "",
+        image_url: "",
+        formType: "new"
+      };
+    }
 
     this.update = this.update.bind(this);
+    this.populateFields = this.populateFields.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.checkSubmit = this.checkSubmit.bind(this);
   }
 
   update(item) {
     return event => this.setState({ [item]: event.currentTarget.value });
+  }
+
+  populateFields() {
+    this.setState({
+      id: this.props.story.id,
+      title: this.props.story.title,
+      description: this.props.story.description,
+      body: this.props.story.body,
+      image_url: this.props.story.image_url,
+      formType: "edit"
+    });
   }
 
   focusFirstElement() {
@@ -42,30 +67,23 @@ class StoryForm extends React.Component {
     if (charCode === 13) this.handleSubmit(event, this.state);
   }
 
-  handleSubmit(event, state) {
-    state = state || this.state;
+  handleSubmit(event) {
     event.preventDefault();
 
     if (this.state.formType === "new") {
-      this.props.createStory(state);
+      this.props.createStory(this.state)
+        .then(() => this.props.history.push(`/stories/${this.props.story.id}`));
     } else {
-      this.props.updateStory(state);
+      this.props.updateStory(this.state)
+        .then(() => this.props.history.push(`/stories/${this.props.story.id}`));
     }
   }
 
   render() {
-    if (this.props.story) {
-      this.state = {
-        title: this.props.story.title,
-        description: this.props.story.description,
-        body: this.props.story.body,
-        image_url: this.props.story.image_url,
-        formType: "edit"
-      };
-    }
-
     return (
       <form className="storyForm">
+        <br/>
+        <Link to="/">{"<<Back"}</Link>
         <ul className="errors">
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>

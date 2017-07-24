@@ -13,11 +13,10 @@ class Feed extends React.Component {
 
   render() {
     if (this.props.stories.length > 0) {
-      console.log(this.props.stories);
       return (
         <section className="feed">
           {this.props.stories.map(story => {
-            return <FeedItem story={story}/>;
+            return <FeedItem key={story.id} story={story}/>;
           })}
 
         </section>
