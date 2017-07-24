@@ -5,9 +5,7 @@ import {
   RESET_ERRORS
 } from '../actions/error_actions';
 
-const defaultState = [];
-
-const ErrorsReducer = (state = defaultState, action) => {
+const ErrorsReducer = (state = [], action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ERRORS:
