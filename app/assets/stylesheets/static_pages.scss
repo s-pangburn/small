@@ -42,5 +42,23 @@ header h1 {
 }
 
 .greeting span {
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+.greeting a {
+  margin-left: 30px;
+}
+
+.write-story {
+  margin-right: 30px;
+  color: grey;
+}
+
+.write-story:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.write-story:focus {
+  outline: none;
 }

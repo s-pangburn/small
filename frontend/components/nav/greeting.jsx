@@ -42,12 +42,17 @@ class Greeting extends React.Component {
       return (
         <div className="greeting">
           <span>Welcome, {this.props.currentUser.username}!</span>
+          <Link to="/stories/new">Write a story</Link>
           <Link onClick={this.logout} to="/">Logout</Link>
         </div>
       );
     }
     return (
       <div className="login-signup">
+        <span className="write-story"
+          onClick={this.openModal('login')}>
+          Write a story
+        </span>
         <span className="link"
           onClick={this.openModal('login')}>Login</span>
         &nbsp;

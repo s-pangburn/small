@@ -5,7 +5,8 @@ import { requestStory, deleteStory } from '../../actions/story_actions';
 import { resetErrors } from '../../actions/error_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  story: state.stories[ownProps.match.params.storyId]
+  story: state.stories[ownProps.match.params.storyId],
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({

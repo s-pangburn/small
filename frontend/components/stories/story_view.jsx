@@ -32,6 +32,7 @@ class StoryView extends React.Component {
       return (
         <section className="story">
           <Link to="/">{"<<Back"}</Link>
+
           <p className="authorWidget">
             AuthorName placeholder
             &nbsp;|&nbsp;
