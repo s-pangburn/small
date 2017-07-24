@@ -24,7 +24,7 @@ class FeedItem extends React.Component {
             <h2>{ this.state.story.title }</h2>
           </Link>
           <Link to={storyUrl}>
-            <span>{ this.state.story.body }</span>
+            <span>{ this.state.story.description }</span>
           </Link>
         </section>
       </div>
