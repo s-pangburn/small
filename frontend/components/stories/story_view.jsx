@@ -37,7 +37,9 @@ class StoryView extends React.Component {
             AuthorName placeholder
             &nbsp;|&nbsp;
             {(this.props.loggedIn) ? (
-              <Link to={`/stories/${this.props.story.id}/edit`}>Edit Story</Link>
+              <Link to={`/stories/${this.props.story.id}/edit`}>
+                Edit Story
+              </Link>
             ) : (
               <span className="link"
                 onClick={this.handleDelete}>Edit Story</span>
@@ -48,6 +50,7 @@ class StoryView extends React.Component {
               onClick={this.handleDelete}>Delete Story</span>
           </p>
 
+          <h1>{this.props.story.title}</h1>
           {(this.props.story.image_url) ? (
             <figure>
               <div className="imageContainer">
@@ -57,7 +60,7 @@ class StoryView extends React.Component {
             </figure>
           ) : null }
 
-          <h1>{this.props.story.title}</h1>
+
           <section className="body" style={{"whiteSpace": "pre-wrap"}}>
             <p>{this.props.story.body}</p>
           </section>
@@ -66,7 +69,9 @@ class StoryView extends React.Component {
             AuthorName placeholder
             &nbsp;|&nbsp;
             {(this.props.loggedIn) ? (
-              <Link to={`/stories/${this.props.story.id}/edit`}>Edit Story</Link>
+              <Link to={`/stories/${this.props.story.id}/edit`}>
+                Edit Story
+              </Link>
             ) : (
               <span className="link"
                 onClick={this.handleDelete}>Edit Story</span>

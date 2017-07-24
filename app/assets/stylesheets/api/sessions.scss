@@ -29,7 +29,7 @@
   border-radius: 10px;
   overflow: auto;
   font-family: 'Titillium Web', sans-serif;
-  animation-name: fromTop;
+  animation-name: fromBottom;
   animation-duration: 0.75s;
 }
 
@@ -38,7 +38,7 @@
   to {opacity: 1}
 }
 
-@keyframes fromTop {
+@keyframes fromBottom {
   0% {transform: translateY(100px) }
   100% {transform: translateY(0) }
 }

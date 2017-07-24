@@ -72,10 +72,12 @@ class StoryForm extends React.Component {
 
     if (this.state.formType === "new") {
       this.props.createStory(this.state)
-        .then(() => this.props.history.push(`/stories/${this.props.story.id}`));
+        .then(({ story }) => {
+          this.props.history.push(`/stories/${story.id}`);
+        });
     } else {
       this.props.updateStory(this.state)
-        .then(() => this.props.history.push(`/stories/${this.props.story.id}`));
+        .then(({ story }) => this.props.history.push(`/stories/${story.id}`));
     }
   }
 
