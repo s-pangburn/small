@@ -17,11 +17,13 @@ class StoryView extends React.Component {
   }
 
   handleDelete() {
-    alert("You Defeated");
     this.props.deleteStory(this.props.story.id)
       .then(
         story => this.props.history.push({pathname: "/"}),
-        ({errors}) => alert(errors)
+        ({errors}) => {
+          alert(errors);
+          this.props.resetErrors();
+        }
       );
   }
 
@@ -29,14 +31,39 @@ class StoryView extends React.Component {
     if (this.props.story) {
       return (
         <section className="story">
+        <br/>
           <Link to="/">{"<<Back"}</Link>
-          <p>AuthorName placeholder</p>
+          <p className="authorWidget">
+            AuthorName placeholder
+            &nbsp;|&nbsp;
+            <span className="link"
+              onClick={this.handleEdit}>Edit Story</span>
+            &nbsp;|&nbsp;
+            <span className="link"
+              onClick={this.handleDelete}>Delete Story</span>
+          </p>
+
+          <figure>
+            <div className="imageContainer">
+              <img src={this.props.story.image_url}/>
+            </div>
+            <img src={this.props.story.image_url}/>
+          </figure>
+
           <h1>{this.props.story.title}</h1>
-          <img src={this.props.story.image_url}/>
-          <p>{this.props.story.body}</p>
-          <span className="link"
-            onClick={this.handleDelete}>Delete Story</span>
-          <p>AuthorName placeholder</p>
+          <section className="body">
+            <p>{this.props.story.body}</p>
+          </section>
+
+          <p className="authorWidget">
+            AuthorName placeholder
+            &nbsp;|&nbsp;
+            <span className="link"
+              onClick={this.handleEdit}>Edit Story</span>
+            &nbsp;|&nbsp;
+            <span className="link"
+              onClick={this.handleDelete}>Delete Story</span>
+          </p>
         </section>
       );
     } else {

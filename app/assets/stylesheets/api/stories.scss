@@ -62,10 +62,39 @@
 
 .story h1 {
   font-family: 'PT Sans';
-  font-size: 3.5em;
+  font-size: 50px;
   font-weight: bold;
+  text-align: center;
+}
+
+.story .imageContainer {
+  position: absolute;
+  width: 1000px;
+  height: 560px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.story .authorWidget {
+  margin-top: 20px;
+}
+
+.story figure {
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .story img {
   width: 1000px;
+}
+
+.story p, .story span {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.story .body {
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
