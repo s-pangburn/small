@@ -36,7 +36,13 @@ class StoryView extends React.Component {
           <p className="authorWidget">
             AuthorName placeholder
             &nbsp;|&nbsp;
-            <Link to={`/stories/${this.props.story.id}/edit`}>Edit Story</Link>
+            {(this.props.loggedIn) ? (
+              <Link to={`/stories/${this.props.story.id}/edit`}>Edit Story</Link>
+            ) : (
+              <span className="link"
+                onClick={this.handleDelete}>Edit Story</span>
+            ) }
+
             &nbsp;|&nbsp;
             <span className="link"
               onClick={this.handleDelete}>Delete Story</span>
@@ -59,8 +65,13 @@ class StoryView extends React.Component {
           <p className="authorWidget">
             AuthorName placeholder
             &nbsp;|&nbsp;
-            <span className="link"
-              onClick={this.handleEdit}>Edit Story</span>
+            {(this.props.loggedIn) ? (
+              <Link to={`/stories/${this.props.story.id}/edit`}>Edit Story</Link>
+            ) : (
+              <span className="link"
+                onClick={this.handleDelete}>Edit Story</span>
+            ) }
+
             &nbsp;|&nbsp;
             <span className="link"
               onClick={this.handleDelete}>Delete Story</span>

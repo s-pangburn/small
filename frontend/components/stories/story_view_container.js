@@ -5,6 +5,7 @@ import { requestStory, deleteStory } from '../../actions/story_actions';
 import { resetErrors } from '../../actions/error_actions';
 
 const mapStateToProps = (state, ownProps) => ({
+  loggedIn: Boolean(state.session.currentUser),
   story: state.stories[ownProps.match.params.storyId],
   errors: state.errors
 });

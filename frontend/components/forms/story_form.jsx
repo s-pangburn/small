@@ -80,10 +80,17 @@ class StoryForm extends React.Component {
   }
 
   render() {
+    const isEdit = (this.state.formType === 'edit');
+
     return (
       <form className="storyForm">
         <br/>
-        <Link to="/">{"<<Back"}</Link>
+        { isEdit ? (
+          <Link to={`/stories/${this.props.story.id}`}>{"<<Back"}</Link>
+        ) : (
+          <Link to="/">{"<<Back"}</Link>
+        )}
+
         <ul className="errors">
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>
@@ -104,7 +111,7 @@ class StoryForm extends React.Component {
         </label>
         <br/>
         <span className="link" onClick={this.handleSubmit}>
-          { (this.state.formType === 'edit') ? "Edit Story" : "Publish Story" }
+          { (isEdit) ? "Edit Story" : "Publish Story" }
         </span>
       </form>
     );
