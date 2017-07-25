@@ -5,9 +5,16 @@
   font-weight: bold;
 }
 
+.storyForm a {
+  position: relative;
+  left: -57px;
+  top: 8px;
+}
+
 .storyForm h1 {
   font-family: "PT Sans";
   text-align: center;
+  margin-top: 30px;
 }
 
 .storyForm input {
@@ -30,7 +37,7 @@
   margin-bottom: 20px;
   padding: 20px;
   width: 660px;
-  height: 350px;
+  height: 325px;
   font-family: 'Titillium Web';
   font-size: 20px;
   font-weight: bold;

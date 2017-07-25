@@ -33,7 +33,7 @@ class StoryView extends React.Component {
       console.log(this.props.story);
       return (
         <section className="story">
-          <Link to="/">{"<<Back"}</Link>
+          <Link className="back" to="/">{"<<Back"}</Link>
 
           <p className="authorWidget">
             {this.props.story.created_at.slice(0, 10)}

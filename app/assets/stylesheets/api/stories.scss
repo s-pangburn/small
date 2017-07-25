@@ -80,6 +80,9 @@
 .author .date {
   font-size: 16px;
   width: 87px;
+  margin-top: 7px;
+  display: block;
+  margin-left: auto;
 }
 
 .story {
@@ -88,6 +91,13 @@
   padding: 40px;
   background-color: white;
   font-size: 20px;
+}
+
+.back {
+  position: relative;
+  top: -10px;
+  left: 100px;
+  font-weight: bold;
 }
 
 .story h1 {
@@ -106,13 +116,14 @@
   font-family: 'Georgia';
   font-size: 28px;
   text-align: center;
-  color: grey;
+  color: #aaa;
   font-weight: 100;
 }
 
 .story .body {
   padding-top: 20px;
   font-family: 'Georgia';
+  color: #555;
 }
 
 .story .imageContainer {
