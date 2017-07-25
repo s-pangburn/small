@@ -169,4 +169,18 @@ Ut lacinia commodo fermentum. Nam vulputate ipsum viverra turpis ultricies posue
   author_id: user1.id
 )
 
+Story.create!(
+  title: "How to Tame a Pigeon",
+  description: "100% Guarantee",
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique, lorem nec posuere consequat, est sapien cursus ipsum, eget laoreet mauris tortor sit amet purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer hendrerit, nunc nec lacinia sagittis, nibh leo maximus ligula, eget vestibulum tortor leo quis tortor. Nullam a sapien nec nulla molestie malesuada in sit amet massa. Nullam nec diam sed tortor congue convallis. Donec vel ornare purus. Quisque pellentesque tempor enim non feugiat. Quisque pharetra quis velit sed accumsan. Curabitur euismod sed justo a dictum. Cras ut sapien egestas, dictum tortor nec, viverra sapien. Aliquam orci lorem, tristique sit amet ex at, dignissim eleifend diam. Morbi euismod maximus venenatis. Nunc dapibus neque enim, ac bibendum est efficitur a.
+
+Proin vel orci cursus, vestibulum tellus id, dapibus tortor. Donec a sollicitudin eros. Phasellus vel facilisis mauris. Pellentesque et lacus eget velit varius egestas. Morbi sed luctus mauris, sit amet finibus metus. Aliquam vel congue lacus. Phasellus vel gravida mauris, vel sollicitudin turpis. Nullam quis ante lacus. Proin consectetur, nunc luctus aliquet accumsan, nisi urna convallis arcu, sit amet tincidunt eros risus eu odio. Donec tempus arcu quis mauris euismod, vel mollis odio convallis. Nunc eu accumsan ipsum. Aliquam bibendum non dui nec mattis. Integer imperdiet dui non justo aliquam, at dictum magna tincidunt. Etiam eu accumsan nisi, ac commodo ipsum. Curabitur id imperdiet risus. Vestibulum eleifend, sem ac mollis congue, nunc est tristique risus, sit amet tincidunt magna nulla sit amet lorem.
+
+Aliquam erat volutpat. Morbi semper lacinia purus, eu ultricies nunc laoreet vel. Curabitur eget mattis metus. Phasellus eget ante lectus. Donec nec orci fermentum, vehicula libero fermentum, ornare tellus. Aliquam enim lorem, pellentesque et venenatis ac, eleifend at dui. Aliquam finibus leo in elit maximus, rhoncus malesuada neque lacinia. Morbi venenatis, massa eget scelerisque luctus, velit nulla luctus orci, ut faucibus libero neque in dui. Maecenas viverra odio augue. Donec tempus quis mauris sed vehicula. Donec quam eros, scelerisque vitae faucibus et, tempus in arcu. Phasellus pulvinar sapien et pulvinar condimentum. Pellentesque fringilla consequat libero, sed cursus leo tincidunt vel. Donec sagittis lectus sit amet ligula varius vehicula.
+
+Donec tristique sed dolor non tincidunt. Ut facilisis tincidunt fermentum. Nam consectetur mattis vehicula. Mauris vulputate sed urna sit amet posuere. Cras ut orci metus. Ut dapibus diam sed elementum laoreet. Integer bibendum libero massa, quis ultrices quam ornare eu. Vestibulum aliquam ante in elit auctor venenatis. Maecenas vel tempus nibh, in congue est. Proin vel tortor vitae arcu faucibus dapibus ac id leo. Nullam bibendum tortor eget enim volutpat, commodo euismod ante faucibus.",
+  image_url: "1040uuu_cherry_blossom.gif",
+  author_id: user2.id
+)
+
 end
