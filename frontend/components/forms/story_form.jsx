@@ -4,7 +4,7 @@ import request from 'superagent';
 import { Link } from 'react-router-dom';
 
 const CLOUDINARY_UPLOAD_PRESET = 'zl7zltnx';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dzeqeo9b3/upload';
+const CLOUDINARY_UPLOAD_URL = `https://api.cloudinary.com/v1_1/dzeqeo9b3/upload`;
 
 class StoryForm extends React.Component {
   componentWillUnmount() {
@@ -79,10 +79,12 @@ class StoryForm extends React.Component {
       this.props.createStory(this.state)
         .then(({ story }) => {
           this.props.history.push(`/stories/${story.id}`);
-        });
+        }, () => window.scrollTo(0, 0) );
     } else {
       this.props.updateStory(this.state)
-        .then(({ story }) => this.props.history.push(`/stories/${story.id}`));
+        .then(({ story }) => {
+          this.props.history.push(`/stories/${story.id}`);
+        }, () => window.scrollTo(0, 0));
     }
   }
 
