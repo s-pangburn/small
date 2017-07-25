@@ -11,10 +11,12 @@
 }
 
 .feedItem {
-  margin-bottom: 100px;
   display: inline-block;
-  width: 1000px;
-  height: 700px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-left: 75px;
+  width: 850px;
+  height: 550px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -24,7 +26,7 @@
 }
 
 .storyInfo {
-  margin-top: 560px;
+  margin-top: 420px;
   padding-top: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -40,15 +42,18 @@
 
 .feedItem .imageContainer {
   position: absolute;
-  background-color: grey;
-  width: 1000px;
-  height: 560px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right:auto;
+  width: 850px;
+  height: 430px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .feedItem img {
-  width: 1000px;
+  width: 875px;
 }
 
 .feedItem .author {
@@ -57,8 +62,8 @@
 }
 
 .description h2 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 100;
   font-family: 'PT Sans';
   color: black;
 }
@@ -66,8 +71,12 @@
 .description span {
   display: block;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: black;
+}
+
+.author .date {
+  font-size: 16px;
 }
 
 .story {
@@ -81,13 +90,14 @@
 .story h1 {
   font-family: 'PT Sans';
   margin-top: 20px;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: bold;
   text-align: center;
 }
 
 .story h3 {
-  margin-top: 10px;
+  margin-top: 30px;
+  padding-bottom: 20px;
   font-family: 'Georgia';
   font-size: 28px;
   text-align: center;
@@ -96,6 +106,7 @@
 }
 
 .story .body {
+  padding-top: 20px;
   font-family: 'Georgia';
 }
 

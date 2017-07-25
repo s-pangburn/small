@@ -38,7 +38,7 @@ class FeedItem extends React.Component {
           <section className="author">
             <span>{this.state.story.author.username}</span>
             <br/>
-            <span>{this.state.story.created_at.slice(0, 10)}</span>
+            <span className="date">{this.state.story.created_at.slice(0, 10)}</span>
           </section>
         </section>
       </div>
