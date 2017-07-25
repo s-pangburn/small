@@ -81,7 +81,7 @@ class SessionForm extends React.Component {
 
   renderGuestLogin() {
     return (
-      <Link onClick={this.handleGuestLogin} to="/">Demo Login</Link>
+      <span className="link" onClick={this.handleGuestLogin}>Demo Login</span>
     );
   }
 
