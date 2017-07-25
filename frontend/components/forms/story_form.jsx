@@ -93,6 +93,12 @@ class StoryForm extends React.Component {
           <Link to="/">{"<<Back"}</Link>
         )}
 
+        { isEdit ? (
+          <h1>Edit your story</h1>
+        ) : (
+          <h1>Create a story</h1>
+        )}
+
         <ul className="errors">
           {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
         </ul>
@@ -108,12 +114,12 @@ class StoryForm extends React.Component {
         </label>
         <br/>
         <label>Body:<br/>
-          <textarea onChange={this.update("body")} rows="30" cols="90"
+          <textarea onChange={this.update("body")} rows="15" cols="70"
             value={this.state.body}></textarea>
         </label>
         <br/>
         <span className="link" onClick={this.handleSubmit}>
-          { (isEdit) ? "Edit Story" : "Publish Story" }
+          { isEdit ? "Edit Story" : "Publish Story" }
         </span>
       </form>
     );

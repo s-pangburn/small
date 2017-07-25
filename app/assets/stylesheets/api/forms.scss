@@ -1,0 +1,47 @@
+.storyForm {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.storyForm h1 {
+  font-family: "PT Sans";
+  text-align: center;
+}
+
+.storyForm input {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 660px;
+  height: 35px;
+  font-size: 20px;
+  font-family: 'Titillium Web';
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+}
+
+.storyForm textarea {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 660px;
+  height: 400px;
+  font-family: 'Titillium Web';
+  font-size: 18px;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+}
+
+.storyForm input:focus, .storyForm textarea:focus {
+  outline: none;
+  border: 2px solid rgb(50, 245, 170);
+}
+
+.storyForm .link {
+  font-size: 20px;
+  display: block;
+  text-align: right;
+}
