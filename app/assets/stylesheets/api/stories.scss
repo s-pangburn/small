@@ -16,8 +16,7 @@
   margin-bottom: 100px;
   margin-left: 75px;
   width: 850px;
-  height: 550px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 570px;
 }
 
 @keyframes fadeInFromBottom {
@@ -30,10 +29,11 @@
   padding-top: 40px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   display:flex;
   justify-content: space-between;
   align-items: flex-end;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .feedItem .description {
@@ -66,6 +66,7 @@
   font-weight: 100;
   font-family: 'PT Sans';
   color: black;
+  max-width: 450px;
 }
 
 .description span {
@@ -73,10 +74,12 @@
   margin-top: 10px;
   font-size: 20px;
   color: black;
+  max-width: 600px;
 }
 
 .author .date {
   font-size: 16px;
+  width: 87px;
 }
 
 .story {
@@ -89,7 +92,9 @@
 
 .story h1 {
   font-family: 'PT Sans';
+  margin: 0 auto;
   margin-top: 20px;
+  max-width: 800px;
   font-size: 42px;
   font-weight: bold;
   text-align: center;
@@ -126,6 +131,10 @@
   display: block;
   margin: 0 auto;
   width: 850px;
+}
+
+.story .dummyImg {
+  height: 476px;
 }
 
 .story .authorWidget {

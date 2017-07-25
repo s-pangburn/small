@@ -61,7 +61,7 @@ class StoryView extends React.Component {
               <div className="imageContainer">
                 <img src={this.props.story.image_url}/>
               </div>
-              <img src={this.props.story.image_url}/>
+              <img className="dummyImg" src={this.props.story.image_url}/>
             </figure>
           ) : null }
 
