@@ -104,12 +104,12 @@ class StoryForm extends React.Component {
         </ul>
 
         <label>Title:<br/>
-          <input type="text" value={this.state.title}
+          <input type="text" value={this.state.title} placeholder="Add a title"
             onChange={this.update("title")} onKeyPress={this.checkSubmit}/>
         </label>
         <br/>
         <label>Description:<br/>
-          <input type="text" value={this.state.description}
+          <input type="text" value={this.state.description} placeholder="Add a description"
             onChange={this.update("description")} onKeyPress={this.checkSubmit}/>
         </label>
         <br/>
