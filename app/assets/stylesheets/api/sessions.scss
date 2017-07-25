@@ -14,6 +14,7 @@
   height: 100%;
   animation-name: fadeIn;
   animation-duration: 0.5s;
+  z-index: 2000;
 }
 
 .modal {
@@ -32,6 +33,7 @@
   font-weight: bold;
   animation-name: fromBottom;
   animation-duration: 0.75s;
+  z-index: 2000;
 }
 
 @keyframes fadeIn {

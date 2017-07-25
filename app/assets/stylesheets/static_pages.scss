@@ -3,10 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: white//rgb(250, 250, 250)
+  background-color: white;
 }
 
 .outerNav {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   width: 100%;

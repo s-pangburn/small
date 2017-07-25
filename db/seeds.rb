@@ -114,7 +114,7 @@ Story.create!(
 Mauris id turpis sed ex placerat laoreet. In hac habitasse platea dictumst. Mauris enim ipsum, venenatis eu erat sed, pulvinar laoreet magna. Sed ullamcorper, mauris in mattis fringilla, dui mauris vulputate dui, tempus tincidunt libero sem ac nibh. Fusce vestibulum tincidunt urna, vitae vulputate tortor venenatis eget. Donec egestas orci sollicitudin, porttitor sapien sed, laoreet massa. Morbi porttitor volutpat scelerisque. Ut consectetur lorem vel vestibulum euismod. Cras ac ante metus. Praesent rhoncus justo odio, quis ultrices est porttitor viverra. Sed vestibulum vestibulum malesuada. Nam porta ut augue in bibendum. Integer pharetra ante risus, et rutrum nunc dapibus vitae. Nullam vulputate tincidunt nibh, vel finibus lectus feugiat nec. Morbi enim nisi, ultrices sit amet iaculis non, semper vitae orci. Curabitur pellentesque purus eu eros elementum feugiat.
 
 Donec venenatis augue dui, eu volutpat mi sagittis ut. Sed in elit sollicitudin, viverra lectus ut, porttitor turpis. Vestibulum ultrices consectetur urna id tempus. Nullam tempus eu justo sed tincidunt. Duis auctor elit id feugiat maximus. Fusce ullamcorper ante sit amet tincidunt sollicitudin. Praesent nec mollis massa, id porttitor arcu.",
-  image_url: "merrigo_sunset.gif",
+  image_url: "merrigo_sun.gif",
   author_id: user4.id
 )
 

@@ -20,7 +20,7 @@ class FeedItem extends React.Component {
                   <img src={this.props.story.image_url}
                     alt={ this.state.story.title }/>
             ) : (
-              <img src="http://68.media.tumblr.com/a8e8623fc8b4f3d89a916ca640217bfc/tumblr_nk1p2qpKZC1qc2xm1o1_500.gif"
+              <img src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1501015806/merrigo_clouds_k7n2k4.gif"
                 style={{"filter": "grayscale(100%)"}}
                 alt={ this.state.story.title }/>
             ) }

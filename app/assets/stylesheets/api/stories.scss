@@ -6,7 +6,7 @@
 .feed {
   width: 1000px;
   margin: 0 auto;
-  margin-top: 75px;
+  margin-top: 175px;
   font-family: 'Titillium Web';
 }
 
@@ -42,6 +42,7 @@
 
 .feedItem .imageContainer {
   position: absolute;
+  z-index: 100;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -53,7 +54,7 @@
 }
 
 .feedItem img {
-  width: 875px;
+  width: 870px;
 }
 
 .feedItem .author {
@@ -88,6 +89,7 @@
 .story {
   width: 1000px;
   margin: 0 auto;
+  margin-top: 90px;
   padding: 40px;
   background-color: white;
   font-size: 20px;
@@ -123,7 +125,7 @@
 .story .body {
   padding-top: 20px;
   font-family: 'Georgia';
-  color: #555;
+  color: #333;
 }
 
 .story .imageContainer {
