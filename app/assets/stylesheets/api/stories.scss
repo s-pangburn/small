@@ -75,7 +75,6 @@
   margin: 0 auto;
   padding: 40px;
   background-color: white;
-  font-family: 'Georgia';
   font-size: 20px;
 }
 
@@ -85,6 +84,19 @@
   font-size: 50px;
   font-weight: bold;
   text-align: center;
+}
+
+.story h3 {
+  margin-top: 10px;
+  font-family: 'Georgia';
+  font-size: 28px;
+  text-align: center;
+  color: grey;
+  font-weight: 100;
+}
+
+.story .body {
+  font-family: 'Georgia';
 }
 
 .story .imageContainer {
@@ -107,6 +119,10 @@
 
 .story .authorWidget {
   margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: "Titillium Web";
+  font-size: 24px;
+  text-align: center;
 }
 
 .story figure {

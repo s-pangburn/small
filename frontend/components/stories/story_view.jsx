@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 class StoryView extends React.Component {
   componentDidMount() {
-      this.props.requestStory(this.props.match.params.storyId);
+    this.props.requestStory(this.props.match.params.storyId);
+    window.scrollTo(0, 0)
   }
 
   componentWillUnmount() {
@@ -35,23 +36,27 @@ class StoryView extends React.Component {
           <Link to="/">{"<<Back"}</Link>
 
           <p className="authorWidget">
-            AuthorName placeholder
+            {this.props.story.created_at.slice(0, 10)}
             &nbsp;|&nbsp;
-            {(this.props.loggedIn) ? (
-              <Link to={`/stories/${this.props.story.id}/edit`}>
-                Edit Story
-              </Link>
-            ) : (
-              <span className="link"
-                onClick={this.handleDelete}>Edit Story</span>
-            ) }
+            Written by: {this.props.story.author.username}
+            {(this.props.loggedIn &&
+              this.props.currentUser.username ===
+              this.props.story.author.username) ? (
+              <span>
+                &nbsp;|&nbsp;
+                <Link to={`/stories/${this.props.story.id}/edit`}>
+                  Edit Story
+                </Link>
+                &nbsp;|&nbsp;
+                <span className="link"
+                  onClick={this.handleDelete}>Delete Story</span>
+              </span>
+            ) : null }
 
-            &nbsp;|&nbsp;
-            <span className="link"
-              onClick={this.handleDelete}>Delete Story</span>
           </p>
 
           <h1>{this.props.story.title}</h1>
+          <h3>{this.props.story.description}</h3>
           {(this.props.story.image_url) ? (
             <figure>
               <div className="imageContainer">
@@ -67,7 +72,9 @@ class StoryView extends React.Component {
           </section>
 
           <p className="authorWidget">
-            AuthorName placeholder
+            Written by: {this.props.story.author.username}
+            &nbsp;|&nbsp;
+            {this.props.story.created_at.slice(0, 10)}
             &nbsp;|&nbsp;
             {(this.props.loggedIn) ? (
               <Link to={`/stories/${this.props.story.id}/edit`}>
