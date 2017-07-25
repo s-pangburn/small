@@ -52,7 +52,6 @@ class StoryView extends React.Component {
                   onClick={this.handleDelete}>Delete Story</span>
               </span>
             ) : null }
-
           </p>
 
           <h1>{this.props.story.title}</h1>
@@ -72,22 +71,22 @@ class StoryView extends React.Component {
           </section>
 
           <p className="authorWidget">
-            Written by: {this.props.story.author.username}
-            &nbsp;|&nbsp;
             {this.props.story.created_at.slice(0, 10)}
             &nbsp;|&nbsp;
-            {(this.props.loggedIn) ? (
-              <Link to={`/stories/${this.props.story.id}/edit`}>
-                Edit Story
-              </Link>
-            ) : (
-              <span className="link"
-                onClick={this.handleDelete}>Edit Story</span>
-            ) }
-
-            &nbsp;|&nbsp;
-            <span className="link"
-              onClick={this.handleDelete}>Delete Story</span>
+            Written by: {this.props.story.author.username}
+            {(this.props.loggedIn &&
+              this.props.currentUser.username ===
+              this.props.story.author.username) ? (
+              <span>
+                &nbsp;|&nbsp;
+                <Link to={`/stories/${this.props.story.id}/edit`}>
+                  Edit Story
+                </Link>
+                &nbsp;|&nbsp;
+                <span className="link"
+                  onClick={this.handleDelete}>Delete Story</span>
+              </span>
+            ) : null }
           </p>
         </section>
       );
