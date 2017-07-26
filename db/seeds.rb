@@ -179,7 +179,7 @@ Proin vel orci cursus, vestibulum tellus id, dapibus tortor. Donec a sollicitudi
 Aliquam erat volutpat. Morbi semper lacinia purus, eu ultricies nunc laoreet vel. Curabitur eget mattis metus. Phasellus eget ante lectus. Donec nec orci fermentum, vehicula libero fermentum, ornare tellus. Aliquam enim lorem, pellentesque et venenatis ac, eleifend at dui. Aliquam finibus leo in elit maximus, rhoncus malesuada neque lacinia. Morbi venenatis, massa eget scelerisque luctus, velit nulla luctus orci, ut faucibus libero neque in dui. Maecenas viverra odio augue. Donec tempus quis mauris sed vehicula. Donec quam eros, scelerisque vitae faucibus et, tempus in arcu. Phasellus pulvinar sapien et pulvinar condimentum. Pellentesque fringilla consequat libero, sed cursus leo tincidunt vel. Donec sagittis lectus sit amet ligula varius vehicula.
 
 Donec tristique sed dolor non tincidunt. Ut facilisis tincidunt fermentum. Nam consectetur mattis vehicula. Mauris vulputate sed urna sit amet posuere. Cras ut orci metus. Ut dapibus diam sed elementum laoreet. Integer bibendum libero massa, quis ultrices quam ornare eu. Vestibulum aliquam ante in elit auctor venenatis. Maecenas vel tempus nibh, in congue est. Proin vel tortor vitae arcu faucibus dapibus ac id leo. Nullam bibendum tortor eget enim volutpat, commodo euismod ante faucibus.",
-  image_url: "1040uuu_cherry_blossom.gif",
+  image_url: "1041uuu_cherry_blossom",
   author_id: user2.id
 )
 
