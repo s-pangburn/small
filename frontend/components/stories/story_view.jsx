@@ -13,6 +13,7 @@ class StoryView extends React.Component {
 
   constructor(props) {
     super(props);
+    console.log(this.props.story);
 
     this.handleDelete = this.handleDelete.bind(this);
   }

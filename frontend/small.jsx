@@ -5,12 +5,10 @@ import configureStore from './store/store';
 
 import { signup, login, logout } from './actions/session_actions';
 import {
-  requestAllStories,
-  requestStory,
-  createStory,
-  updateStory,
-  deleteStory
-} from './actions/story_actions';
+  createComment,
+  updateComment,
+  deleteComment
+} from './util/comment_api_util';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
@@ -19,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.createComment = createComment;
+  window.updateComment = updateComment;
+  window.deleteComment = deleteComment;
 });
 
 const createStore = () => {
