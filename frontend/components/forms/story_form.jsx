@@ -94,8 +94,8 @@ class StoryForm extends React.Component {
   }
 
   handleImageUpload(file) {
-    const CLOUDINARY_UPLOAD_PRESET = window.cloudinaryOptions.uploadPreset;
-    const CLOUDINARY_UPLOAD_URL = `https://api.cloudinary.com/v1_1/${window.cloudinaryOptions.cloudName}/upload`;
+    const CLOUDINARY_UPLOAD_PRESET = "zl7zltnx";
+    const CLOUDINARY_UPLOAD_URL = `https://api.cloudinary.com/v1_1/dzeqeo9b3/upload`;
 
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
                         .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
