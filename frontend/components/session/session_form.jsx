@@ -47,14 +47,13 @@ class SessionForm extends React.Component {
     if (charCode === 13) this.handleSubmit(event, this.state);
   }
 
-  handleSubmit(event, state) {
-    state = state || this.state;
+  handleSubmit(event) {
     event.preventDefault();
 
     if (this.state.formType === "login") {
-      this.props.login(state);
+      this.props.login(this.state);
     } else {
-      this.props.signup(state);
+      this.props.signup(this.state);
     }
   }
 

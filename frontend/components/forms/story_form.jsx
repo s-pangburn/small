@@ -14,6 +14,7 @@ class StoryForm extends React.Component {
         .then(() => this.populateFields());
     }
     this.focusFirstElement();
+    window.scrollTo(0, 0);
   }
 
   constructor(props) {
