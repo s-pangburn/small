@@ -42,24 +42,18 @@ class StoryForm extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.story) {
-      this.state = {
-        id: this.props.story.id,
-        title: this.props.story.title,
-        description: this.props.story.description,
-        body: this.props.story.body,
-        image_url: this.props.story.image_url,
-        formType: "edit"
-      };
+    this.state = {
+      id: undefined,
+      title: "",
+      description: "",
+      body: "",
+      image_url: ""
+    };
+
+    if (this.props.match.params.storyId) {
+      this.state.formType = "edit";
     } else {
-      this.state = {
-        id: undefined,
-        title: "",
-        description: "",
-        body: "",
-        image_url: "",
-        formType: "new"
-      };
+      this.state.formType = "new";
     }
 
     this.update = this.update.bind(this);
@@ -143,7 +137,7 @@ class StoryForm extends React.Component {
     return (
       <form className="storyForm">
         <br/>
-        { isEdit ? (
+        { (isEdit && this.props.story) ? (
           <Link to={`/stories/${this.props.story.id}`}>{"<<Back"}</Link>
         ) : (
           <Link to="/">{"<<Back"}</Link>
