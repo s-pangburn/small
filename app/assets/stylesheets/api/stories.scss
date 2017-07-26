@@ -4,6 +4,10 @@
 
 
 .feed {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
   width: 1000px;
   margin: 0 auto;
   margin-top: 175px;
@@ -11,10 +15,9 @@
 }
 
 .feedItem {
-  display: inline-block;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 100px;
-  margin-left: 75px;
   width: 850px;
   height: 570px;
 }
@@ -25,7 +28,6 @@
 }
 
 .storyInfo {
-  margin-top: 420px;
   padding-top: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -41,7 +43,7 @@
 }
 
 .feedItem .imageContainer {
-  position: absolute;
+  display: flex;
   z-index: 100;
   left: 0;
   right: 0;
@@ -128,14 +130,13 @@
   color: #333;
 }
 
-.story .imageContainer {
+.story img {
   position: absolute;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right:auto;
   width: 850px;
-  height: 430px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -147,7 +148,9 @@
 }
 
 .story .dummyImg {
-  height: 430px;
+  position: static;
+  display: block;
+  width: 850px;
 }
 
 .story .authorWidget {

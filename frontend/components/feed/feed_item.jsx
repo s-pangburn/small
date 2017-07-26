@@ -14,18 +14,16 @@ class FeedItem extends React.Component {
 
     return (
       <div className="feedItem">
-        <Link to={storyUrl}>
-          <div className="imageContainer">
-            {(this.props.story.image_url) ? (
-                  <img src={this.props.story.image_url}
-                    alt={ this.state.story.title }/>
-            ) : (
-              <img src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1501015806/merrigo_clouds_k7n2k4.gif"
-                style={{"filter": "grayscale(100%)"}}
-                alt={ this.state.story.title }/>
-            ) }
-          </div>
-        </Link>
+        <div className="imageContainer">
+          {(this.props.story.image_url) ? (
+                <img src={this.props.story.image_url}
+                  alt={ this.state.story.title }/>
+          ) : (
+            <img src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1501015806/merrigo_clouds_k7n2k4.gif"
+              style={{"filter": "grayscale(100%)"}}
+              alt={ this.state.story.title }/>
+          ) }
+        </div>
         <section className="storyInfo">
           <section className="description">
             <Link to={storyUrl}>

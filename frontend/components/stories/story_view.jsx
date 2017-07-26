@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class StoryView extends React.Component {
   componentDidMount() {
     this.props.requestStory(this.props.match.params.storyId);
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {
