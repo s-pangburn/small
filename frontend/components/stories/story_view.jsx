@@ -30,7 +30,6 @@ class StoryView extends React.Component {
 
   render() {
     if (this.props.story) {
-      console.log(this.props.story);
       return (
         <section className="story">
           <Link className="back" to="/">{"<<Back"}</Link>

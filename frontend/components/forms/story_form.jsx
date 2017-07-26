@@ -12,6 +12,28 @@ class StoryForm extends React.Component {
     if (this.props.match.params.storyId) {
       this.props.requestStory(this.props.match.params.storyId)
         .then(() => this.populateFields());
+      this.state.formType = "edit";
+    }
+    this.focusFirstElement();
+    window.scrollTo(0, 0);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location.pathname === "/stories/new") {
+      this.state = {
+        id: undefined,
+        title: "",
+        description: "",
+        body: "",
+        image_url: "",
+        formType: "new"
+      };
+    } else {
+      if (nextProps.match.params.storyId && this.state.formType !== "edit") {
+        nextProps.requestStory(nextProps.match.params.storyId)
+          .then(() => this.populateFields());
+      }
+      this.state.formType = "edit";
     }
     this.focusFirstElement();
     window.scrollTo(0, 0);
