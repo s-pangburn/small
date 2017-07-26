@@ -17,14 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const store = createStore();
   ReactDOM.render(<Root store={store}/>, root);
 
+  document.body.style.zoom = 0.9;
+
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-
-  window.requestAllStories = requestAllStories;
-  window.requestStory = requestStory;
-  window.createStory = createStory;
-  window.updateStory = updateStory;
-  window.deleteStory = deleteStory;
 });
 
 const createStore = () => {
