@@ -11,6 +11,7 @@ class FeedItem extends React.Component {
 
   render() {
     const storyUrl = `/stories/${this.state.story.id}`;
+    const date = new Date(this.props.story.created_at);
 
     return (
       <div className="feedItem">
@@ -38,7 +39,9 @@ class FeedItem extends React.Component {
           <section className="author">
             <span>{this.state.story.author.username}</span>
             <br/>
-            <span className="date">{this.state.story.created_at.slice(0, 10)}</span>
+            <span className="date">{
+                `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+              }</span>
           </section>
         </section>
       </div>

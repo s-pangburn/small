@@ -24,6 +24,12 @@ class User < ActiveRecord::Base
     class_name: :Story,
     dependent: :destroy
 
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Comment,
+    dependent: :destroy
+
   after_initialize :ensure_session_token
 
   def password=(password)

@@ -30,12 +30,16 @@ class StoryView extends React.Component {
 
   render() {
     if (this.props.story) {
+      const date = new Date(this.props.story.created_at);
+
       return (
         <section className="story">
           <Link className="back" to="/">{"<<Back"}</Link>
 
           <p className="authorWidget">
-            {this.props.story.created_at.slice(0, 10)}
+            <span className="date">{
+                `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+              }</span>
             &nbsp;|&nbsp;
             Written by: {this.props.story.author.username}
             {(this.props.loggedIn &&
@@ -69,7 +73,9 @@ class StoryView extends React.Component {
           </section>
 
           <p className="authorWidget">
-            {this.props.story.created_at.slice(0, 10)}
+            <span className="date">{
+                `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+              }</span>
             &nbsp;|&nbsp;
             Written by: {this.props.story.author.username}
             {(this.props.loggedIn &&
