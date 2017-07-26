@@ -131,9 +131,6 @@
 }
 
 .story img {
-  position: absolute;
-  left: 0;
-  right: 0;
   margin-left: auto;
   margin-right:auto;
   width: 850px;
@@ -144,12 +141,6 @@
 .story img {
   display: block;
   margin: 0 auto;
-  width: 850px;
-}
-
-.story .dummyImg {
-  position: static;
-  display: block;
   width: 850px;
 }
 

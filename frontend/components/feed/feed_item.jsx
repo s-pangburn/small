@@ -15,6 +15,7 @@ class FeedItem extends React.Component {
     return (
       <div className="feedItem">
         <div className="imageContainer">
+          <Link to={ storyUrl }>
           {(this.props.story.image_url) ? (
                 <img src={this.props.story.image_url}
                   alt={ this.state.story.title }/>
@@ -23,6 +24,7 @@ class FeedItem extends React.Component {
               style={{"filter": "grayscale(100%)"}}
               alt={ this.state.story.title }/>
           ) }
+          </Link>
         </div>
         <section className="storyInfo">
           <section className="description">
