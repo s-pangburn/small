@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import Comments from './comments';
-import { commentsByStoryId } from '../../reducers/selectors';
+import CommentForm from './comment_form';
 
 import {
-  requestAllComments,
+  createComment,
   updateComment,
   deleteComment
 } from '../../actions/comment_actions';
@@ -11,15 +10,13 @@ import {
 import { resetErrors } from '../../actions/error_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  loggedIn: Boolean(state.session.currentUser),
   currentUser: state.session.currentUser,
-  comments: commentsByStoryId(state, ownProps.storyId),
   storyId: ownProps.storyId,
   errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestAllComments: () => dispatch(requestAllComments()),
+  createComment: comment => dispatch(createComment(comment)),
   updateComment: comment => dispatch(updateComment(comment)),
   deleteComment: comment => dispatch(deleteComment(comment)),
   resetErrors: () => dispatch(resetErrors())
@@ -28,4 +25,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Comments);
+)(CommentForm);

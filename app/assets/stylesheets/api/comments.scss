@@ -23,6 +23,7 @@
 }
 
 .avatar {
+  flex: 0;
   width: 48px;
   border-radius: 50%;
   display: inline-block;
@@ -34,7 +35,7 @@
   margin-bottom: 80px;
   padding: 10px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 25px;
   align-items: center;
   width: 570px;
   min-height: 35px;
@@ -58,6 +59,8 @@
 }
 
 .commentForm .publish {
+  margin-left: 5px;
+  flex: -1;
   align-self: flex-end;
   font-weight: bold;
 }
@@ -74,6 +77,16 @@
   border: 1px solid lightgrey;
   border-radius: 2px;
   background-color: white;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.options span {
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .userInfo {
@@ -102,4 +115,5 @@
   font-family: Georgia;
   font-size: 20px;
   font-weight: normal;
+  line-height: 1.25;
 }

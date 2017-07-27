@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentFormContainer from './comment_form_container';
 
 class Comments extends React.Component {
   componentDidMount() {
@@ -7,40 +8,19 @@ class Comments extends React.Component {
 
   constructor(props) {
     super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
 
-    this.state = {
-      body: "",
-      author_id: this.props.currentUser.id,
-      story_id: this.props.storyId
+  handleDelete(commentId) {
+    return () => {
+      this.props.deleteComment(commentId);
     };
-
-    this.handlePublish = this.handlePublish.bind(this);
-  }
-
-  update(item) {
-    return event => this.setState({ [item]: event.currentTarget.value });
-  }
-
-  handlePublish() {
-    event.preventDefault();
-    this.setState({ body: "" });
-    this.props.createComment(this.state)
-      .then( () => window.scrollTo(0,document.body.scrollHeight) );
   }
 
   render() {
     return (
       <section className="comments">
-        <div className="commentForm">
-          <img className="avatar"
-            src="http://res.cloudinary.com/dzeqeo9b3/image/upload/r_0/v1501173171/avatar_default_wkpp05.png"/>
-          <textarea
-            onChange={this.update("body")}
-            placeholder="Write a response..."
-            value={this.state.body}
-            ></textarea>
-          <span className="publish link" onClick={ this.handlePublish }>Publish</span>
-        </div>
+        <CommentFormContainer storyId={this.props.storyId}/>
 
         {this.props.comments.length > 0 ? (
           <span className="responsesHeader">Responses</span>
@@ -53,14 +33,24 @@ class Comments extends React.Component {
 
           return (
             <div key={comment.id} className="comment">
-              <div className="userInfo">
-                <img className="avatar"
-                  src="http://res.cloudinary.com/dzeqeo9b3/image/upload/r_0/v1501173171/avatar_default_wkpp05.png"/>
-                <div>
-                  <span className="username link">{comment.author.username}</span><br/>
-                  <span className="date">{date.toDateString()}</span>
+              <section className="top">
+                <div className="userInfo">
+                  <img className="avatar"
+                    src="http://res.cloudinary.com/dzeqeo9b3/image/upload/r_0/v1501173171/avatar_default_wkpp05.png"/>
+                  <div>
+                    <span className="username link">{comment.author.username}</span><br/>
+                    <span className="date">{date.toDateString()}</span>
+                  </div>
                 </div>
-              </div>
+                {(this.props.loggedIn &&
+                  this.props.currentUser.username ===
+                  comment.author.username) ? (
+                    <div className="options">
+                      <span className="link">Edit</span>
+                      <span className="link" onClick={this.handleDelete(comment.id)}>Delete</span>
+                    </div>
+                ) : null}
+              </section>
               <p>{comment.body}</p>
             </div>
           );
