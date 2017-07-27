@@ -42,7 +42,7 @@ class StoryView extends React.Component {
 
             <p className="authorWidget">
               <span className="date">{
-                  `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+                  `${date.toDateString()}`
                 }</span>
               &nbsp;|&nbsp;
               Written by: {this.props.story.author.username}
@@ -78,7 +78,7 @@ class StoryView extends React.Component {
 
             <p className="authorWidget">
               <span className="date">{
-                  `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+                  `${date.toDateString()}`
                 }</span>
               &nbsp;|&nbsp;
               Written by: {this.props.story.author.username}
@@ -96,7 +96,7 @@ class StoryView extends React.Component {
                 </span>
               ) : null }
             </p>
-            
+
           </section>
           <CommentsContainer storyId={this.props.story.id}/>
         </div>

@@ -4,11 +4,11 @@
 
 .comments {
   background-color: #fafafa;
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 50px;
 }
 
-.responses-header {
+.responsesHeader {
   display: block;
   width: 632px;
   margin: 0 auto;
@@ -22,6 +22,40 @@
   width: 48px;
   border-radius: 50%;
   display: inline-block;
+}
+
+.commentForm {
+  display:flex;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  width: 570px;
+  min-height: 35px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.commentForm textarea {
+  flex: 1;
+  margin-top: 13px;
+  margin-left: 15px;
+  height: 35px;
+  font-size: 20px;
+  font-family: Georgia;
+  border: none;
+}
+
+.commentForm textarea:focus {
+  outline: none;
+}
+
+.commentForm .publish {
+  align-self: flex-end;
+  font-weight: bold;
 }
 
 .comment {
