@@ -6,7 +6,7 @@ class CommentForm extends React.Component {
 
     this.state = {
       body: "",
-      author_id: this.props.currentUser.id,
+      author_id: "",
       story_id: this.props.storyId
     };
 
@@ -19,9 +19,10 @@ class CommentForm extends React.Component {
 
   handlePublish() {
     event.preventDefault();
-    this.setState({ body: "" });
+    this.state.author_id = this.props.currentUser.id;
     this.props.createComment(this.state)
       .then( () => window.scrollTo(0,document.body.scrollHeight) );
+    this.setState({ body: "" });
   }
 
   render() {

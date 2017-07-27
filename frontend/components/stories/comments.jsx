@@ -18,9 +18,12 @@ class Comments extends React.Component {
   }
 
   render() {
+    console.error(this.props);
     return (
       <section className="comments">
-        <CommentFormContainer storyId={this.props.storyId}/>
+        { this.props.loggedIn ? (
+          <CommentFormContainer storyId={this.props.storyId}/>
+        ) : null }
 
         {this.props.comments.length > 0 ? (
           <span className="responsesHeader">Responses</span>
