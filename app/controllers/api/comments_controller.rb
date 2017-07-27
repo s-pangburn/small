@@ -1,6 +1,10 @@
 class Api::CommentsController < ApplicationController
   before_action :require_login, only: [:create, :update, :destroy]
 
+  def index
+    @comments = Comment.all
+  end
+
   def create
     @comment = Comment.new(comment_params)
     @comment.author_id = current_user.id

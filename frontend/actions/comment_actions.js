@@ -5,6 +5,14 @@ export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
+export const requestAllComments = () => dispatch => (
+  APIUtil.fetchAllComments().then( comments => (
+    dispatch(receiveAllComments(comments))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
+  ))
+);
+
 export const requestComment = id => dispatch => (
   APIUtil.fetchComment(id).then(comment => (
     dispatch(receiveComment(comment))
@@ -37,9 +45,9 @@ export const deleteComment = comment => dispatch => (
   ))
 );
 
-export const receiveAllStories = stories => ({
+export const receiveAllComments = comments => ({
   type: RECEIVE_COMMENTS,
-  stories
+  comments
 });
 
 export const receiveComment = comment => ({

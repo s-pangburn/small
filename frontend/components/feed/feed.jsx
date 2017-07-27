@@ -5,6 +5,7 @@ import FeedItem from './feed_item';
 class Feed extends React.Component {
   componentDidMount() {
     this.props.requestAllStories();
+    this.props.requestAllComments();
   }
 
   constructor(props) {

@@ -3,9 +3,7 @@ import merge from 'lodash/merge';
 import {
   RECEIVE_STORIES,
   RECEIVE_STORY,
-  REMOVE_STORY,
-  RECEIVE_ERRORS,
-  RESET_ERRORS
+  REMOVE_STORY
 } from '../actions/story_actions';
 
 const defaultState = {};

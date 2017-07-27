@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class StoryView extends React.Component {
   componentDidMount() {
     this.props.requestStory(this.props.match.params.storyId);
+    this.props.requestAllComments();
     window.scrollTo(0, 0);
   }
 
@@ -13,7 +14,6 @@ class StoryView extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(this.props.story);
 
     this.handleDelete = this.handleDelete.bind(this);
   }
