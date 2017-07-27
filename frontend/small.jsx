@@ -8,7 +8,7 @@ import {
   createComment,
   updateComment,
   deleteComment
-} from './util/comment_api_util';
+} from './actions/comment_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
