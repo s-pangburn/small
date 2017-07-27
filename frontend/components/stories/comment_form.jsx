@@ -14,7 +14,16 @@ class CommentForm extends React.Component {
   }
 
   update(item) {
-    return event => this.setState({ [item]: event.currentTarget.value });
+    return event => {
+      this.setState({ [item]: event.currentTarget.value });
+      this.autoSize(event);
+    };
+  }
+
+  autoSize(event) {
+    const el = event.currentTarget;
+    el.style.height = "35px";
+    el.style.height = (el.scrollHeight)+"px";
   }
 
   handlePublish() {

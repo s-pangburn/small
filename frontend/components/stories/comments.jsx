@@ -26,7 +26,11 @@ class Comments extends React.Component {
 
         {this.props.comments.map(comment => {
           return (
-            <CommentItem key={comment.id} comment={comment}/>
+            <CommentItem
+              key={comment.id}
+              comment={comment}
+              currentUser={this.props.currentUser}
+              loggedIn={this.props.loggedIn}/>
           );
         })}
 

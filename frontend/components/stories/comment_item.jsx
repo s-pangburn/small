@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 class CommentItem extends React.Component {
   constructor(props) {
@@ -8,21 +9,38 @@ class CommentItem extends React.Component {
       id: this.props.comment.id,
       body: this.props.comment.body,
       author_id: this.props.comment.author.id,
-      story_id: this.props.comment.story_id
+      story_id: this.props.comment.story_id,
+      showForm: false
     };
 
     this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.autoSize = this.autoSize.bind(this);
+  }
+
+  update(item) {
+    return event => {
+      this.setState({ [item]: event.currentTarget.value });
+      this.autoSize(event);
+    };
   }
 
   handleEdit() {
-    //Nothing
+    event.preventDefault();
+    this.setState({ showForm: !this.state.showForm });
   }
 
   handleDelete() {
+    event.preventDefault();
     return () => {
       this.props.deleteComment(this.state.id);
     };
+  }
+
+  autoSize(event) {
+    const el = event.currentTarget;
+    el.style.height = "35px";
+    el.style.height = (el.scrollHeight)+"px";
   }
 
   render() {
@@ -52,7 +70,24 @@ class CommentItem extends React.Component {
           ) : null}
         </section>
 
-        <p>{comment.body}</p>
+        <p
+          className={
+            classNames({
+              hidden: this.state.showForm
+            })
+          }
+        >{comment.body}</p>
+        <textarea
+          className={
+            classNames({
+              editForm: true,
+              hidden: !this.state.showForm
+            })
+          }
+          onChange={this.update("body")}
+          onLoad={this.autoSize}
+          value={this.state.body}
+        ></textarea>
       </div>
     );
   }

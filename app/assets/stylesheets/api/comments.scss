@@ -44,6 +44,11 @@
   background-color: white;
 }
 
+.commentForm .avatar {
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
 .commentForm textarea {
   flex: 1;
   margin-top: 13px;
@@ -116,4 +121,13 @@
   font-size: 20px;
   font-weight: normal;
   line-height: 1.25;
+}
+
+.comment .editForm {
+  height: auto;
+  width: 570px;
+  font-family: Georgia;
+  font-size: 20px;
+  border: none;
+  outline: none;
 }
