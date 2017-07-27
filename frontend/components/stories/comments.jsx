@@ -42,7 +42,11 @@ class Comments extends React.Component {
           <span className="publish link" onClick={ this.handlePublish }>Publish</span>
         </div>
 
-        <span className="responsesHeader">Responses</span>
+        {this.props.comments.length > 0 ? (
+          <span className="responsesHeader">Responses</span>
+        ) : (
+          <span className="noResponses">No responses yet</span>
+        )}
 
         {this.props.comments.map(comment => {
           const date = new Date(comment.created_at);

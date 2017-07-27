@@ -8,7 +8,7 @@
   padding-bottom: 50px;
 }
 
-.responsesHeader {
+.responsesHeader, .noResponses {
   display: block;
   width: 632px;
   margin: 0 auto;
@@ -16,6 +16,10 @@
   font-family: 'PT Sans';
   font-size: 16px;
   color: grey;
+}
+
+.noResponses {
+  width: 120px;
 }
 
 .avatar {
