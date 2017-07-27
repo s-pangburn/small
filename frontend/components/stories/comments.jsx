@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentFormContainer from './comment_form_container';
+import CommentItem from './comment_item';
 
 class Comments extends React.Component {
   componentDidMount() {
@@ -8,17 +9,9 @@ class Comments extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleDelete = this.handleDelete.bind(this);
-  }
-
-  handleDelete(commentId) {
-    return () => {
-      this.props.deleteComment(commentId);
-    };
   }
 
   render() {
-    console.error(this.props);
     return (
       <section className="comments">
         { this.props.loggedIn ? (
@@ -32,30 +25,8 @@ class Comments extends React.Component {
         )}
 
         {this.props.comments.map(comment => {
-          const date = new Date(comment.created_at);
-
           return (
-            <div key={comment.id} className="comment">
-              <section className="top">
-                <div className="userInfo">
-                  <img className="avatar"
-                    src="http://res.cloudinary.com/dzeqeo9b3/image/upload/r_0/v1501173171/avatar_default_wkpp05.png"/>
-                  <div>
-                    <span className="username link">{comment.author.username}</span><br/>
-                    <span className="date">{date.toDateString()}</span>
-                  </div>
-                </div>
-                {(this.props.loggedIn &&
-                  this.props.currentUser.username ===
-                  comment.author.username) ? (
-                    <div className="options">
-                      <span className="link">Edit</span>
-                      <span className="link" onClick={this.handleDelete(comment.id)}>Delete</span>
-                    </div>
-                ) : null}
-              </section>
-              <p>{comment.body}</p>
-            </div>
+            <CommentItem key={comment.id} comment={comment}/>
           );
         })}
 
