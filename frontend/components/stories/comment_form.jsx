@@ -38,7 +38,7 @@ class CommentForm extends React.Component {
     return (
       <div className="commentForm">
         <img className="avatar"
-          src="http://res.cloudinary.com/dzeqeo9b3/image/upload/r_0/v1501173171/avatar_default_wkpp05.png"/>
+          src="https://res.cloudinary.com/dzeqeo9b3/image/upload/v1501173171/avatar_default_wkpp05.png"/>
         <textarea
           onChange={this.update("body")}
           placeholder="Write a response..."

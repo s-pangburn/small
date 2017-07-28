@@ -62,7 +62,7 @@ class CommentItem extends React.Component {
 
           <div className="userInfo">
             <img className="avatar"
-              src="http://res.cloudinary.com/dzeqeo9b3/image/upload/r_0/v1501173171/avatar_default_wkpp05.png"/>
+              src="https://res.cloudinary.com/dzeqeo9b3/image/upload/v1501173171/avatar_default_wkpp05.png"/>
             <div>
               <span className="username link">{comment.author.username}</span><br/>
               <span className="date">{date.toDateString()}</span>
