@@ -19,7 +19,8 @@ class StoryForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.location.pathname === "/stories/new") {
+    if (nextProps.location.pathname === "/stories/new" &&
+        this.props.location.pathname !== "/stories/new") {
       this.state = {
         id: undefined,
         title: "",
