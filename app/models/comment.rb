@@ -11,7 +11,7 @@
 #
 
 class Comment < ActiveRecord::Base
-  validates :body, :author_id, :story_id, presence: true
+  validates :body, :author, :story, presence: true
 
   belongs_to :author,
     primary_key: :id,

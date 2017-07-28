@@ -30,6 +30,30 @@ class User < ActiveRecord::Base
     class_name: :Comment,
     dependent: :destroy
 
+  has_many :following,
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: :Follow
+
+  has_many :followees,
+    through: :following,
+    source: :followee
+
+  has_many :follows,
+    primary_key: :id,
+    foreign_key: :followee_id,
+    class_name: :Follow
+
+  has_many :followers,
+    through: :follows,
+    source: :follower
+
+  has_many :likes
+
+  has_many :liked_stories,
+    through: :likes,
+    source: :story
+
   after_initialize :ensure_session_token
 
   def password=(password)
