@@ -59,12 +59,13 @@ class StoryView extends React.Component {
                     onClick={this.handleDelete}>Delete Story</span>
                 </span>
               ) : (
-                <span>
-                  &nbsp;|&nbsp;
-                  <span className="link">Like Story</span>
-                  &nbsp;|&nbsp;
-                  <span className="link">Follow User</span>
-                </span>
+                // <span>
+                //   &nbsp;|&nbsp;
+                //   <span className="link">Like Story</span>
+                //   &nbsp;|&nbsp;
+                //   <span className="link">Follow User</span>
+                // </span>
+                null
               ) }
             </p>
 
@@ -101,14 +102,7 @@ class StoryView extends React.Component {
                   <span className="link"
                     onClick={this.handleDelete}>Delete Story</span>
                 </span>
-              ) : (
-                <span>
-                  &nbsp;|&nbsp;
-                  <span className="link">Like Story</span>
-                  &nbsp;|&nbsp;
-                  <span className="link">Follow User</span>
-                </span>
-              ) }
+              ) : null }
             </p>
 
           </section>

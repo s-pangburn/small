@@ -186,7 +186,7 @@ Donec tristique sed dolor non tincidunt. Ut facilisis tincidunt fermentum. Nam c
 Comment.create!(
   body: "Interesting...",
   story_id: ecclesiastes.id,
-  author_id: user1.id
+  author_id: user5.id
 )
 
 Comment.create!(
@@ -198,13 +198,13 @@ Comment.create!(
 Comment.create!(
   body: "Uhhhhh",
   story_id: ecclesiastes.id,
-  author_id: user1.id
+  author_id: user3.id
 )
 
 Comment.create!(
   body: "That's pretty cool.",
   story_id: ecclesiastes.id,
-  author_id: user1.id
+  author_id: user4.id
 )
 
 Comment.create!(
@@ -222,7 +222,7 @@ Comment.create!(
 Comment.create!(
   body: "I don't get it.",
   story_id: zulu.id,
-  author_id: user1.id
+  author_id: user5.id
 )
 
 Comment.create!(
