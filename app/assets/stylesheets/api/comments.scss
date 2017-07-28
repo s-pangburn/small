@@ -123,23 +123,30 @@
   font-size: 20px;
   font-weight: normal;
   line-height: 1.25;
+  white-space: pre-wrap;
 }
 
 .comment .editForm {
   position: relative;
-  margin-top: 18px;
-  left: -2px;
+  margin-top: 16px;
+  left: -4px;
   width: 570px;
   font-family: Georgia;
   font-size: 20px;
   line-height: 1.25;
-  border: none;
+  border: 2px solid white;
   outline: none;
+}
+
+.comment .editForm:focus {
+  border: 2px solid rgb(50, 245, 170);
+  border-radius: 2px;
 }
 
 .comment .updateOptions {
   display: flex;
   justify-content: flex-end;
+  margin-top: 10px;
 }
 
 .comment .update {
