@@ -58,7 +58,14 @@ class StoryView extends React.Component {
                   <span className="link"
                     onClick={this.handleDelete}>Delete Story</span>
                 </span>
-              ) : null }
+              ) : (
+                <span>
+                  &nbsp;|&nbsp;
+                  <span className="link">Like Story</span>
+                  &nbsp;|&nbsp;
+                  <span className="link">Follow User</span>
+                </span>
+              ) }
             </p>
 
             <h1>{this.props.story.title}</h1>
@@ -94,7 +101,14 @@ class StoryView extends React.Component {
                   <span className="link"
                     onClick={this.handleDelete}>Delete Story</span>
                 </span>
-              ) : null }
+              ) : (
+                <span>
+                  &nbsp;|&nbsp;
+                  <span className="link">Like Story</span>
+                  &nbsp;|&nbsp;
+                  <span className="link">Follow User</span>
+                </span>
+              ) }
             </p>
 
           </section>
