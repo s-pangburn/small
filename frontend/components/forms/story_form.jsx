@@ -92,14 +92,14 @@ class StoryForm extends React.Component {
 
     if (this.state.formType === "new") {
       this.props.createStory(this.state)
-        .then(({ story }) => {
-          this.props.history.push(`/stories/${story.id}`);
-        }, () => window.scrollTo(0, 0) );
+                .then(({ story }) => {
+                  this.props.history.push(`/stories/${story.id}`);
+                }, (errors) => window.scrollTo(0, 0) ); // View errors at top of page
     } else {
       this.props.updateStory(this.state)
-        .then(({ story }) => {
-          this.props.history.push(`/stories/${story.id}`);
-        }, () => window.scrollTo(0, 0));
+                .then(({ story }) => {
+                  this.props.history.push(`/stories/${story.id}`);
+                }, (errors) => window.scrollTo(0, 0));
     }
   }
 

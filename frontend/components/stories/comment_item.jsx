@@ -46,7 +46,6 @@ class CommentItem extends React.Component {
   }
 
   autoSize(event) {
-    console.log("I've been called!");
     const el = event.currentTarget;
     el.style.height = "35px";
     el.style.height = (el.scrollHeight)+"px";
