@@ -117,7 +117,9 @@ In addition to the included packages, [Cloudinary][cloudinary] was used for imag
 ### Additional Resources
 
 [Proposal Wireframes][wireframes]
+
 [API Endpoints][apiEndPoints]
+
 [Database Schema][dbSchema]
 
 [wireframes]: docs/wireframes
