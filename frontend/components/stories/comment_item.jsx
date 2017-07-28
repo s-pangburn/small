@@ -13,7 +13,8 @@ class CommentItem extends React.Component {
       showForm: false
     };
 
-    this.handleEdit = this.handleEdit.bind(this);
+    this.toggleEdit = this.toggleEdit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.autoSize = this.autoSize.bind(this);
   }
@@ -25,7 +26,7 @@ class CommentItem extends React.Component {
     };
   }
 
-  handleEdit() {
+  toggleEdit() {
     event.preventDefault();
     this.setState({ showForm: !this.state.showForm });
   }
@@ -37,7 +38,15 @@ class CommentItem extends React.Component {
     };
   }
 
+  handleUpdate() {
+    event.preventDefault();
+    this.state.author_id = this.props.currentUser.id;
+    this.props.updateComment(this.state)
+      .then( () => this.setState({ showForm: false }) );
+  }
+
   autoSize(event) {
+    console.log("I've been called!");
     const el = event.currentTarget;
     el.style.height = "35px";
     el.style.height = (el.scrollHeight)+"px";
@@ -62,32 +71,37 @@ class CommentItem extends React.Component {
 
           {(this.props.loggedIn &&
             this.props.currentUser.username ===
-            comment.author.username) ? (
+            comment.author.username &&
+            !this.state.showForm) ? (
               <div className="options">
-                <span className="link" onClick={this.handleEdit}>Edit</span>
+                <span className="link" onClick={this.toggleEdit}>Edit</span>
                 <span className="link" onClick={this.handleDelete(comment.id)}>Delete</span>
               </div>
           ) : null}
         </section>
 
-        <p
-          className={
-            classNames({
-              hidden: this.state.showForm
-            })
-          }
-        >{comment.body}</p>
-        <textarea
-          className={
-            classNames({
-              editForm: true,
-              hidden: !this.state.showForm
-            })
-          }
-          onChange={this.update("body")}
-          onLoad={this.autoSize}
-          value={this.state.body}
-        ></textarea>
+        { this.state.showForm ? (
+          <section className="edit">
+            <textarea
+              className="editForm"
+              onChange={this.update("body")}
+              autoFocus
+              onFocus={this.autoSize}
+              value={this.state.body}
+              ></textarea>
+
+            <div className="updateOptions">
+              <span
+                className="link update"
+                onClick={this.toggleEdit}>Cancel</span>
+              <span
+                className="link update"
+                onClick={this.handleUpdate}>Update</span>
+            </div>
+          </section>
+        ) : (
+          <p>{comment.body}</p>
+        )}
       </div>
     );
   }
