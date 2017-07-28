@@ -18,7 +18,7 @@ The project was designed and built within a two-week timeframe, though I plan to
 
 The story creation and editing page is modest at first glance:
 
-<!-- ![Small story editing page](docs/images/edit_story.gif) -->
+![Small story editing page](docs/images/edit_story.gif)
 
 Users can add stories with a minimum of the title and body. There is an optional description element as well as support for image uploading. Each story's show page contains additional information about the author as well as the date it was published.
 
@@ -65,13 +65,13 @@ And when errors inevitably appear, debugging only needs to happen in one central
 
 ### Creating and updating comments
 
-<!-- ![Small comment creation demo](docs/images/adding_comment.gif) -->
+![Small comment creation demo](docs/images/adding_comment.gif)
 
 Comments are added to the story page dynamically using React and Redux's render and subscription features, respectively. Because of this, changes in state are reflected immediately upon request completion, without any need for additional DOM manipulation.
 
 In addition, editing comments occurs "directly" in the comment thread, with updates occurring immediately after submit. The textarea element adapts its size dynamically to fit the contents of the container.
 
-<!-- ![Small comment update demo](docs/images/editing_comment.gif) -->
+![Small comment update demo](docs/images/editing_comment.gif)
 
 This was accomplished through a hidden form element that is conditionally rendered with an autofocus property. The autofocus property triggers an onfocus event that acts as a pseudo-initialization for the element, which then begins to update in real-time:
 
