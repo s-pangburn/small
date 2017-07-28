@@ -19,7 +19,7 @@ user3 = User.create!(username: "Doorman", password: "123123", email: "doorman@do
 user4 = User.create!(username: "Napoleon (Hill)", password: "123123", email: "napoleon@no.notthatone")
 user5 = User.create!(username: "Lao Tzu", password: "123123", email: "laotzu@dao.wisdom")
 
-Story.create!(
+ecclesiastes = Story.create!(
   title: "Ecclesiastes",
   description: "There is nothing new under the sun",
   body: "So I reflected on all this and concluded that the righteous and the wise and what they do are in God’s hands, but no one knows whether love or hate awaits them. All share a common destiny—the righteous and the wicked, the good and the bad, the clean and the unclean, those who offer sacrifices and those who do not.
@@ -80,7 +80,7 @@ Moreover, no one knows when their hour will come:
   author_id: user2.id
 )
 
-Story.create!(
+doors = Story.create!(
   title: "Fifteen Doors and How to Open Them",
   description: "The Definitive Guide",
   body: "Duis vel odio leo. Donec et consequat odio. Nam blandit neque dictum velit pulvinar rutrum. Cras massa ligula, eleifend ut aliquam sed, vestibulum a sem. Sed in tortor hendrerit, sagittis diam at, pellentesque ligula. Sed efficitur dui nec nisl suscipit commodo. Etiam finibus et urna eu facilisis. Nunc condimentum laoreet ultricies. Sed eu mauris felis. Mauris urna nisl, volutpat quis porttitor sodales, auctor vel mauris. Mauris erat elit, hendrerit a aliquam non, suscipit quis ipsum. Aenean ultricies, leo eget faucibus euismod, metus mi mattis eros, sit amet pulvinar lorem erat ut metus. Fusce tincidunt, enim a ultrices facilisis, mauris lorem tincidunt diam, quis posuere metus lectus et leo. Nullam ut enim non ante suscipit convallis. Donec aliquet metus a mauris malesuada, ut sodales sem tempor. Quisque bibendum bibendum sodales.
@@ -106,7 +106,7 @@ In lorem dolor, rutrum ut laoreet vel, dignissim vitae nulla. Suspendisse molest
   author_id: user3.id
 )
 
-Story.create!(
+great_things = Story.create!(
   title: "If you cannot do great things, do small things in a great way",
   description: "Wisdom from Napoleon (Hill)",
   body: "Duis vestibulum arcu at nisl feugiat, sed elementum erat dictum. Nam sit amet varius dolor, dictum fermentum diam. Vestibulum elit orci, laoreet vitae nisl rutrum, suscipit placerat urna. Vestibulum mollis neque ac vestibulum dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sit amet tempus neque, eu tempus dui. Aliquam pharetra ex nibh, sed dapibus magna iaculis eu. Fusce ornare turpis at pretium fermentum. Ut tempus condimentum eros, et venenatis felis facilisis quis. Curabitur semper nulla vel mi dapibus, a dapibus velit consectetur. Donec aliquet consectetur nisi eget faucibus. Donec eu mauris consectetur, ultrices sapien et, dictum justo. Vestibulum faucibus est sed ullamcorper finibus.
@@ -118,7 +118,7 @@ Donec venenatis augue dui, eu volutpat mi sagittis ut. Sed in elit sollicitudin,
   author_id: user4.id
 )
 
-Story.create!(
+smallest = Story.create!(
   title: "World's top 10 smallest apps",
   description: "The littlest of the littlest",
   body: "1. Small by Stephen Pangburn
@@ -144,7 +144,7 @@ Story.create!(
   author_id: user2.id
 )
 
-Story.create!(
+journey = Story.create!(
   title: "A Journey of a Thousand Miles",
   description: "Do the difficult things while they are easy and do the great things while they are small.",
   body: "Integer mollis nec ante quis sagittis. Etiam vel risus vitae tortor luctus finibus vel in enim. Aenean non semper felis. Nullam a felis blandit, luctus magna quis, consectetur tortor. Cras finibus venenatis ligula, non placerat lorem consectetur in. Curabitur bibendum tellus vitae orci lacinia, ut porta neque commodo. Sed quis ex porttitor orci vulputate facilisis. Maecenas ac bibendum odio, et eleifend ligula. Praesent purus turpis, congue a ipsum in, ullamcorper condimentum dolor. Nam laoreet neque eu venenatis mollis. Phasellus quam quam, tincidunt vel ipsum id, gravida vestibulum enim. Ut at interdum justo, at finibus ex. Etiam finibus massa eget ipsum dignissim, vel tincidunt ante dictum.
@@ -154,7 +154,7 @@ Suspendisse ac ligula ut orci faucibus facilisis. Fusce maximus sed leo ut laore
   author_id: user5.id
 )
 
-Story.create!(
+zulu = Story.create!(
   title: "This is a story",
   description: "About Zulu",
   body: "Donec laoreet odio in auctor viverra. Fusce quis auctor risus. Aliquam erat volutpat. Suspendisse justo ligula, varius vitae congue et, auctor ut leo. Ut consectetur vestibulum lacinia. Nulla enim lectus, posuere condimentum tincidunt quis, mollis eu neque. Etiam tristique sagittis vehicula.
@@ -169,7 +169,7 @@ Ut lacinia commodo fermentum. Nam vulputate ipsum viverra turpis ultricies posue
   author_id: user1.id
 )
 
-Story.create!(
+pigeon = Story.create!(
   title: "How to Tame a Pigeon",
   description: "100% Guarantee",
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique, lorem nec posuere consequat, est sapien cursus ipsum, eget laoreet mauris tortor sit amet purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer hendrerit, nunc nec lacinia sagittis, nibh leo maximus ligula, eget vestibulum tortor leo quis tortor. Nullam a sapien nec nulla molestie malesuada in sit amet massa. Nullam nec diam sed tortor congue convallis. Donec vel ornare purus. Quisque pellentesque tempor enim non feugiat. Quisque pharetra quis velit sed accumsan. Curabitur euismod sed justo a dictum. Cras ut sapien egestas, dictum tortor nec, viverra sapien. Aliquam orci lorem, tristique sit amet ex at, dignissim eleifend diam. Morbi euismod maximus venenatis. Nunc dapibus neque enim, ac bibendum est efficitur a.
@@ -180,6 +180,54 @@ Aliquam erat volutpat. Morbi semper lacinia purus, eu ultricies nunc laoreet vel
 
 Donec tristique sed dolor non tincidunt. Ut facilisis tincidunt fermentum. Nam consectetur mattis vehicula. Mauris vulputate sed urna sit amet posuere. Cras ut orci metus. Ut dapibus diam sed elementum laoreet. Integer bibendum libero massa, quis ultrices quam ornare eu. Vestibulum aliquam ante in elit auctor venenatis. Maecenas vel tempus nibh, in congue est. Proin vel tortor vitae arcu faucibus dapibus ac id leo. Nullam bibendum tortor eget enim volutpat, commodo euismod ante faucibus.",
   image_url: "1041uuu_cherry_blossom.gif",
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "Interesting...",
+  story_id: ecclesiastes.id,
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "Nulla semper pretium lacus vel varius. Cras luctus et est a elementum. Quisque erat ipsum, placerat quis consequat in, congue in neque. Mauris sagittis est nec nulla scelerisque, aliquam tempor metus dignissim. Lorem ipsum dolor sit amet, consectetur adipisci.",
+  story_id: ecclesiastes.id,
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "Uhhhhh",
+  story_id: ecclesiastes.id,
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "That's pretty cool.",
+  story_id: ecclesiastes.id,
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "That's deep, bro.",
+  story_id: great_things.id,
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "I sense some bias here...",
+  story_id: smallest.id,
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "I don't get it.",
+  story_id: zulu.id,
+  author_id: user1.id
+)
+
+Comment.create!(
+  body: "Clickbait",
+  story_id: pigeon.id,
   author_id: user1.id
 )
 
