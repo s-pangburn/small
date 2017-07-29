@@ -28,7 +28,10 @@ class CommentItem extends React.Component {
 
   toggleEdit() {
     event.preventDefault();
-    this.setState({ showForm: !this.state.showForm });
+    this.setState({
+      showForm: !this.state.showForm ,
+      body: this.props.comment.body  // Reset body element when cancelled
+    });
   }
 
   handleDelete() {

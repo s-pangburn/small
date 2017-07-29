@@ -102,13 +102,13 @@ This was accomplished through a hidden form element that is conditionally render
 
 ## Project Design
 
-Small was designed with simplicity and elegance as its primary goals. Considering the two-week time period, it was decided to focus on a small core set of features that ran smoothly and prioritized keeping code manageable over hitting all major features, with the interest of providing a solid foundation to build on for the future in mind.
+Small was designed with simplicity and elegance as its primary goals. Considering the two-week time period, it was decided to focus on a core set of features that ran smoothly and bug-free. Keeping code manageable was prioritized over hitting every target, in the interest of providing a solid codebase to build upon for the future.
 
 ## Technologies
 
-Rails was chosen due to its out-of-the-box support for relational databases and RESTful architecture. Because React is being used on the frontend, Rails' API primarily serves up JSON.
+Rails was chosen due to its out-of-the-box support for relational databases and RESTful architecture. Because React is being used on the frontend, the Rails API primarily serves JSON.
 
-Frontend Flux states are set up in a way such that there are separate reducers and actions for stories, comments, users, and errors. This keeps the code modular and eases the task of keeping the state up-to-date.
+Frontend Flux states are set up in a way such that there are separate reducers and actions for stories, comments, users, and errors. This keeps the code modular and eases the task of keeping the state up-to-date with changes in the database.
 
 In addition to the included packages, [Cloudinary][cloudinary] was used for image uploading.
 
@@ -125,6 +125,7 @@ In addition to the included packages, [Cloudinary][cloudinary] was used for imag
 
 ## Possible future features
 
+In the future I would like to add:
   * User pages
   * Follows
   * Personalized feed
