@@ -18,7 +18,7 @@ The project was designed and built within a two-week timeframe, though I plan to
 
 The story creation and editing page is modest at first glance:
 
-![Small story editing page](docs/images/edit_story.gif)
+![Small story editing page](docs/images/edit_story.png)
 
 Users can add stories with a minimum of the title and body. There is an optional description element as well as support for image uploading. Each story's show page contains additional information about the author as well as the date it was published.
 
