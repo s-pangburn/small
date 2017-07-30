@@ -16,11 +16,11 @@ The project was designed and built within a two-week timeframe, though I plan to
 
 ### Story editing and conditional rendering
 
+Users can add stories with a minimum of the title and body. There is an optional description element as well as support for image uploading. Each story's show page contains additional information about the author as well as the date it was published.
+
 The story creation and editing page is modest at first glance:
 
 ![Small story editing page](docs/images/edit_story.png)
-
-Users can add stories with a minimum of the title and body. There is an optional description element as well as support for image uploading. Each story's show page contains additional information about the author as well as the date it was published.
 
 To keep code DRY, similar components were combined into a singular, more adaptable component to avoid rendering multiple copies of what was essentially the same html in different classes. This was done for the story creation and update pages as well as the login and signup dialogs. While this increases the complexity of the classes somewhat, it pays off in the newfound ease of switching form types:
 
