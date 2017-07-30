@@ -55,7 +55,6 @@ Similarly, for the login form, a single modal component can be used for all sess
     contentLabel="Login Modal">
 
     <SessionFormContainer
-      history={this.props.history}
       formType={this.formType} />
 
   </Modal>
