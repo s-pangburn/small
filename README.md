@@ -68,11 +68,11 @@ And when errors inevitably appear, debugging only needs to happen in one central
 
 Comments are added to the story page dynamically using React and Redux's render and subscription features, respectively. Because of this, changes in state are reflected immediately upon request completion, without any need for additional DOM manipulation.
 
-In addition, editing comments occurs "directly" in the comment thread, with updates occurring immediately after submit. The textarea element adapts its size dynamically to fit the contents of the container.
+In addition, editing comments occurs "directly" in the comment thread, with updates occurring immediately after submit. The `<textarea>` element adapts its size dynamically to fit the contents of the container.
 
 ![Small comment update demo](docs/images/editing_comment.gif)
 
-This was accomplished through a hidden form element that is conditionally rendered with an autofocus property. The autofocus property triggers an onfocus event that acts as a pseudo-initialization for the element, which then begins to update in real-time:
+This was accomplished through a hidden `<form>` element that is conditionally rendered with an `autofocus` property. The autofocus property triggers an `onfocus` event that acts as a pseudo-initialization for the element, which then begins to update in real-time:
 
 ```html
 { this.state.showForm ? (
@@ -125,7 +125,7 @@ In addition to the included packages, [Cloudinary][cloudinary] was used for imag
 ## Possible future features
 
 In the future I would like to add:
-  * User pages
+  * User pages/avatars
   * Follows
   * Personalized feed
   * Likes
