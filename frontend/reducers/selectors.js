@@ -13,3 +13,15 @@ export const commentsByStoryId = ({ comments }, story_id) => {
   });
   return storyComments;
 };
+
+export const likesByStoryId = ({ likes }, story_id) => {
+  const storyLikes = [];
+
+  Object.keys(likes).forEach(likeId => {
+    const like = likes[likeId];
+    if (likes[likeId].story_id === parseInt(story_id)) {
+      storyLikes.push(like);
+    }
+  });
+  return storyLikes;
+};
