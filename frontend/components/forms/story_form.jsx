@@ -135,14 +135,15 @@ class StoryForm extends React.Component {
   render() {
     const isEdit = (this.state.formType === 'edit');
 
+    // { (isEdit && this.props.story) ? (
+    //   <Link to={`/stories/${this.props.story.id}`}>{"<<Back"}</Link>
+    // ) : (
+    //   <Link to="/">{"<<Back"}</Link>
+    // )}
+
     return (
       <form className="storyForm">
         <br/>
-        { (isEdit && this.props.story) ? (
-          <Link to={`/stories/${this.props.story.id}`}>{"<<Back"}</Link>
-        ) : (
-          <Link to="/">{"<<Back"}</Link>
-        )}
 
         { isEdit ? (
           <h1>Edit your story</h1>

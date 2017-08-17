@@ -34,11 +34,11 @@ class StoryView extends React.Component {
   render() {
     if (this.props.story) {
       const date = new Date(this.props.story.created_at);
+        // <Link className="back" to="/">{"<<Back"}</Link>
 
       return (
         <div>
           <section className="story">
-            <Link className="back" to="/">{"<<Back"}</Link>
 
             <p className="authorWidget">
               <span className="date">{
