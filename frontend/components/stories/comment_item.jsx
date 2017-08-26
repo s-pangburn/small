@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentUserInfo from './comment_user_info'
 import CommentEditControls from './comment_edit_controls'
+import CommentEditForm from './comment_edit_form'
 
 class CommentItem extends React.Component {
   constructor(props) {
@@ -15,23 +16,13 @@ class CommentItem extends React.Component {
     };
 
     this.toggleEdit = this.toggleEdit.bind(this);
-    this.handleUpdate = this.handleUpdate.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
-    this.autoSize = this.autoSize.bind(this);
-  }
-
-  update(item) {
-    return event => {
-      this.setState({ [item]: event.currentTarget.value });
-      this.autoSize(event);
-    };
   }
 
   toggleEdit() {
     event.preventDefault();
     this.setState({
-      showForm: !this.state.showForm ,
-      body: this.props.comment.body  // Reset body element when cancelled
+      showForm: !this.state.showForm
     });
   }
 
@@ -40,19 +31,6 @@ class CommentItem extends React.Component {
     return () => {
       this.props.deleteComment(this.state.id);
     };
-  }
-
-  handleUpdate() {
-    event.preventDefault();
-    this.state.author_id = this.props.currentUser.id;
-    this.props.updateComment(this.state)
-      .then( () => this.setState({ showForm: false }) );
-  }
-
-  autoSize(event) {
-    const el = event.currentTarget;
-    el.style.height = "35px";
-    el.style.height = (el.scrollHeight)+"px";
   }
 
   userCanEdit() {
@@ -83,24 +61,12 @@ class CommentItem extends React.Component {
         </section>
 
         { this.state.showForm ? (
-          <section className="edit">
-            <textarea
-              className="editForm"
-              onChange={this.update("body")}
-              autoFocus
-              onFocus={this.autoSize}
-              value={this.state.body}
-              ></textarea>
-
-            <div className="updateOptions">
-              <span
-                className="link update"
-                onClick={this.toggleEdit}>Cancel</span>
-              <span
-                className="link update"
-                onClick={this.handleUpdate}>Update</span>
-            </div>
-          </section>
+          <CommentEditForm
+            comment={this.props.comment}
+            toggleEdit={this.toggleEdit}
+            updateComment={this.props.updateComment}
+            authorId={this.props.currentUser.id}
+          />
         ) : (
           <p>{comment.body}</p>
         )}
