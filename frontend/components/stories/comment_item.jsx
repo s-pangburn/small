@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import CommentUserInfo from './comment_user_info'
 
 class CommentItem extends React.Component {
   constructor(props) {
@@ -61,15 +61,7 @@ class CommentItem extends React.Component {
     return (
       <div className="comment">
         <section className="top">
-
-          <div className="userInfo">
-            <img className="avatar"
-              src="https://res.cloudinary.com/dzeqeo9b3/image/upload/v1501173171/avatar_default_wkpp05.png"/>
-            <div>
-              <span className="username link">{comment.author.username}</span><br/>
-              <span className="date">{date.toDateString()}</span>
-            </div>
-          </div>
+          <CommentUserInfo authorName={comment.author.username} date={date.toDateString()} />
 
           {(this.props.loggedIn &&
             this.props.currentUser.username ===
