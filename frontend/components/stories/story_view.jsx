@@ -48,16 +48,7 @@ class StoryView extends React.Component {
               handleDelete={this.handleDelete}
             />
 
-            <h1>{this.props.story.title}</h1>
-            <h3>{this.props.story.description}</h3>
-            {(this.props.story.image_url) ? (
-              <figure>
-                <div className="imageContainer">
-                  <img className="splashImage" src={this.props.story.image_url}/>
-                </div>
-              </figure>
-            ) : null }
-
+            <StoryHeader story={this.props.story} />
 
             <section className="body" style={{"whiteSpace": "pre-wrap"}}>
               <p>{this.props.story.body}</p>
