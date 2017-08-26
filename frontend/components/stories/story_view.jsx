@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import CommentsContainer from '../comments/comments_container';
+import AuthorWidget from '../users/author_widget';
 
 class StoryView extends React.Component {
   componentDidMount() {
@@ -38,34 +39,14 @@ class StoryView extends React.Component {
         <div>
           <section className="story">
 
-            <p className="authorWidget">
-              <span className="date">{
-                  `${date.toDateString()}`
-                }</span>
-              &nbsp;|&nbsp;
-              Written by: {this.props.story.author.username}
-              {(this.props.loggedIn &&
-                this.props.currentUser.username ===
-                this.props.story.author.username) ? (
-                <span>
-                  &nbsp;|&nbsp;
-                  <Link to={`/stories/${this.props.story.id}/edit`}>
-                    Edit Story
-                  </Link>
-                  &nbsp;|&nbsp;
-                  <span className="link"
-                    onClick={this.handleDelete}>Delete Story</span>
-                </span>
-              ) : (
-                // <span>
-                //   &nbsp;|&nbsp;
-                //   <span className="link">Like Story</span>
-                //   &nbsp;|&nbsp;
-                //   <span className="link">Follow User</span>
-                // </span>
-                null
-              ) }
-            </p>
+            <AuthorWidget
+              author={this.props.story.author}
+              date={date}
+              loggedIn={this.props.loggedIn}
+              currentUser={this.props.currentUser}
+              story={this.props.story}
+              handleDelete={this.handleDelete}
+            />
 
             <h1>{this.props.story.title}</h1>
             <h3>{this.props.story.description}</h3>
@@ -82,26 +63,14 @@ class StoryView extends React.Component {
               <p>{this.props.story.body}</p>
             </section>
 
-            <p className="authorWidget">
-              <span className="date">{
-                  `${date.toDateString()}`
-                }</span>
-              &nbsp;|&nbsp;
-              Written by: {this.props.story.author.username}
-              {(this.props.loggedIn &&
-                this.props.currentUser.username ===
-                this.props.story.author.username) ? (
-                <span>
-                  &nbsp;|&nbsp;
-                  <Link to={`/stories/${this.props.story.id}/edit`}>
-                    Edit Story
-                  </Link>
-                  &nbsp;|&nbsp;
-                  <span className="link"
-                    onClick={this.handleDelete}>Delete Story</span>
-                </span>
-              ) : null }
-            </p>
+            <AuthorWidget
+              author={this.props.story.author}
+              date={date}
+              loggedIn={this.props.loggedIn}
+              currentUser={this.props.currentUser}
+              story={this.props.story}
+              handleDelete={this.handleDelete}
+            />
 
           </section>
           <CommentsContainer storyId={this.props.story.id}/>
