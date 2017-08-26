@@ -12,7 +12,7 @@ class CommentItem extends React.Component {
     };
 
     this.toggleEdit = this.toggleEdit.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
+    this.bindDelete = this.bindDelete.bind(this);
   }
 
   toggleEdit() {
@@ -22,7 +22,7 @@ class CommentItem extends React.Component {
     });
   }
 
-  handleDelete() {
+  bindDelete() {
     event.preventDefault();
     return () => {
       this.props.deleteComment(this.props.comment.id);
@@ -48,12 +48,12 @@ class CommentItem extends React.Component {
             date={date.toDateString()}
           />
 
-        {(this.userCanEdit()) ? (
+        { this.userCanEdit() ? (
             <CommentEditControls
               toggleEdit={this.toggleEdit}
-              handleDelete={this.handleDelete(comment.id)}
+              handleDelete={this.bindDelete(comment.id)}
             />
-          ) : null}
+          ) : null }
         </section>
 
         { this.state.showForm ? (

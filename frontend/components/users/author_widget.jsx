@@ -12,3 +12,5 @@ class AuthorWidget extends React.Component {
     };
   }
 }
+
+export default AuthorWidget;

@@ -43,7 +43,7 @@ class CommentForm extends React.Component {
           onChange={this.update("body")}
           placeholder="Write a response..."
           value={this.state.body}
-          ></textarea>
+        ></textarea>
         <span className="publish link" onClick={ this.handlePublish }>Publish</span>
       </div>
     );

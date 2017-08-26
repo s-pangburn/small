@@ -16,7 +16,6 @@ class StoryView extends React.Component {
 
   constructor(props) {
     super(props);
-
     this.handleDelete = this.handleDelete.bind(this);
   }
 
@@ -24,7 +23,7 @@ class StoryView extends React.Component {
     this.props.deleteStory(this.props.story.id)
       .then(
         story => this.props.history.push({pathname: "/"}),
-        ({errors}) => {
+        ( { errors } ) => {
           alert(errors);
           this.props.resetErrors();
         }
@@ -34,7 +33,6 @@ class StoryView extends React.Component {
   render() {
     if (this.props.story) {
       const date = new Date(this.props.story.created_at);
-        // <Link className="back" to="/">{"<<Back"}</Link>
 
       return (
         <div>
