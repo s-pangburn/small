@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import CommentsContainer from '../comments/comments_container';
 import AuthorWidget from '../users/author_widget';
+import StoryHeader from './story_header'
 
 class StoryView extends React.Component {
   componentDidMount() {
