@@ -8,10 +8,6 @@ class CommentItem extends React.Component {
     super(props);
 
     this.state = {
-      id: this.props.comment.id,
-      body: this.props.comment.body,
-      author_id: this.props.comment.author.id,
-      story_id: this.props.comment.story_id,
       showForm: false
     };
 
@@ -29,7 +25,7 @@ class CommentItem extends React.Component {
   handleDelete() {
     event.preventDefault();
     return () => {
-      this.props.deleteComment(this.state.id);
+      this.props.deleteComment(this.props.comment.id);
     };
   }
 
