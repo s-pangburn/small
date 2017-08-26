@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import CommentsContainer from './comments_container';
+import CommentsContainer from '../comments/comments_container';
 
 class StoryView extends React.Component {
   componentDidMount() {
