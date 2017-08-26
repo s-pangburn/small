@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ErrorList from '../errors/error_list';
+import SessionFormFooter from './session_form_footer';
 
 class SessionForm extends React.Component {
   componentWillUnmount() {
@@ -80,12 +81,6 @@ class SessionForm extends React.Component {
     );
   }
 
-  renderGuestLogin() {
-    return (
-      <span className="link" onClick={this.handleGuestLogin}>Demo Login</span>
-    );
-  }
-
   render() {
     const isLoginForm = (this.state.formType === 'login');
 
@@ -97,6 +92,7 @@ class SessionForm extends React.Component {
         <ErrorList errors={this.props.errors} />
 
         { isLoginForm ? null : this.renderEmailForm() }
+
         <label>Username:
           <input type="text" value={this.state.username}
             onChange={this.update("username")} onKeyPress={this.checkSubmit}/>
@@ -112,20 +108,12 @@ class SessionForm extends React.Component {
           { isLoginForm ? "Login" : "Sign Up" }
         </span>
 
-        <span className='footnote'>
-          { isLoginForm ? (
-            <div>
-              Don't have an account? <span className="link"
-                onClick={this.resetForm("signup")}>Sign Up</span>
-            </div>
-          ) : (
-            <div>
-              Already have an account? <span className="link"
-                onClick={this.resetForm("login")}> Login</span>
-            </div>
-          )}
-          { this.renderGuestLogin() }
-        </span>
+        <SessionFormFooter
+          isLoginForm={isLoginForm}
+          setSignUp={this.resetForm("signup")}
+          setLogin={this.resetForm("login")}
+          handleGuestLogin={this.handleGuestLogin}
+        />
       </form>
     );
   }
