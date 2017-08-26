@@ -5,7 +5,7 @@ import GreetingContainer from './nav/greeting_container';
 import SessionFormContainer from './session/session_form_container';
 import FeedContainer from './feed/feed_container';
 import StoryViewContainer from './stories/story_view_container';
-import StoryFormContainer from './forms/story_form_container';
+import StoryFormContainer from './stories/story_form_container';
 
 import { AuthRoute } from '../util/route_util';
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import ErrorList from '../errors/error_list';
+
 class SessionForm extends React.Component {
   componentWillUnmount() {
     this.props.resetErrors();
@@ -29,7 +31,7 @@ class SessionForm extends React.Component {
     return event => this.setState({ [item]: event.currentTarget.value });
   }
 
-  setForm(formType) {
+  resetForm(formType) {
     return () => {
       this.setState({ formType }, () => {
         this.props.resetErrors();
@@ -92,9 +94,7 @@ class SessionForm extends React.Component {
 
         <h1>small</h1>
 
-        <ul className="errors">
-          {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
-        </ul>
+        <ErrorList errors={this.props.errors} />
 
         { isLoginForm ? null : this.renderEmailForm() }
         <label>Username:
@@ -116,12 +116,12 @@ class SessionForm extends React.Component {
           { isLoginForm ? (
             <div>
               Don't have an account? <span className="link"
-                onClick={this.setForm("signup")}>Sign Up</span>
+                onClick={this.resetForm("signup")}>Sign Up</span>
             </div>
           ) : (
             <div>
               Already have an account? <span className="link"
-                onClick={this.setForm("login")}> Login</span>
+                onClick={this.resetForm("login")}> Login</span>
             </div>
           )}
           { this.renderGuestLogin() }

@@ -3,59 +3,28 @@ import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import { Link } from 'react-router-dom';
 
+import ErrorList from '../errors/error_list';
+
 class StoryForm extends React.Component {
   componentWillUnmount() {
     this.props.resetErrors();
   }
 
   componentDidMount() {
-    if (this.props.match.params.storyId) {
-      this.props.requestStory(this.props.match.params.storyId)
-        .then(() => this.populateFields());
-      this.state.formType = "edit";
-    }
     this.focusFirstElement();
-    window.scrollTo(0, 0);
+
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.location.pathname === "/stories/new" &&
-        this.props.location.pathname !== "/stories/new") {
-      this.state = {
-        id: undefined,
-        title: "",
-        description: "",
-        body: "",
-        image_url: "",
-        formType: "new"
-      };
-    } else {
-      if (nextProps.match.params.storyId && this.state.formType !== "edit") {
-        nextProps.requestStory(nextProps.match.params.storyId)
-          .then(() => this.populateFields());
-      }
-      this.state.formType = "edit";
-    }
+    this.refreshFormType(nextProps);
     this.focusFirstElement();
-    window.scrollTo(0, 0);
   }
 
   constructor(props) {
     super(props);
 
-    this.state = {
-      id: undefined,
-      title: "",
-      description: "",
-      body: "",
-      image_url: ""
-    };
-
-    if (this.props.match.params.storyId) {
-      this.state.formType = "edit";
-    } else {
-      this.state.formType = "new";
-    }
+    this.clearState();
+    this.determineFormType();
 
     this.update = this.update.bind(this);
     this.populateFields = this.populateFields.bind(this);
@@ -65,6 +34,41 @@ class StoryForm extends React.Component {
 
   update(item) {
     return event => this.setState({ [item]: event.currentTarget.value });
+  }
+
+  clearState() {
+    this.state = {
+      id: undefined,
+      title: "",
+      description: "",
+      body: "",
+      image_url: ""
+    };
+  }
+
+  determineFormType() {
+    if (this.props.match.params.storyId) {
+      this.props.requestStory(this.props.match.params.storyId)
+        .then(() => this.populateFields());
+      this.state.formType = "edit";
+    } else {
+      this.state.formType = "new";
+    }
+  }
+
+  refreshFormType(nextProps) {
+    if (nextProps.location.pathname === "/stories/new" &&
+        this.props.location.pathname !== "/stories/new") {
+      this.clearState();
+      this.state.formType = "new";
+    } else {
+      if (nextProps.match.params.storyId &&
+          this.state.formType !== "edit") {
+        nextProps.requestStory(nextProps.match.params.storyId)
+          .then(() => this.populateFields());
+      }
+      this.state.formType = "edit";
+    }
   }
 
   populateFields() {
@@ -80,6 +84,7 @@ class StoryForm extends React.Component {
 
   focusFirstElement() {
     document.forms[0].elements[0].focus();
+    window.scrollTo(0, 0);
   }
 
   checkSubmit(event) {
@@ -135,12 +140,6 @@ class StoryForm extends React.Component {
   render() {
     const isEdit = (this.state.formType === 'edit');
 
-    // { (isEdit && this.props.story) ? (
-    //   <Link to={`/stories/${this.props.story.id}`}>{"<<Back"}</Link>
-    // ) : (
-    //   <Link to="/">{"<<Back"}</Link>
-    // )}
-
     return (
       <form className="storyForm">
         <br/>
@@ -152,9 +151,7 @@ class StoryForm extends React.Component {
         )}
 
 
-        <ul className="errors">
-          {this.props.errors.map((error, i) => <li key={i}>{error}</li>)}
-        </ul>
+        <ErrorList errors={this.props.errors} />
 
         {this.state.image_url === '' ? null :
           <div className="imgPreview">
