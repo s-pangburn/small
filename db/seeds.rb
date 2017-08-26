@@ -76,7 +76,7 @@ Moreover, no one knows when their hour will come:
 
   so people are trapped by evil times
         that fall unexpectedly upon them.",
-  image_url: "pixel_landscape.jpg",
+  image_url: "1041uuu_koi.gif",
   author_id: user2.id
 )
 
