@@ -1,7 +1,3 @@
-// Place all the styles related to the Api::Stories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .story {
   width: 1000px;
   margin: 0 auto;
@@ -55,7 +51,6 @@
   margin: 0 auto;
   width: 850px;
   overflow: hidden;
-  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .story figure {
