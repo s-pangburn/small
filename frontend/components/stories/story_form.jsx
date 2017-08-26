@@ -4,6 +4,7 @@ import request from 'superagent';
 import { Link } from 'react-router-dom';
 
 import ErrorList from '../errors/error_list';
+import StoryFormHeader from './story_form_header';
 
 class StoryForm extends React.Component {
   componentWillUnmount() {
@@ -144,21 +145,13 @@ class StoryForm extends React.Component {
       <form className="storyForm">
         <br/>
 
-        { isEdit ? (
-          <h1>Edit your story</h1>
-        ) : (
-          <h1>Create a story</h1>
-        )}
-
-
+        <StoryFormHeader isEdit={isEdit} />
         <ErrorList errors={this.props.errors} />
 
-        {this.state.image_url === '' ? null :
-          <div className="imgPreview">
-            <div>
-              <img src={this.state.image_url} />
-            </div>
-          </div>}
+        <div className="imgPreview">
+          <img src={this.state.image_url} />
+        </div>
+
         <Dropzone
           className="imgUpload link"
           multiple={false}
@@ -166,6 +159,7 @@ class StoryForm extends React.Component {
           onDrop={this.onImageDrop.bind(this)}>
           <p>Upload an image</p>
         </Dropzone>
+
         <br/>
 
         <label>Title:<br/>
@@ -177,8 +171,6 @@ class StoryForm extends React.Component {
           <input type="text" value={this.state.description} placeholder="Add a description"
             onChange={this.update("description")} onKeyPress={this.checkSubmit}/>
         </label>
-
-
 
         <label className="body">Body:<br/>
           <textarea onChange={this.update("body")} rows="15" cols="70"
