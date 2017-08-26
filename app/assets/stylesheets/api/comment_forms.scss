@@ -1,0 +1,42 @@
+.newCommentForm {
+  display:flex;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 25px;
+  align-items: center;
+  width: 570px;
+  min-height: 35px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.newCommentForm .avatar {
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.newCommentForm textarea {
+  flex: 1;
+  margin-top: 13px;
+  margin-left: 15px;
+  height: 39px;
+  font-size: 20px;
+  font-family: Georgia, 'PT Serif', serif;
+  border: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.newCommentForm textarea:focus {
+  outline: none;
+}
+
+.newCommentForm .publish {
+  margin-left: 5px;
+  flex: -1;
+  align-self: flex-end;
+  font-weight: bold;
+}

@@ -1,8 +1,3 @@
-// Place all the styles related to the Api::Stories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .feed {
   display: flex;
   align-items: center;
@@ -88,77 +83,4 @@
   margin-top: 7px;
   display: block;
   margin-left: auto;
-}
-
-.story {
-  width: 1000px;
-  margin: 0 auto;
-  margin-top: 90px;
-  padding: 40px;
-  background-color: white;
-  font-size: 20px;
-  zoom: 0.9;
-}
-
-.back {
-  position: relative;
-  top: -12px;
-  left: 100px;
-  font-weight: bold;
-}
-
-.story h1 {
-  font-family: 'PT Sans';
-  margin-top: 20px;
-  max-width: 845px;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: left;
-  margin: 0 auto;
-  color: #333;
-}
-
-.story h3 {
-  margin-top: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
-  padding-bottom: 20px;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 28px;
-  text-align: left;
-  color: #999;
-  font-weight: 600;
-}
-
-.story .body {
-  padding-top: 20px;
-  font-family: Georgia, 'PT Serif', serif;
-  color: #333;
-}
-
-.story .splashImage {
-  display: block;
-  position: relative;
-  left: 0px;
-  margin: 0 auto;
-  width: 850px;
-  overflow: hidden;
-  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.story figure {
-  margin-top: 30px;
-  margin-bottom: 40px;
-}
-
-.story p, .story span {
-  width: 850px;
-  margin: 0 auto;
-  font-size: 24px;
-}
-
-.story .body {
-  margin-top: 20px;
-  margin-bottom: 60px;
-  line-height: 1.5;
 }

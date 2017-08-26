@@ -22,56 +22,6 @@
   width: 120px;
 }
 
-.avatar {
-  flex: 0;
-  width: 48px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.commentForm {
-  display:flex;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  padding: 10px;
-  padding-left: 30px;
-  padding-right: 25px;
-  align-items: center;
-  width: 570px;
-  min-height: 35px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  background-color: white;
-}
-
-.commentForm .avatar {
-  align-self: flex-start;
-  margin-top: 5px;
-}
-
-.commentForm textarea {
-  flex: 1;
-  margin-top: 13px;
-  margin-left: 15px;
-  height: 39px;
-  font-size: 20px;
-  font-family: Georgia, 'PT Serif', serif;
-  border: none;
-  resize: none;
-  overflow: hidden;
-}
-
-.commentForm textarea:focus {
-  outline: none;
-}
-
-.commentForm .publish {
-  margin-left: 5px;
-  flex: -1;
-  align-self: flex-end;
-  font-weight: bold;
-}
-
 .comment {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -94,27 +44,6 @@
 .options span {
   font-weight: bold;
   margin-left: 20px;
-}
-
-.userInfo {
-  display: flex;
-  align-items: center;
-}
-
-.userInfo div {
-  margin-left: 10px;
-}
-
-.userInfo .username {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.userInfo .date {
-  padding-top: 5px;
-  font-size: 12px;
-  color: grey;
-  font-weight: bold;
 }
 
 .comment p {

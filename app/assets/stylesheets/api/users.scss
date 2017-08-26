@@ -1,3 +1,43 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.story .authorWidget {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  font-family: "Titillium Web";
+  font-size: 24px;
+  text-align: center;
+}
+
+.story .authorWidget .link, .authorWidget a {
+  font-weight: normal;
+}
+
+.comment .userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.comment .userInfo div {
+  margin-left: 10px;
+}
+
+.comment .userInfo .username {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comment .userInfo .date {
+  padding-top: 5px;
+  font-size: 12px;
+  color: grey;
+  font-weight: bold;
+}
+
+.comment .avatar {
+  flex: 0;
+  width: 48px;
+  border-radius: 50%;
+  display: inline-block;
+}
