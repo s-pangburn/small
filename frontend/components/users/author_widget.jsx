@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class AuthorWidget extends React.Component {
+  currentUserCanEdit() {
+    return this.props.loggedIn &&
+      this.props.currentUser.username ===
+      this.props.author.username
+  }
+
   render() {
     return (
       <p className="authorWidget">
@@ -10,9 +16,7 @@ class AuthorWidget extends React.Component {
           }</span>
         &nbsp;|&nbsp;
         Written by: {this.props.author.username}
-        {(this.props.loggedIn &&
-          this.props.currentUser.username ===
-          this.props.author.username) ? (
+        { this.currentUserCanEdit() ? (
           <span>
             &nbsp;|&nbsp;
             <Link to={`/stories/${this.props.story.id}/edit`}>

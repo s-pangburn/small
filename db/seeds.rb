@@ -13,11 +13,36 @@ Story.destroy_all
 
 ActiveRecord::Base.transaction do
 
-user1 = User.create!(username: "guest", password: "password", email: "guest@example.com")
-user2 = User.create!(username: "Stephen", password: "123123", email: "stephen@small.app")
-user3 = User.create!(username: "Doorman", password: "123123", email: "doorman@doors.open")
-user4 = User.create!(username: "Napoleon (Hill)", password: "123123", email: "napoleon@no.notthatone")
-user5 = User.create!(username: "Lao Tzu", password: "123123", email: "laotzu@dao.wisdom")
+user1 = User.create!(
+  username: "guest",
+  password: "password",
+  email: "guest@example.com",
+  description: "Hospitality is his favorite thing."
+)
+user2 = User.create!(
+  username: "Stephen",
+  password: "123123",
+  email: "stephen@small.app",
+  description: "Makes small apps"
+)
+user3 = User.create!(
+  username: "Doorman",
+  password: "123123",
+  email: "doorman@doors.open",
+  description: "Just a man who loves doors."
+)
+user4 = User.create!(
+  username: "Napoleon (Hill)",
+  password: "123123",
+  email: "napoleon@no.not.that.one",
+  description: "No, not that one."
+)
+user5 = User.create!(
+  username: "Lao Tzu",
+  password: "123123",
+  email: "laotzu@dao.wisdom",
+  description: "李聃被尊为道教始祖、东方三大圣人之首，唐朝追认李聃为李姓始祖。"
+)
 
 ecclesiastes = Story.create!(
   title: "Ecclesiastes",
