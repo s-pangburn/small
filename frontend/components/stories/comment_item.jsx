@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentUserInfo from './comment_user_info'
+import CommentEditControls from './comment_edit_controls'
 
 class CommentItem extends React.Component {
   constructor(props) {
@@ -54,6 +55,13 @@ class CommentItem extends React.Component {
     el.style.height = (el.scrollHeight)+"px";
   }
 
+  userCanEdit() {
+    return this.props.loggedIn &&
+      this.props.currentUser.username ===
+      this.props.comment.author.username &&
+      !this.state.showForm
+  }
+
   render() {
     const comment = this.props.comment;
     const date = new Date(comment.created_at);
@@ -61,16 +69,16 @@ class CommentItem extends React.Component {
     return (
       <div className="comment">
         <section className="top">
-          <CommentUserInfo authorName={comment.author.username} date={date.toDateString()} />
+          <CommentUserInfo
+            authorName={comment.author.username}
+            date={date.toDateString()}
+          />
 
-          {(this.props.loggedIn &&
-            this.props.currentUser.username ===
-            comment.author.username &&
-            !this.state.showForm) ? (
-              <div className="options">
-                <span className="link" onClick={this.toggleEdit}>Edit</span>
-                <span className="link" onClick={this.handleDelete(comment.id)}>Delete</span>
-              </div>
+        {(this.userCanEdit()) ? (
+            <CommentEditControls
+              toggleEdit={this.toggleEdit}
+              handleDelete={this.handleDelete(comment.id)}
+            />
           ) : null}
         </section>
 
