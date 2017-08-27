@@ -42,7 +42,7 @@ class FeedItem extends React.Component {
               <br/>
               <span className="date">{
                   `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-                }</span>
+              }</span>
             </section>
 
         </section>
