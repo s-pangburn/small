@@ -46,7 +46,7 @@ class LoginModal extends React.Component {
         <ErrorList errors={this.props.errors} />
 
         <SessionForm
-          formType={this.props.formType}
+          formType={this.state.formType}
           isLoginForm={isLoginForm}
           login={this.props.login}
           signup={this.props.signup}
