@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Modal from 'react-modal';
 
-import SessionFormContainer from '../session/session_form_container';
+import LoginModalContainer from '../session/login_modal_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -64,7 +64,7 @@ class Greeting extends React.Component {
           onRequestClose={this.closeModal}
           contentLabel="Login Modal">
 
-          <SessionFormContainer
+          <LoginModalContainer
             history={this.props.history}
             formType={this.formType} />
 

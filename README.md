@@ -54,7 +54,7 @@ Similarly, for the login form, a single modal component can be used for all sess
     onRequestClose={this.closeModal}
     contentLabel="Login Modal">
 
-    <SessionFormContainer
+    <LoginModalContainer
       formType={this.formType} />
 
   </Modal>

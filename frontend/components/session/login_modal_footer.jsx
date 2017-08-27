@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SessionFormFooter extends React.Component {
+class LoginModalFooter extends React.Component {
   render() {
     return (
       <span className='footnote'>
@@ -26,4 +26,4 @@ class SessionFormFooter extends React.Component {
   }
 }
 
-export default SessionFormFooter;
+export default LoginModalFooter;

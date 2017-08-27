@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { login, signup } from '../../actions/session_actions';
 import { resetErrors } from '../../actions/error_actions';
-import SessionForm from './session_form';
+import LoginModal from './login_modal';
 
 const mapStateToProps = (state, ownProps) => ({
   loggedIn: Boolean(state.session.currentUser),
@@ -21,4 +21,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SessionForm);
+)(LoginModal);

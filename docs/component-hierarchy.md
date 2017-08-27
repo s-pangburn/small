@@ -8,8 +8,8 @@
 **GreetingContainer**
  - Greeting
 
-**SessionFormContainer**
- - SessionForm
+**LoginModalContainer**
+ - LoginModal
 
 **FeedContainer**
  - Feed
@@ -35,8 +35,8 @@
 
 |Path   | Component   |
 |-------|-------------|
-| "/signup" | "SessionFormContainer" |
-| "/login" | "SessionFormContainer" |
+| "/signup" | "LoginModalContainer" |
+| "/login" | "LoginModalContainer" |
 | "/:userId/:postId" | "StoryContainer" |
 | "/feed" | "FeedContainer" |
 | "/stories/new" | "StoryFormContainer"

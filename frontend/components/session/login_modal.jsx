@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ErrorList from '../errors/error_list';
-import SessionFormFooter from './session_form_footer';
+import LoginModalFooter from './login_modal_footer';
+import Logo from '../nav/logo';
 
-class SessionForm extends React.Component {
+class LoginModal extends React.Component {
   componentWillUnmount() {
     this.props.resetErrors();
   }
@@ -85,9 +86,9 @@ class SessionForm extends React.Component {
     const isLoginForm = (this.state.formType === 'login');
 
     return (
-      <form className="sessionForm">
+      <form className="LoginModal">
 
-        <h1>small</h1>
+        <Logo />
 
         <ErrorList errors={this.props.errors} />
 
@@ -108,7 +109,7 @@ class SessionForm extends React.Component {
           { isLoginForm ? "Login" : "Sign Up" }
         </span>
 
-        <SessionFormFooter
+        <LoginModalFooter
           isLoginForm={isLoginForm}
           setSignUp={this.resetForm("signup")}
           setLogin={this.resetForm("login")}
@@ -119,4 +120,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default LoginModal;

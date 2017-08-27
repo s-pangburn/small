@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 
-import GreetingContainer from './nav/greeting_container';
-import SessionFormContainer from './session/session_form_container';
+import NavBar from './nav/nav_bar';
+import LoginModalContainer from './session/login_modal_container';
 import FeedContainer from './feed/feed_container';
 import StoryViewContainer from './stories/story_view_container';
 import StoryFormContainer from './stories/story_form_container';
@@ -11,14 +11,7 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <nav className="outerNav">
-      <header>
-        <Link to="/">
-          <h1 className="logo">small</h1>
-        </Link>
-        <Route path="/" component={GreetingContainer}/>
-      </header>
-    </nav>
+    <NavBar />
 
     <Switch>
       <AuthRoute path="/stories/new"
