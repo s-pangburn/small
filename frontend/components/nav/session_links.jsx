@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 import LoginModalContainer from '../session/login_modal_container';
 import UserGreeting from './user_greeting';
 
-class Greeting extends React.Component {
+class SessionLinks extends React.Component {
   constructor(props) {
     super(props);
 
@@ -71,4 +71,4 @@ class Greeting extends React.Component {
   }
 }
 
-export default Greeting;
+export default SessionLinks;
