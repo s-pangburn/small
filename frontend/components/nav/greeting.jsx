@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import Modal from 'react-modal';
 
 import LoginModalContainer from '../session/login_modal_container';
+import UserGreeting from './user_greeting';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -35,15 +36,12 @@ class Greeting extends React.Component {
   }
 
   render() {
-    if (this.props.currentUser) {
-      return (
-        <div className="greeting">
-          <span>Welcome, {this.props.currentUser.username}!</span>
-          <Link to="/stories/new">Write a story</Link>
-          <Link onClick={this.logout} to="/">Logout</Link>
-        </div>
-      );
-    }
+    if (this.props.currentUser)
+      return <UserGreeting
+                currentUser={this.props.currentUser}
+                logout={this.logout}
+              />;
+
     return (
       <div className="login-signup">
         <span className="write-story"
@@ -64,7 +62,8 @@ class Greeting extends React.Component {
 
           <LoginModalContainer
             history={this.props.history}
-            formType={this.formType} />
+            formType={this.formType}
+          />
 
         </Modal>
       </div>
