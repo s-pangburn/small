@@ -52,8 +52,6 @@ class Greeting extends React.Component {
         <span className="link"
           onClick={this.openModal('login')}>Login</span>
 
-        &nbsp;
-
         <span className="link"
           onClick={this.openModal('signup')}>Sign Up</span>
 

@@ -1,6 +1,15 @@
 import React from 'react';
 
 class LoginModalFooter extends React.Component {
+  handleGuestLogin(event) {
+    const guest = {
+      username: "guest",
+      password: "password",
+      email: "guest@example.com"
+    };
+    this.props.login(guest);
+  }
+
   render() {
     return (
       <span className='footnote'>
@@ -17,7 +26,7 @@ class LoginModalFooter extends React.Component {
         )}
         <span
           className="link"
-          onClick={this.props.handleGuestLogin}
+          onClick={this.handleGuestLogin.bind(this)}
         >
           Demo Login
         </span>
