@@ -14,9 +14,9 @@ class FeedItem extends React.Component {
     const date = new Date(this.props.story.created_at);
 
     return (
+      <Link to={ storyUrl }>
       <div className="feedItem">
         <div className="imageContainer">
-          <Link to={ storyUrl }>
           {(this.props.story.image_url) ? (
                 <img src={this.props.story.image_url}
                   alt={ this.state.story.title }/>
@@ -25,26 +25,29 @@ class FeedItem extends React.Component {
               style={{"filter": "grayscale(100%)"}}
               alt={ this.state.story.title }/>
           ) }
-          </Link>
+
         </div>
+
         <section className="storyInfo">
-          <section className="description">
-            <Link to={storyUrl}>
-              <h2>{ this.state.story.title }</h2>
-            </Link>
-            <Link to={storyUrl}>
-              <span>{ this.state.story.description }</span>
-            </Link>
-          </section>
-          <section className="author">
-            <span>{this.state.story.author.username}</span>
-            <br/>
-            <span className="date">{
-                `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-              }</span>
-          </section>
+
+            <section className="description">
+
+                <h2>{ this.state.story.title }</h2>
+                <span>{ this.state.story.description }</span>
+
+            </section>
+
+            <section className="author">
+              <span>{this.state.story.author.username}</span>
+              <br/>
+              <span className="date">{
+                  `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+                }</span>
+            </section>
+
         </section>
       </div>
+    </Link>
     );
   }
 }

@@ -12,10 +12,9 @@
 
 .feedItem {
   display: flex;
-  flex-direction: column;
   margin-bottom: 100px;
   width: 850px;
-  height: 570px;
+  height: 450px;
 }
 
 @keyframes fadeInFromBottom {
@@ -24,29 +23,33 @@
 }
 
 .storyInfo {
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  display:flex;
+  position: absolute;
+  width: 810px;
+  height: 410px;
+  padding: 20px;
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
 }
 
-.feedItem .description {
-  position: static;
+.feedItem:hover .storyInfo {
+  visibility: visible;
+  cursor: pointer;
 }
 
 .feedItem .imageContainer {
   display: flex;
-  z-index: 100;
+  z-index: 90;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right:auto;
   width: 850px;
-  height: 430px;
+  height: 450px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);
 }
@@ -55,16 +58,11 @@
   width: 870px;
 }
 
-.feedItem .author {
-  font-size: 20px;
-  text-align: right;
-}
-
 .description h2 {
   font-size: 28px;
   font-weight: 100;
   font-family: 'PT Sans';
-  color: black;
+  color: white;
   max-width: 450px;
 }
 
@@ -73,14 +71,20 @@
   margin-top: 10px;
   font-size: 20px;
   font-weight: normal;
-  color: black;
+  color: white;
   max-width: 600px;
 }
 
+.feedItem .author {
+  font-size: 20px;
+  text-align: right;
+}
+
 .author .date {
+  display: flex;
   font-size: 16px;
   width: 87px;
   margin-top: 7px;
-  display: block;
+  color: white;
   margin-left: auto;
 }
