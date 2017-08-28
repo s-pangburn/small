@@ -61,6 +61,25 @@
   width: 450px;
 }
 
+.imageContainer .storyPreview {
+  padding: 20px;
+  font-family: Georgia, 'PT Serif', serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: #333;
+  background-color: #eee;
+}
+
+.storyPreview:first-child:first-letter {
+  float: left;
+  font-size: 80px;
+  line-height: 60px;
+  padding-top: 6px;
+  padding-right: 4px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
 .description h2 {
   font-size: 22px;
   font-weight: 100;
