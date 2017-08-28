@@ -41,11 +41,9 @@ class Feed extends React.Component {
   render() {
     if (this.props.stories.length > 0) {
       return (
-        <div>
-          <section className="feed">
-            {this.generateFeedRows()}
-          </section>
-        </div>
+        <section className="feed">
+          {this.generateFeedRows()}
+        </section>
       );
     } else {
       return null;

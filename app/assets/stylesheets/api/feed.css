@@ -4,9 +4,9 @@
   align-items: center;
   width: 1000px;
   margin: 0 auto;
-  margin-top: 175px;
+  margin-top: 200px;
   font-family: 'Titillium Web';
-  zoom: 0.8;
+  zoom: 0.83;
 }
 
 .feed-row {
@@ -16,8 +16,6 @@
 
 .feedItem {
   display: flex;
-  margin-bottom: 40px;
-  margin-left: 20px;
   width: 445px;
   height: 245px;
 }
@@ -81,13 +79,12 @@
 }
 
 .feedItem .author {
-  font-size: 16px;
+  font-size: 18px;
   text-align: right;
 }
 
 .author .date {
   display: inline;
-  font-size: 16px;
   width: 87px;
   margin-top: 7px;
   color: white;
