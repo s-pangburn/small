@@ -40,6 +40,36 @@
    outline: none;
  }
 
+ button {
+   margin-right: 5px;
+   padding-top: 1px;
+   padding-bottom: 1px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border: 1px solid rgb(50, 100, 255);
+   border-radius: 5px;
+   color: rgb(50, 100, 255);
+   background: none;
+   font-family: 'Titillium Web';
+   font-size: 18px;
+   font-weight: bold;
+ }
+
+ button:hover {
+   border-color: rgb(50, 235, 160);
+   color: rgb(50, 235, 160);
+   cursor: pointer;
+ }
+
+ button:active {
+   border-color: black;
+   color: black;
+ }
+
+ button:focus {
+   outline: none;
+ }
+
  ::selection {
    background-color: rgb(50, 235, 160);
    color: black;

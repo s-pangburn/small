@@ -1,13 +1,63 @@
 .story .authorWidget {
-  margin-top: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
+  margin-left: 50px;
+  margin-right: 50px;
   font-family: "Titillium Web";
   font-size: 24px;
-  text-align: center;
 }
 
 .story .authorWidget .link, .authorWidget a {
   font-weight: normal;
+}
+
+.story .authorWidget {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0px;
+  padding-bottom: 30px;
+  padding-left: 35px;
+  padding-right: 35px;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.story .authorWidget .userInfo {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  flex: 2;
+}
+
+.authorWidget .avatar {
+  margin-right: 15px;
+}
+
+.story .authorWidget .username {
+  font-size: 20px;
+  font-family: 'PT Sans';
+  font-weight: normal;
+}
+
+.story .authorWidget .user-description {
+  font-size: 18px;
+  color: grey;
+  font-weight: normal;
+}
+
+.story .authorWidget .date {
+  padding-top: 5px;
+  font-size: 16px;
+  color: grey;
+  font-weight: bold;
+}
+
+.story .avatar {
+  flex: 0;
+  width: 48px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .comment .userInfo {

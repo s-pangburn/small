@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import FollowButton from './follow_button'
+
 class AuthorWidget extends React.Component {
   currentUserCanEdit() {
     return this.props.loggedIn &&
@@ -11,22 +13,15 @@ class AuthorWidget extends React.Component {
   render() {
     return (
       <section className="authorWidget">
-        <span className="date">{
-            `${this.props.date.toDateString()}`
-          }</span>
-        &nbsp;|&nbsp;
-        Written by: {this.props.author.username}
-        { this.currentUserCanEdit() ? (
-          <span>
-            &nbsp;|&nbsp;
-            <Link to={`/stories/${this.props.story.id}/edit`}>
-              Edit Story
-            </Link>
-            &nbsp;|&nbsp;
-            <span className="link"
-              onClick={this.props.handleDelete}>Delete Story</span>
-          </span>
-        ) : null }
+        <div className="userInfo">
+          <img className="avatar"
+            src="https://res.cloudinary.com/dzeqeo9b3/image/upload/v1501173171/avatar_default_wkpp05.png"/>
+          <div >
+            <span className="username link">{this.props.author.username}</span><br/>
+            <span className="date">{this.props.date.toDateString()}</span>
+          </div>
+        </div>
+        <FollowButton />
       </section>
     )
   }
