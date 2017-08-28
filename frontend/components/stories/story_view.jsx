@@ -34,20 +34,9 @@ class StoryView extends React.Component {
 
   render() {
     if (this.props.story) {
-      const date = new Date(this.props.story.created_at);
-
       return (
         <div>
           <section className="story">
-
-            <AuthorWidget
-              author={this.props.story.author}
-              date={date}
-              loggedIn={this.props.loggedIn}
-              currentUser={this.props.currentUser}
-              story={this.props.story}
-              handleDelete={this.handleDelete}
-            />
 
             <StoryHeader story={this.props.story} />
 
@@ -57,7 +46,7 @@ class StoryView extends React.Component {
 
             <AuthorWidget
               author={this.props.story.author}
-              date={date}
+              date={this.props.story.created_at}
               loggedIn={this.props.loggedIn}
               currentUser={this.props.currentUser}
               story={this.props.story}

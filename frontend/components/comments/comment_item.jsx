@@ -1,7 +1,7 @@
 import React from 'react';
-import CommentUserInfo from './comment_user_info'
 import CommentEditControls from './comment_edit_controls'
 import CommentEditForm from './comment_edit_form'
+import UserInfo from '../users/user_info'
 
 class CommentItem extends React.Component {
   constructor(props) {
@@ -38,14 +38,13 @@ class CommentItem extends React.Component {
 
   render() {
     const comment = this.props.comment;
-    const date = new Date(comment.created_at);
 
     return (
       <div className="comment">
         <section className="top">
-          <CommentUserInfo
-            authorName={comment.author.username}
-            date={date.toDateString()}
+          <UserInfo
+            author={comment.author}
+            date={this.props.comment.created_at}
           />
 
         { this.userCanEdit() ? (

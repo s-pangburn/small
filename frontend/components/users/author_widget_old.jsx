@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class AuthorWidget extends React.Component {
+class OldAuthorWidget extends React.Component {
   currentUserCanEdit() {
     return this.props.loggedIn &&
       this.props.currentUser.username ===
@@ -32,4 +32,4 @@ class AuthorWidget extends React.Component {
   }
 }
 
-export default AuthorWidget;
+export default OldAuthorWidget;
