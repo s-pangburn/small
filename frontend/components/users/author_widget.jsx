@@ -10,7 +10,7 @@ class AuthorWidget extends React.Component {
 
   render() {
     return (
-      <p className="authorWidget">
+      <section className="authorWidget">
         <span className="date">{
             `${this.props.date.toDateString()}`
           }</span>
@@ -27,7 +27,7 @@ class AuthorWidget extends React.Component {
               onClick={this.props.handleDelete}>Delete Story</span>
           </span>
         ) : null }
-      </p>
+      </section>
     )
   }
 }

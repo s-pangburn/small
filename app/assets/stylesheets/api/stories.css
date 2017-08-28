@@ -64,6 +64,16 @@
   font-size: 24px;
 }
 
+.story p:first-child:first-letter {
+  float: left;
+  font-size: 80px;
+  line-height: 60px;
+  padding-top: 6px;
+  padding-right: 4px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
 .story .body {
   margin-top: 20px;
   margin-bottom: 60px;
