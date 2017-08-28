@@ -1,20 +1,25 @@
 .feed {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-direction: column;
+  align-items: center;
   width: 1000px;
   margin: 0 auto;
   margin-top: 175px;
   font-family: 'Titillium Web';
-  zoom: 0.9;
+  zoom: 0.8;
+}
+
+.feed-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .feedItem {
   display: flex;
-  margin-bottom: 100px;
-  width: 850px;
-  height: 450px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  width: 445px;
+  height: 245px;
 }
 
 @keyframes fadeInFromBottom {
@@ -24,8 +29,8 @@
 
 .storyInfo {
   position: absolute;
-  width: 810px;
-  height: 410px;
+  width: 405px;
+  height: 205px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -48,22 +53,22 @@
   right: 0;
   margin-left: auto;
   margin-right:auto;
-  width: 850px;
-  height: 450px;
+  width: 445px;
+  height: 245px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);
 }
 
 .feedItem img {
-  width: 870px;
+  width: 450px;
 }
 
 .description h2 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 100;
   font-family: 'PT Sans';
   color: white;
-  max-width: 450px;
+  max-width: 290px;
 }
 
 .description span {
@@ -72,11 +77,11 @@
   font-size: 20px;
   font-weight: normal;
   color: white;
-  max-width: 600px;
+  max-width: 250px;
 }
 
 .feedItem .author {
-  font-size: 20px;
+  font-size: 16px;
   text-align: right;
 }
 

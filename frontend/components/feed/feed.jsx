@@ -10,17 +10,42 @@ class Feed extends React.Component {
 
   constructor(props) {
     super(props);
+    this.generateFeedRows = this.generateFeedRows.bind(this);
+  }
+
+  generateFeedRows() {
+    let arr = []
+    let idx = 0
+    while (idx < this.props.stories.length-3) {
+      arr.push(
+        <section className="feed-row">
+          <FeedItem
+            key={this.props.stories[idx].id}
+            story={this.props.stories[idx]}
+          />
+          <FeedItem
+            key={this.props.stories[idx + 1].id}
+            story={this.props.stories[idx + 1]}
+          />
+          <FeedItem
+            key={this.props.stories[idx + 2].id}
+            story={this.props.stories[idx + 2]}
+          />
+        </section>
+      )
+      idx += 3;
+    }
+    return arr;
   }
 
   render() {
     if (this.props.stories.length > 0) {
       return (
-        <section className="feed">
-          {this.props.stories.map(story => {
-            return <FeedItem key={story.id} story={story}/>;
-          })}
-
-        </section>
+        <div>
+          <section className="feed">
+            {this.generateFeedRows()}
+          </section>
+        </div>
       );
     } else {
       return null;
