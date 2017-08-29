@@ -76,24 +76,12 @@ This was accomplished through a hidden `<form>` element that is conditionally re
 
 ```html
 { this.state.showForm ? (
-  <section className="edit">
-    <textarea
-      className="editForm"
-      onChange={this.update("body")}
-      autoFocus
-      onFocus={this.autoSize}
-      value={this.state.body}
-      ></textarea>
-
-    <div className="updateOptions">
-      <span
-        className="link update"
-        onClick={this.toggleEdit}>Cancel</span>
-      <span
-        className="link update"
-        onClick={this.handleUpdate}>Update</span>
-    </div>
-  </section>
+  <CommentEditForm
+    comment={this.props.comment}
+    toggleEdit={this.toggleEdit}
+    updateComment={this.props.updateComment}
+    authorId={this.props.currentUser.id}
+  />
 ) : (
   <p>{comment.body}</p>
 )}
