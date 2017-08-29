@@ -60,8 +60,7 @@ class CommentItem extends React.Component {
             comment={this.props.comment}
             toggleEdit={this.toggleEdit}
             updateComment={this.props.updateComment}
-            authorId={this.props.currentUser.id}
-          />
+            authorId={this.props.currentUser.id} />
         ) : (
           <p>{comment.body}</p>
         )}

@@ -24,10 +24,8 @@ class FeedItem extends React.Component {
                 <img src={this.props.story.image_url}
                   alt={ this.state.story.title }/>
           ) : (
-            <p
-              className="storyPreview"
-              style={{"whiteSpace": "pre-wrap"}}
-            >
+            <p className="storyPreview"
+              style={{"whiteSpace": "pre-wrap"}} >
               {this.props.story.body}
             </p>
           ) }

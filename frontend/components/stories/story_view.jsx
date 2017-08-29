@@ -50,11 +50,10 @@ class StoryView extends React.Component {
               loggedIn={this.props.loggedIn}
               currentUser={this.props.currentUser}
               story={this.props.story}
-              handleDelete={this.handleDelete}
-            />
+              handleDelete={this.handleDelete} />
 
           </section>
-          <CommentsContainer storyId={this.props.story.id}/>
+          <CommentsContainer storyId={this.props.story.id} />
         </div>
       );
     } else {

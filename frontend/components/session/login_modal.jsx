@@ -49,15 +49,13 @@ class LoginModal extends React.Component {
           formType={this.state.formType}
           isLoginForm={isLoginForm}
           login={this.props.login}
-          signup={this.props.signup}
-        />
+          signup={this.props.signup} />
 
         <LoginModalFooter
           isLoginForm={isLoginForm}
           setSignUp={this.resetForm("signup")}
           setLogin={this.resetForm("login")}
-          login={this.props.login}
-        />
+          login={this.props.login} />
       </form>
     );
   }

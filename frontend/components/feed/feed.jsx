@@ -21,16 +21,13 @@ class Feed extends React.Component {
         <section className="feed-row">
           <FeedItem
             key={this.props.stories[idx].id}
-            story={this.props.stories[idx]}
-          />
+            story={this.props.stories[idx]} />
           <FeedItem
             key={this.props.stories[idx + 1].id}
-            story={this.props.stories[idx + 1]}
-          />
+            story={this.props.stories[idx + 1]} />
           <FeedItem
             key={this.props.stories[idx + 2].id}
-            story={this.props.stories[idx + 2]}
-          />
+            story={this.props.stories[idx + 2]} />
         </section>
       )
       idx += 3;

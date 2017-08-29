@@ -58,12 +58,11 @@ class SessionLinks extends React.Component {
           overlayClassName="modal-overlay"
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
-          contentLabel="Login Modal">
+          contentLabel="Login Modal" >
 
           <LoginModalContainer
             history={this.props.history}
-            formType={this.formType}
-          />
+            formType={this.formType} />
 
         </Modal>
       </div>

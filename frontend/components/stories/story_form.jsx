@@ -173,8 +173,9 @@ class StoryForm extends React.Component {
         </label>
 
         <label className="body">Body:<br/>
-          <textarea onChange={this.update("body")} rows="15" cols="70"
-            value={this.state.body}></textarea>
+          <textarea
+            onChange={this.update("body")}
+            value={this.state.body} />
         </label>
         <br/>
 

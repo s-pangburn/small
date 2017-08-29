@@ -26,8 +26,7 @@ class LoginModalFooter extends React.Component {
         )}
         <span
           className="link"
-          onClick={this.handleGuestLogin.bind(this)}
-        >
+          onClick={this.handleGuestLogin.bind(this)} >
           Demo Login
         </span>
       </span>

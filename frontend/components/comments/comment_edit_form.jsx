@@ -43,8 +43,7 @@ class CommentEditForm extends React.Component {
           onChange={this.update("body")}
           autoFocus
           onFocus={this.autoSize}
-          value={this.state.body}
-        ></textarea>
+          value={this.state.body} />
 
         <div className="updateOptions">
           <span

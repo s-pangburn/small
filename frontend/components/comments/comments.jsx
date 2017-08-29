@@ -32,7 +32,7 @@ class Comments extends React.Component {
               currentUser={this.props.currentUser}
               loggedIn={this.props.loggedIn}
               updateComment={this.props.updateComment}
-              deleteComment={this.props.deleteComment}/>
+              deleteComment={this.props.deleteComment} />
           );
         })}
 
