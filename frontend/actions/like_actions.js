@@ -30,16 +30,16 @@ export const deleteLike = like => dispatch => (
 );
 
 export const receiveAllLikes = likes => ({
-  type: RECEIVE_COMMENTS,
+  type: RECEIVE_LIKES,
   likes
 });
 
 export const receiveLike = like => ({
-  type: RECEIVE_COMMENT,
+  type: RECEIVE_LIKES,
   like
 });
 
 export const removeLike = like => ({
-  type: REMOVE_COMMENT,
+  type: REMOVE_LIKE,
   like
 });
