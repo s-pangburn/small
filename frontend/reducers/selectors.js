@@ -32,7 +32,7 @@ export const followsByUserId = ({ follows }, user_id) => {
   Object.keys(follows).forEach(followId => {
     const follow = follows[followId];
     if (follow.follower_id === parseInt(user_id)) {
-      userFollows.push(follow);
+      userFollows.push(follow.followee_id);
     }
   });
   return userFollows;

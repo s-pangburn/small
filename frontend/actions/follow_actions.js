@@ -30,12 +30,12 @@ export const deleteFollow = follow => dispatch => (
 );
 
 export const receiveAllFollows = follows => ({
-  type: RECEIVE_FOLLOWS,
+  type: RECEIVE_ALL_FOLLOWS,
   follows
 });
 
 export const receiveFollow = follow => ({
-  type: RECEIVE_FOLLOWS,
+  type: RECEIVE_FOLLOW,
   follow
 });
 

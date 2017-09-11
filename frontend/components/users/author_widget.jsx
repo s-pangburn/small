@@ -19,7 +19,8 @@ class AuthorWidget extends React.Component {
           author={this.props.author}
           date={this.props.story.created_at}
         />
-      <FollowButtonContainer />
+      <FollowButtonContainer
+        followeeId={this.props.author.id}/>
       </section>
     )
   }

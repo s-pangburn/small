@@ -1,21 +1,31 @@
 import React from 'react';
 
 class FollowButton extends React.Component {
+  componentDidMount() {
+    this.props.requestAllFollows()
+  }
+
   constructor(props) {
     super(props);
 
     this.state = {
-      following: false
+      follow: {
+        followee_id: this.props.followeeId
+      },
+      following: Boolean(this.props.userFollows.includes(this.props.followeeId))
     }
   }
 
   toggleFollow() {
-    this.setState({
-      following: !this.state.following
-    });
+    if (!this.state.following) {
+      this.props.createFollow(this.state.follow);
+    } else {
+      this.props.deleteFollow(this.state.follow);
+    }
   }
 
   render() {
+    this.state.following = Boolean(this.props.userFollows.includes(this.props.followeeId))
     return (
       <button
         className="follow-button"
