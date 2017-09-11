@@ -19,8 +19,8 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -330px;
-  margin-left: -540px;
+  margin-top: -340px;
+  margin-left: -550px;
   width: 40px;
   height: 100px;
   display: flex;
@@ -29,13 +29,22 @@
 }
 
 .sidebar .like-count {
-  padding-left: 26px;
+  padding-left: 28px;
   font-family: 'PT Sans';
   font-weight: bold;
+  color: grey;
+}
+
+.sidebar .controls {
+  display: flex;
+  padding-top: 90px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar img {
-  padding-top: 10px;
+  padding-top: 20px;
   opacity: 0.75;
 }
 

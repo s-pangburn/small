@@ -40,7 +40,8 @@ class StoryView extends React.Component {
           <section className="story">
             <ControlsSidebar
               story={this.props.story}
-              storyLikes={this.props.storyLikes}/>
+              storyLikes={this.props.storyLikes}
+              handleDelete={this.handleDelete}/>
 
             <StoryHeader story={this.props.story} />
 
