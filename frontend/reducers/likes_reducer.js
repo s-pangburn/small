@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
 
 import {
-  RECEIVE_LIKES,
+  RECEIVE_ALL_LIKES,
   RECEIVE_LIKE,
   REMOVE_LIKE
 } from '../actions/like_actions';
@@ -12,7 +12,7 @@ const LikesReducer = (state = defaultState, action) => {
   Object.freeze(state);
 
   switch (action.type) {
-    case RECEIVE_LIKES:
+    case RECEIVE_ALL_LIKES:
       return merge({}, action.likes);
     case RECEIVE_LIKE:
       return merge({}, state, { [action.like.id]: action.like});

@@ -21,7 +21,10 @@ class Api::LikesController < ApplicationController
   end
 
   def destroy
-    @like = Like.find_by_id(params[:id])
+    @like = Like.find_by(
+      story_id: params[:like][:story_id],
+      user_id: current_user.id
+    )
 
     if @like.user_id == current_user.id
       @like.destroy
