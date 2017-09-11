@@ -10,7 +10,7 @@ import { followsByUserId } from '../../reducers/selectors';
 import { resetErrors } from '../../actions/error_actions';
 import FollowButton from './follow_button';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
   return {
     loggedIn: Boolean(state.session.currentUser),
     currentUser: state.session.currentUser,

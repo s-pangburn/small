@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import FollowButton from './follow_button'
+import FollowButtonContainer from './follow_button_container'
 import UserInfo from './user_info';
 
 class AuthorWidget extends React.Component {
@@ -19,7 +19,7 @@ class AuthorWidget extends React.Component {
           author={this.props.author}
           date={this.props.story.created_at}
         />
-        <FollowButton />
+      <FollowButtonContainer />
       </section>
     )
   }

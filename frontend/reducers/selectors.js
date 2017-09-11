@@ -19,9 +19,21 @@ export const likesByStoryId = ({ likes }, story_id) => {
 
   Object.keys(likes).forEach(likeId => {
     const like = likes[likeId];
-    if (likes[likeId].story_id === parseInt(story_id)) {
+    if (like.story_id === parseInt(story_id)) {
       storyLikes.push(like);
     }
   });
   return storyLikes;
+};
+
+export const followsByUserId = ({ follows }, user_id) => {
+  const userFollows = [];
+
+  Object.keys(follows).forEach(followId => {
+    const follow = follows[followId];
+    if (follow.follower_id === parseInt(user_id)) {
+      userFollows.push(follow);
+    }
+  });
+  return userFollows;
 };
