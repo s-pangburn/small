@@ -20,7 +20,7 @@ export const likesByStoryId = ({ likes }, story_id) => {
   Object.keys(likes).forEach(likeId => {
     const like = likes[likeId];
     if (like.story_id === parseInt(story_id)) {
-      storyLikes.push(like);
+      storyLikes.push(like.user_id);
     }
   });
   return storyLikes;
