@@ -25,7 +25,9 @@ class FollowButton extends React.Component {
   }
 
   render() {
-    this.state.following = Boolean(this.props.userFollows.includes(this.props.followeeId))
+    this.state.following = Boolean(
+      this.props.userFollows.includes(this.props.followeeId)
+    )
     return (
       <button
         className="follow-button"
