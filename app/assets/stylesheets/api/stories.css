@@ -15,6 +15,35 @@
   font-weight: bold;
 }
 
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -330px;
+  margin-left: -540px;
+  width: 40px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .like-count {
+  padding-left: 26px;
+  font-family: 'PT Sans';
+  font-weight: bold;
+}
+
+.sidebar img {
+  padding-top: 10px;
+  opacity: 0.75;
+}
+
+.sidebar img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .story h1 {
   font-family: 'PT Sans';
   margin-top: 20px;

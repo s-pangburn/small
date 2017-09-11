@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CommentsContainer from '../comments/comments_container';
 import AuthorWidget from '../users/author_widget';
 import StoryHeader from './story_header'
+import ControlsSidebar from './controls_sidebar';
 
 class StoryView extends React.Component {
   componentDidMount() {
@@ -37,6 +38,9 @@ class StoryView extends React.Component {
       return (
         <div>
           <section className="story">
+            <ControlsSidebar
+              story={this.props.story}
+              storyLikes={this.props.storyLikes}/>
 
             <StoryHeader story={this.props.story} />
 
