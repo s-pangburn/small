@@ -106,9 +106,9 @@ In addition to the included packages, [Cloudinary][cloudinary] was used for imag
   * [API Endpoints][apiEndPoints]
   * [Database Schema][dbSchema]
 
-[wireframes]: docs/wireframes
-[apiEndPoints]: docs/api-endpoints.md
-[dbSchema]: docs/db-schema.md
+[wireframes]: https://github.com/s-pangburn/small/wiki/Wireframes
+[apiEndPoints]: https://github.com/s-pangburn/small/wiki/Routes
+[dbSchema]: https://github.com/s-pangburn/small/wiki/Schema
 
 ## Possible future features
 
