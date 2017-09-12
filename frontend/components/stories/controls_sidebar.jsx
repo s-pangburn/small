@@ -25,8 +25,6 @@ class ControlsSidebar extends React.Component {
                 </div>
               </section>
             ) : null }
-            <img width="32" src="https://cdn1.iconfinder.com/data/icons/rcons-line-ios-3/32/comment-512.png" />
-
           </div>
         </aside>
       )
