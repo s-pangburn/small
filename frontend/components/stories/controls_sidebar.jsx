@@ -21,7 +21,7 @@ class ControlsSidebar extends React.Component {
                 </Link>
 
                 <div onClick={this.props.handleDelete}>
-                  <img width="38" src="http://www.icon2s.com/img128/128x128-black-white-metro-delete-icon.png" />
+                  <img width="34" style={{"marginLeft":"-1px"}} src="http://www.icon2s.com/img128/128x128-black-white-metro-delete-icon.png" />
                 </div>
               </section>
             ) : null }
