@@ -40,6 +40,7 @@ class CommentForm extends React.Component {
         <img className="avatar"
           src="https://res.cloudinary.com/dzeqeo9b3/image/upload/v1501173171/avatar_default_wkpp05.png"/>
         <textarea
+          id="commentForm"
           onChange={this.update("body")}
           placeholder="Write a response..."
           value={this.state.body} />
