@@ -40,7 +40,6 @@ class StoryView extends React.Component {
 
   handleScroll() {
     const storyHeight = document.getElementById('body').clientHeight;
-    console.log($(document).scrollTop(), storyHeight);
 
     if ($(document).scrollTop() > storyHeight) {
       this.setState({ sidebar: false })
