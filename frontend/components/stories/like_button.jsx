@@ -34,9 +34,9 @@ class LikeButton extends React.Component {
           onClick={this.toggleLike.bind(this)}
           >
           { this.state.liked ? (
-            <img width="68" src="https://cdn3.iconfinder.com/data/icons/inficons-set-2/512/star-ratings-512.png" />
+            <img width="65" src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1505191311/star-blue-filled_bvxzle.png" />
           ) : (
-            <img width="68" src="http://iconshow.me/media/images/Mixed/line-icon/png/256/star-256.png" />
+            <img width="65" src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1505191305/star-blue_yyh7qu.png" />
           )}
         </span>
         <span className="like-count">{this.props.storyLikes.length}</span>
