@@ -5,6 +5,7 @@ import CommentsContainer from '../comments/comments_container';
 import AuthorWidget from '../users/author_widget';
 import StoryHeader from './story_header'
 import ControlsSidebar from './controls_sidebar';
+import ControlsFooter from './controls_footer';
 
 class StoryView extends React.Component {
   componentDidMount() {
@@ -66,6 +67,12 @@ class StoryView extends React.Component {
             <section className="body" id="body" style={{"whiteSpace": "pre-wrap"}}>
               <p>{this.props.story.body}</p>
             </section>
+
+            <ControlsFooter
+              currentUser={this.props.currentUser}
+              story={this.props.story}
+              storyLikes={this.props.storyLikes}
+              handleDelete={this.handleDelete}/>
 
             <AuthorWidget
               author={this.props.story.author}
