@@ -11,6 +11,7 @@ class StoryView extends React.Component {
     this.props.requestStory(this.props.match.params.storyId);
     this.props.requestAllComments();
     window.scrollTo(0, 0);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
@@ -19,7 +20,11 @@ class StoryView extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      sidebar: true
+    }
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   handleDelete() {
@@ -33,19 +38,32 @@ class StoryView extends React.Component {
       );
   }
 
+  handleScroll() {
+    const storyHeight = document.getElementById('body').clientHeight;
+
+    if ($(document).scrollTop() > storyHeight) {
+      this.setState({ sidebar: false })
+    } else {
+      this.setState({ sidebar: true })
+    }
+  }
+
   render() {
     if (this.props.story) {
       return (
         <div>
           <section className="story">
-            <ControlsSidebar
-              story={this.props.story}
-              storyLikes={this.props.storyLikes}
-              handleDelete={this.handleDelete}/>
+            { this.state.sidebar ? (
+              <ControlsSidebar
+                currentUser={this.props.currentUser}
+                story={this.props.story}
+                storyLikes={this.props.storyLikes}
+                handleDelete={this.handleDelete}/>
+            ) : null }
 
             <StoryHeader story={this.props.story} />
 
-            <section className="body" style={{"whiteSpace": "pre-wrap"}}>
+            <section className="body" id="body" style={{"whiteSpace": "pre-wrap"}}>
               <p>{this.props.story.body}</p>
             </section>
 

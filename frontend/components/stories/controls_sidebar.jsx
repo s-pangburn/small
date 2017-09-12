@@ -9,23 +9,30 @@ class ControlsSidebar extends React.Component {
   }
 
   render() {
-    return (
-      <aside className="sidebar">
-        <LikeButtonContainer story={this.props.story}/>
-        <div className="controls">
+    if (this.props.currentUser) {
+      return (
+        <aside className="sidebar">
+          <LikeButtonContainer story={this.props.story}/>
+          <div className="controls">
+            { this.props.currentUser.username === this.props.story.author.username ? (
+              <section className="user-controls">
+                <Link to={`/stories/${this.props.story.id}/edit`}>
+                  <img width="32" src="http://vinsol.com/themes/vinsoldotcom-theme/images/new_img/launch-icons/icon-edit.png" />
+                </Link>
 
-          <Link to={`/stories/${this.props.story.id}/edit`}>
-            <img width="32" src="http://vinsol.com/themes/vinsoldotcom-theme/images/new_img/launch-icons/icon-edit.png" />
-          </Link>
+                <div onClick={this.props.handleDelete}>
+                  <img width="38" src="http://www.icon2s.com/img128/128x128-black-white-metro-delete-icon.png" />
+                </div>
+              </section>
+            ) : null }
+            <img width="32" src="https://cdn1.iconfinder.com/data/icons/rcons-line-ios-3/32/comment-512.png" />
 
-          <div onClick={this.props.handleDelete}>
-            <img width="38" src="http://www.icon2s.com/img128/128x128-black-white-metro-delete-icon.png" />
           </div>
-
-          <img width="32" src="https://cdn1.iconfinder.com/data/icons/rcons-line-ios-3/32/comment-512.png" />
-        </div>
-      </aside>
-    )
+        </aside>
+      )
+    } else {
+      return null;
+    }
   }
 }
 
