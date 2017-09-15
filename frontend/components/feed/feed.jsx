@@ -27,7 +27,7 @@ class Feed extends React.Component {
         stories={this.props.stories.slice(0,3)} />
     )
 
-    while (idx < this.props.stories.length - 3) {
+    while (idx <= this.props.stories.length - 3) {
       arr.push(
         <GroupOfThree
           key={this.props.stories[idx].id}

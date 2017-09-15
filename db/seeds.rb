@@ -224,6 +224,50 @@ Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in ali
   author_id: user2.id
 )
 
+snails = Story.create!(
+  title: "72 Uses for Snails",
+  description: "Did you know that snails make terrible shoelaces?",
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec erat est. Cras urna orci, scelerisque eget purus nec, viverra pulvinar metus. Aenean quis purus ipsum. Maecenas sollicitudin in turpis vel tristique. Donec elementum feugiat congue. Aenean luctus ultricies rhoncus. Fusce elit magna, vulputate vel sollicitudin et, rhoncus eget urna. Nulla pellentesque sed velit quis porttitor. Morbi scelerisque velit est, nec malesuada orci efficitur non. Cras iaculis commodo pulvinar. Aliquam maximus nisl erat, in ornare nibh imperdiet ut.
+
+Donec urna felis, fringilla at mollis in, semper ut diam. Nam dictum eu neque in facilisis. Praesent a leo rutrum, pellentesque libero ut, blandit quam. Curabitur eu bibendum nunc. Mauris fermentum, elit in varius condimentum, justo nulla ultricies justo, nec vulputate nibh sapien non felis. In hendrerit turpis sed dui vestibulum finibus in sit amet lacus. Aliquam vel pharetra metus. Maecenas vel fringilla nisl. Integer nec dapibus urna, a gravida velit.
+
+Cras nec nibh purus. Donec tincidunt felis ac ante ullamcorper iaculis. Ut venenatis enim felis, eu fringilla leo auctor nec. Etiam sit amet augue ut ipsum rutrum bibendum porta at turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis nunc nulla, facilisis et fringilla ac, lobortis ac elit. Nunc massa tortor, sollicitudin et lacinia eget, scelerisque at metus. Quisque sodales dictum velit, quis accumsan nunc pulvinar quis. Phasellus fermentum augue id rutrum accumsan. Nulla ac tellus in tortor tempor bibendum non eu diam.
+
+Vestibulum pulvinar ipsum vel eros volutpat laoreet. Curabitur sed felis velit. Fusce nec pretium velit. Nulla molestie, nibh bibendum elementum semper, urna mauris rutrum neque, eu aliquet nunc massa sit amet turpis. Suspendisse id tellus sit amet quam sollicitudin suscipit pellentesque nec diam. Etiam pharetra faucibus mi ut maximus. Sed porttitor cursus aliquam. Nullam cursus eget justo et luctus. Etiam volutpat enim ut est gravida, id mollis mi viverra.
+
+Praesent id neque felis. Mauris rutrum placerat ante in pretium. In non orci dolor. Curabitur id imperdiet libero. Nunc sit amet rutrum eros. Nulla ut consequat velit. Donec auctor dapibus tortor a efficitur. Curabitur auctor lorem vitae justo vestibulum, tincidunt sodales est maximus. Fusce egestas scelerisque elit et placerat. Maecenas lacinia erat consequat eros luctus, id laoreet lectus elementum. Pellentesque ac sagittis arcu, ac malesuada erat. Nam accumsan est ac metus tempor porta. Nunc dapibus molestie purus, quis rutrum ipsum malesuada ac. Proin tempus nibh eros, ac finibus ex mattis vel.",
+  image_url: "1041uuu_interior.gif",
+  author_id: user2.id
+)
+
+skeleton_closet = Story.create!(
+  title: "The Skeleton Closet",
+  description: "Feeling bonely?",
+  body: "Cras nec nibh purus. Donec tincidunt felis ac ante ullamcorper iaculis. Ut venenatis enim felis, eu fringilla leo auctor nec. Etiam sit amet augue ut ipsum rutrum bibendum porta at turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis nunc nulla, facilisis et fringilla ac, lobortis ac elit. Nunc massa tortor, sollicitudin et lacinia eget, scelerisque at metus. Quisque sodales dictum velit, quis accumsan nunc pulvinar quis. Phasellus fermentum augue id rutrum accumsan. Nulla ac tellus in tortor tempor bibendum non eu diam.
+
+Vestibulum pulvinar ipsum vel eros volutpat laoreet. Curabitur sed felis velit. Fusce nec pretium velit. Nulla molestie, nibh bibendum elementum semper, urna mauris rutrum neque, eu aliquet nunc massa sit amet turpis. Suspendisse id tellus sit amet quam sollicitudin suscipit pellentesque nec diam. Etiam pharetra faucibus mi ut maximus. Sed porttitor cursus aliquam. Nullam cursus eget justo et luctus. Etiam volutpat enim ut est gravida, id mollis mi viverra.
+
+Praesent id neque felis. Mauris rutrum placerat ante in pretium. In non orci dolor. Curabitur id imperdiet libero. Nunc sit amet rutrum eros. Nulla ut consequat velit. Donec auctor dapibus tortor a efficitur. Curabitur auctor lorem vitae justo vestibulum, tincidunt sodales est maximus. Fusce egestas scelerisque elit et placerat. Maecenas lacinia erat consequat eros luctus, id laoreet lectus elementum. Pellentesque ac sagittis arcu, ac malesuada erat. Nam accumsan est ac metus tempor porta. Nunc dapibus molestie purus, quis rutrum ipsum malesuada ac. Proin tempus nibh eros, ac finibus ex mattis vel.",
+  image_url: "merrigo_skyline.png",
+  author_id: user1.id
+)
+
+overcoming_shyness = Story.create!(
+  title: "Overcoming Shyness",
+  description: "If it's good enough for a Tenda, it's good enough for you.",
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec erat est. Cras urna orci, scelerisque eget purus nec, viverra pulvinar metus. Aenean quis purus ipsum. Maecenas sollicitudin in turpis vel tristique. Donec elementum feugiat congue. Aenean luctus ultricies rhoncus. Fusce elit magna, vulputate vel sollicitudin et, rhoncus eget urna. Nulla pellentesque sed velit quis porttitor. Morbi scelerisque velit est, nec malesuada orci efficitur non. Cras iaculis commodo pulvinar. Aliquam maximus nisl erat, in ornare nibh imperdiet ut.
+
+Donec urna felis, fringilla at mollis in, semper ut diam. Nam dictum eu neque in facilisis. Praesent a leo rutrum, pellentesque libero ut, blandit quam. Curabitur eu bibendum nunc. Mauris fermentum, elit in varius condimentum, justo nulla ultricies justo, nec vulputate nibh sapien non felis. In hendrerit turpis sed dui vestibulum finibus in sit amet lacus. Aliquam vel pharetra metus. Maecenas vel fringilla nisl. Integer nec dapibus urna, a gravida velit.
+
+Cras nec nibh purus. Donec tincidunt felis ac ante ullamcorper iaculis. Ut venenatis enim felis, eu fringilla leo auctor nec. Etiam sit amet augue ut ipsum rutrum bibendum porta at turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis nunc nulla, facilisis et fringilla ac, lobortis ac elit. Nunc massa tortor, sollicitudin et lacinia eget, scelerisque at metus. Quisque sodales dictum velit, quis accumsan nunc pulvinar quis. Phasellus fermentum augue id rutrum accumsan. Nulla ac tellus in tortor tempor bibendum non eu diam.
+
+Vestibulum pulvinar ipsum vel eros volutpat laoreet. Curabitur sed felis velit. Fusce nec pretium velit. Nulla molestie, nibh bibendum elementum semper, urna mauris rutrum neque, eu aliquet nunc massa sit amet turpis. Suspendisse id tellus sit amet quam sollicitudin suscipit pellentesque nec diam. Etiam pharetra faucibus mi ut maximus. Sed porttitor cursus aliquam. Nullam cursus eget justo et luctus. Etiam volutpat enim ut est gravida, id mollis mi viverra.
+
+Praesent id neque felis. Mauris rutrum placerat ante in pretium. In non orci dolor. Curabitur id imperdiet libero. Nunc sit amet rutrum eros. Nulla ut consequat velit. Donec auctor dapibus tortor a efficitur. Curabitur auctor lorem vitae justo vestibulum, tincidunt sodales est maximus. Fusce egestas scelerisque elit et placerat. Maecenas lacinia erat consequat eros luctus, id laoreet lectus elementum. Pellentesque ac sagittis arcu, ac malesuada erat. Nam accumsan est ac metus tempor porta. Nunc dapibus molestie purus, quis rutrum ipsum malesuada ac. Proin tempus nibh eros, ac finibus ex mattis vel.",
+  image_url: "merrigo_dawn.gif",
+  author_id: user3.id
+)
+
 Comment.create!(
   body: "Interesting...",
   story_id: ecclesiastes.id,
