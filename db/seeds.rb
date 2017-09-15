@@ -123,10 +123,6 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 Etiam malesuada magna metus, eget scelerisque orci efficitur et. Nunc non mauris eu lacus posuere sollicitudin. Mauris et libero felis. Curabitur fermentum porta erat, in laoreet lacus aliquet vel. Suspendisse mi ligula, pharetra ac consequat id, porttitor nec sapien. Maecenas aliquam iaculis semper. Mauris ornare ante felis, nec iaculis neque efficitur at. Proin in eros odio. Nam urna tortor, sollicitudin nec massa sit amet, aliquam faucibus quam. Sed semper sem vitae ex porttitor, non pellentesque lorem lacinia. Fusce facilisis mi nec gravida feugiat. Nam gravida dolor quam, in eleifend dui efficitur auctor.
 
-Maecenas id risus non tellus interdum facilisis hendrerit vel ipsum. Vivamus porta neque in urna ultrices sodales. Quisque enim nunc, sagittis a ligula vel, efficitur venenatis lacus. Sed aliquet volutpat quam, id eleifend lacus. Cras ut eros non ante condimentum volutpat. Fusce eget mollis quam, ut mattis arcu. Duis eu lorem nec turpis tristique pharetra. Praesent volutpat gravida tellus. Phasellus vitae commodo nibh. Nulla gravida, erat ut mattis bibendum, dolor est bibendum libero, sit amet sodales ante lectus nec dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam aliquet tristique neque, in rhoncus felis aliquam et. Mauris lobortis dui sit amet molestie lobortis. Cras orci dui, mollis sed mi sit amet, rhoncus semper velit.
-
-Proin lobortis ante purus, quis auctor mi imperdiet a. Sed eu sem et nisl ultrices malesuada. Nam in nulla eu nulla bibendum volutpat. Mauris tempor venenatis risus, ut volutpat dui. Praesent mollis luctus leo et ultrices. Proin magna diam, tincidunt et enim non, dignissim pellentesque ante. Aliquam erat volutpat. Duis semper, magna at dignissim tincidunt, sem erat pretium ligula, sit amet molestie purus lorem non mi. Aliquam quis porttitor tortor. Pellentesque euismod condimentum risus, vel efficitur libero porttitor eu. Suspendisse a faucibus velit.
-
 Sed orci velit, varius ac condimentum ac, suscipit facilisis nisi. Donec erat erat, dictum tristique gravida vel, ullamcorper sed eros. Nulla condimentum erat non gravida dapibus. Nulla eget sodales dolor. Pellentesque maximus finibus rhoncus. Praesent rutrum turpis ut enim tempor, eget varius velit bibendum. Duis feugiat iaculis arcu non laoreet. Vestibulum pharetra pulvinar nunc, at maximus quam feugiat ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in sodales sapien.
 
 In lorem dolor, rutrum ut laoreet vel, dignissim vitae nulla. Suspendisse molestie laoreet metus a varius. Sed nec efficitur velit. Suspendisse eu venenatis nisi. Quisque vulputate iaculis pretium. Sed egestas ex et metus porttitor, id maximus est egestas. Praesent malesuada mattis turpis sit amet rhoncus. Duis ac lacus non neque tempus finibus. Sed accumsan est mollis, hendrerit lacus nec, accumsan ex. Donec euismod eros quam, sit amet vestibulum magna tempus ac.",
@@ -300,11 +296,6 @@ Like.create!(
 Like.create!(
   user_id: user2.id,
   story_id: doors.id
-)
-
-Like.create!(
-  user_id: user2.id,
-  story_id: ecclesiastes.id
 )
 
 Like.create!(
