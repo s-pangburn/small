@@ -30,32 +30,46 @@ class Feed extends React.Component {
     }
 
     while (idx <= this.props.stories.length - 3) {
-      arr.push(
-        <GroupOfThree
-          key={this.props.stories[idx].id}
-          stories={this.props.stories.slice(idx, idx+3)} />
-      )
-      idx += 3;
-
-      if (idx === this.props.stories.length - 3) {
-        arr.push(
-          <GroupOfThree
-            key={this.props.stories[idx].id}
-            stories={this.props.stories.slice(idx, idx+3)} />
-        )
-        idx += 3;
-      } else {
-        if (idx <= this.props.stories.length - 2) {
+      switch(idx) {
+        case (this.props.stories.length - 4):
           arr.push(
             <GroupOfTwo
               key={this.props.stories[idx].id}
               stories={this.props.stories.slice(idx, idx+2)} />
           )
           idx += 2;
-        }
+          break;
+        default:
+          arr.push(
+            <GroupOfThree
+              key={this.props.stories[idx].id}
+              stories={this.props.stories.slice(idx, idx+3)} />
+          )
+          idx += 3;
+      }
+
+      switch (idx) {
+        case (this.props.stories.length - 3):
+          arr.push(
+            <GroupOfThree
+              key={this.props.stories[idx].id}
+              stories={this.props.stories.slice(idx, idx+3)} />
+          )
+          idx += 3;
+          break;
+        default:
+          if (idx <= this.props.stories.length - 2) {
+            arr.push(
+              <GroupOfTwo
+                key={this.props.stories[idx].id}
+                stories={this.props.stories.slice(idx, idx+2)} />
+            )
+            idx += 2;
+          }
       }
     }
 
+    // Catch remainder of stories (if there is more than one)
     if (idx === this.props.stories.length - 2) {
       arr.push(
         <GroupOfTwo
