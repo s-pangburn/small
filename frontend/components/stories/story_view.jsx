@@ -17,6 +17,7 @@ class StoryView extends React.Component {
 
   componentWillUnmount() {
     this.props.resetErrors();
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   constructor(props) {

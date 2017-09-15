@@ -208,6 +208,7 @@
   font-weight: normal;
   color: #333;
   background-color: #eee;
+  width: 100%
 }
 
 .storyPreview:first-child:first-letter {

@@ -36,15 +36,35 @@ class Feed extends React.Component {
           stories={this.props.stories.slice(idx, idx+3)} />
       )
       idx += 3;
-      if (idx <= this.props.stories.length - 2) {
+
+      if (idx === this.props.stories.length - 3) {
         arr.push(
-          <GroupOfTwo
+          <GroupOfThree
             key={this.props.stories[idx].id}
-            stories={this.props.stories.slice(idx, idx+2)} />
+            stories={this.props.stories.slice(idx, idx+3)} />
         )
-        idx += 2;
+        idx += 3;
+      } else {
+        if (idx <= this.props.stories.length - 2) {
+          arr.push(
+            <GroupOfTwo
+              key={this.props.stories[idx].id}
+              stories={this.props.stories.slice(idx, idx+2)} />
+          )
+          idx += 2;
+        }
       }
     }
+
+    if (idx === this.props.stories.length - 2) {
+      arr.push(
+        <GroupOfTwo
+          key={this.props.stories[idx].id}
+          stories={this.props.stories.slice(idx, idx+2)} />
+      )
+      idx += 2;
+    }
+
     return arr;
   }
 
