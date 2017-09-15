@@ -34,7 +34,7 @@ class LikeButton extends React.Component {
           onClick={this.toggleLike.bind(this)}
           >
           { this.state.liked ? (
-            <img width="65" src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1505191322/star-green-filled_tczlyh.png" />
+            <img width="65" src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1505191311/star-blue-filled_bvxzle.png" />
           ) : (
             <img width="65" src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1505191305/star-blue_yyh7qu.png" />
           )}
