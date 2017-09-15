@@ -12,6 +12,7 @@
 .feed-row {
   display: flex;
   flex-direction: row;
+  margin-bottom: 60px;
 }
 
 .splashStory {
@@ -61,7 +62,7 @@
   font-weight: 100;
   font-family: 'PT Sans';
   color: white;
-  max-width: 290px;
+  max-width: 500px;
 }
 
 .splash .description span {
@@ -79,6 +80,73 @@
 }
 
 .splash .author .date {
+  display: inline;
+  width: 174px;
+  margin-top: 7px;
+  color: white;
+  margin-left: auto;
+}
+
+.group-of-two .feedItem {
+  display: flex;
+  width: 667px;
+  height: 367px;
+}
+
+.group-of-two .storyInfo {
+  position: absolute;
+  width: 607px;
+  height: 307px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.group-of-two .feedItem .imageContainer {
+  display: flex;
+  z-index: 90;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right:auto;
+  width: 667px;
+  height: 367px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+.group-of-two .feedItem img {
+  width: 900px;
+}
+
+.group-of-two .description h2 {
+  font-size: 28px;
+  font-weight: 100;
+  font-family: 'PT Sans';
+  color: white;
+  max-width: 400px;
+}
+
+.group-of-two .description span {
+  display: block;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  max-width: 500px;
+}
+
+.group-of-two .feedItem .author {
+  font-size: 24px;
+  text-align: right;
+}
+
+.group-of-two .author .date {
   display: inline;
   width: 174px;
   margin-top: 7px;

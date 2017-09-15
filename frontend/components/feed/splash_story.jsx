@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom';
 import FeedItem from './feed_item';
 
 class SplashStory extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      stories: this.props.stories
-    };
-  }
-
   render() {
     return (
       <div key={this.props.stories[0].id} className="splashStory">

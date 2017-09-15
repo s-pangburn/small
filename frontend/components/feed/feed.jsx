@@ -2,6 +2,8 @@ import React from 'react';
 import FeedContainer from './feed_container';
 import FeedItem from './feed_item';
 import SplashStory from './splash_story';
+import GroupOfTwo from './group_of_two';
+import GroupOfThree from './group_of_three';
 
 class Feed extends React.Component {
   componentDidMount() {
@@ -27,19 +29,21 @@ class Feed extends React.Component {
 
     while (idx < this.props.stories.length - 3) {
       arr.push(
-        <section key={this.props.stories[idx].id} className="feed-row">
-          <FeedItem
-            key={this.props.stories[idx].id}
-            story={this.props.stories[idx]} />
-          <FeedItem
-            key={this.props.stories[idx + 1].id}
-            story={this.props.stories[idx + 1]} />
-          <FeedItem
-            key={this.props.stories[idx + 2].id}
-            story={this.props.stories[idx + 2]} />
-        </section>
+        <GroupOfThree
+          key={this.props.stories[idx].id}
+          stories={this.props.stories.slice(idx, idx+3)} />
       )
       idx += 3;
+      console.log(idx, this.props.stories.length);
+      if (idx <= this.props.stories.length - 2) {
+        console.log("WE're trying!");
+        arr.push(
+          <GroupOfTwo
+            key={this.props.stories[idx].id}
+            stories={this.props.stories.slice(idx, idx+2)} />
+        )
+        idx += 2;
+      }
     }
     return arr;
   }
