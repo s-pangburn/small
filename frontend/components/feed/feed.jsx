@@ -36,9 +36,7 @@ class Feed extends React.Component {
           stories={this.props.stories.slice(idx, idx+3)} />
       )
       idx += 3;
-      console.log(idx, this.props.stories.length);
       if (idx <= this.props.stories.length - 2) {
-        console.log("WE're trying!");
         arr.push(
           <GroupOfTwo
             key={this.props.stories[idx].id}
