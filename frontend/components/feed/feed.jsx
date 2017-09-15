@@ -17,12 +17,12 @@ class Feed extends React.Component {
   }
 
   generateFeedRows() {
-    let arr = []
+    let feedRows = []
     let idx = 3
 
     //Generate splash image
     if (this.props.stories.length > 3) {
-      arr.push(
+      feedRows.push(
         <SplashStory
           key={this.props.stories[0].id}
           stories={this.props.stories.slice(0,3)} />
@@ -32,7 +32,7 @@ class Feed extends React.Component {
     while (idx <= this.props.stories.length - 3) {
       switch(idx) {
         case (this.props.stories.length - 4):
-          arr.push(
+          feedRows.push(
             <GroupOfTwo
               key={this.props.stories[idx].id}
               stories={this.props.stories.slice(idx, idx+2)} />
@@ -40,7 +40,7 @@ class Feed extends React.Component {
           idx += 2;
           break;
         default:
-          arr.push(
+          feedRows.push(
             <GroupOfThree
               key={this.props.stories[idx].id}
               stories={this.props.stories.slice(idx, idx+3)} />
@@ -50,7 +50,7 @@ class Feed extends React.Component {
 
       switch (idx) {
         case (this.props.stories.length - 3):
-          arr.push(
+          feedRows.push(
             <GroupOfThree
               key={this.props.stories[idx].id}
               stories={this.props.stories.slice(idx, idx+3)} />
@@ -59,7 +59,7 @@ class Feed extends React.Component {
           break;
         default:
           if (idx <= this.props.stories.length - 2) {
-            arr.push(
+            feedRows.push(
               <GroupOfTwo
                 key={this.props.stories[idx].id}
                 stories={this.props.stories.slice(idx, idx+2)} />
@@ -71,7 +71,7 @@ class Feed extends React.Component {
 
     // Catch remainder of stories (if there is more than one)
     if (idx === this.props.stories.length - 2) {
-      arr.push(
+      feedRows.push(
         <GroupOfTwo
           key={this.props.stories[idx].id}
           stories={this.props.stories.slice(idx, idx+2)} />
@@ -79,7 +79,7 @@ class Feed extends React.Component {
       idx += 2;
     }
 
-    return arr;
+    return feedRows;
   }
 
   render() {

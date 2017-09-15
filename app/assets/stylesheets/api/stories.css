@@ -130,6 +130,17 @@
   overflow: hidden;
 }
 
+.story figcaption {
+  text-align: right;
+  position: static;
+  margin-top: 10px;
+  margin-right: 75px;
+  float: right;
+  font-weight: normal;
+  font-family: "PT Sans";
+  color: grey;
+}
+
 .story figure {
   margin-top: 30px;
   margin-bottom: 40px;
