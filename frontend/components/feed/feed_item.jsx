@@ -12,9 +12,6 @@ class FeedItem extends React.Component {
   render() {
     const storyUrl = `/stories/${this.state.story.id}`;
     const date = new Date(this.props.story.created_at);
-    // <img src="https://res.cloudinary.com/dzeqeo9b3/image/upload/v1501015806/merrigo_clouds_k7n2k4.gif"
-    //   style={{"filter": "grayscale(100%)"}}
-    //   alt={ this.state.story.title }/>
 
     return (
       <Link to={ storyUrl }>

@@ -1,6 +1,7 @@
 import React from 'react';
 import FeedContainer from './feed_container';
 import FeedItem from './feed_item';
+import SplashStory from './splash_story';
 
 class Feed extends React.Component {
   componentDidMount() {
@@ -15,10 +16,18 @@ class Feed extends React.Component {
 
   generateFeedRows() {
     let arr = []
-    let idx = 0
-    while (idx < this.props.stories.length-3) {
+    let idx = 3
+
+    //Generate splash image
+    arr.push(
+      <SplashStory
+        key={this.props.stories[0].id}
+        stories={this.props.stories.slice(0,3)} />
+    )
+
+    while (idx < this.props.stories.length - 3) {
       arr.push(
-        <section className="feed-row">
+        <section key={this.props.stories[idx].id} className="feed-row">
           <FeedItem
             key={this.props.stories[idx].id}
             story={this.props.stories[idx]} />

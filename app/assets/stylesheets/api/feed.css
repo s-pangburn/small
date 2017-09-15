@@ -14,6 +14,78 @@
   flex-direction: row;
 }
 
+.splashStory {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.splash .feedItem {
+  display: flex;
+  width: 890px;
+  height: 490px;
+}
+
+.splash .storyInfo {
+  position: absolute;
+  width: 830px;
+  height: 430px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 100;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.splash .feedItem .imageContainer {
+  display: flex;
+  z-index: 90;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right:auto;
+  width: 890px;
+  height: 490px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+.splash .feedItem img {
+  width: 900px;
+}
+
+.splash .description h2 {
+  font-size: 32px;
+  font-weight: 100;
+  font-family: 'PT Sans';
+  color: white;
+  max-width: 290px;
+}
+
+.splash .description span {
+  display: block;
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: normal;
+  color: white;
+  max-width: 500px;
+}
+
+.splash .feedItem .author {
+  font-size: 28px;
+  text-align: right;
+}
+
+.splash .author .date {
+  display: inline;
+  width: 174px;
+  margin-top: 7px;
+  color: white;
+  margin-left: auto;
+}
+
 .feedItem {
   display: flex;
   width: 445px;
