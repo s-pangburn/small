@@ -21,11 +21,13 @@ class Feed extends React.Component {
     let idx = 3
 
     //Generate splash image
-    arr.push(
-      <SplashStory
-        key={this.props.stories[0].id}
-        stories={this.props.stories.slice(0,3)} />
-    )
+    if (this.props.stories.length > 3) {
+      arr.push(
+        <SplashStory
+          key={this.props.stories[0].id}
+          stories={this.props.stories.slice(0,3)} />
+      )
+    }
 
     while (idx <= this.props.stories.length - 3) {
       arr.push(
