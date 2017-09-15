@@ -11,7 +11,9 @@ The project was designed and built within a two-week timeframe, though I plan to
 ## Features
   * Secure frontend to backend user authentication using BCrypt.
   * Users can create, edit, view, and delete stories.
+  * Feed dynamically adapts to display all published stories in an appealing way.
   * Users can comment on posts and update their responses directly on the page.
+  * Users can like posts and follow other users.
   * Stories support images and animated GIFs.
 
 ### Story editing and conditional rendering
@@ -114,7 +116,5 @@ In addition to the included packages, [Cloudinary][cloudinary] was used for imag
 
 In the future I would like to add:
   * User pages/avatars
-  * Follows
   * Personalized feed
-  * Likes
   * Search
