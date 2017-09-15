@@ -33,7 +33,7 @@ class StoryHeader extends React.Component {
 
     return (artist) ? (
       <figcaption>
-        Art by <a href={url} style={{"fontWeight": "normal"}}>{artist}</a>
+        Art by <a href={url} target="_blank" style={{"fontWeight": "normal"}}>{artist}</a>
       </figcaption>
     ) : null;
   }
