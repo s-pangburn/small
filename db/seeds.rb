@@ -10,6 +10,9 @@
 
 User.destroy_all
 Story.destroy_all
+Comment.destroy_all
+Like.destroy_all
+Follow.destroy_all
 
 ActiveRecord::Base.transaction do
 
@@ -181,6 +184,22 @@ Suspendisse ac ligula ut orci faucibus facilisis. Fusce maximus sed leo ut laore
   author_id: user5.id
 )
 
+zulu = Story.create!(
+  title: "This is a story",
+  description: "About Zulu",
+  body: "Donec laoreet odio in auctor viverra. Fusce quis auctor risus. Aliquam erat volutpat. Suspendisse justo ligula, varius vitae congue et, auctor ut leo. Ut consectetur vestibulum lacinia. Nulla enim lectus, posuere condimentum tincidunt quis, mollis eu neque. Etiam tristique sagittis vehicula.
+
+Vivamus mollis orci vitae porta scelerisque. Sed gravida auctor tortor, eu volutpat ligula viverra et. Etiam ut placerat diam. Praesent dictum augue metus, quis rutrum arcu egestas a. Donec ultrices interdum molestie. Sed a augue nisl. Suspendisse aliquet scelerisque dui, eu pharetra nisi eleifend ut. Nunc eu velit quis lacus auctor fringilla et ut lacus. Donec rhoncus, mi non auctor interdum, felis magna scelerisque lacus, non tempor neque sem in dui. Mauris et nunc ut nibh vehicula mollis.
+
+Integer hendrerit sapien at massa imperdiet venenatis. Aenean a massa at nunc venenatis commodo. Integer pharetra eros vel nisi tempus, at maximus sapien elementum. Praesent vitae metus purus. Sed gravida urna vitae sapien varius, ut hendrerit ipsum pellentesque. In sagittis rutrum velit, malesuada eleifend nulla volutpat sed. Sed turpis nunc, pulvinar id ipsum sit amet, varius porttitor ligula. Aenean ac placerat est.
+
+Aliquam ligula arcu, eleifend tincidunt erat eu, eleifend dignissim augue. Aliquam iaculis risus egestas rhoncus feugiat. Ut sit amet mauris velit. Vivamus purus diam, volutpat in lacus eget, faucibus volutpat elit. Etiam sit amet magna sed quam consectetur ultricies sit amet et mi. In auctor tristique risus et imperdiet. Donec arcu libero, varius at dignissim quis, faucibus ut lorem. Pellentesque id eleifend eros. Sed vehicula, arcu in mattis dapibus, urna augue varius enim, at posuere neque purus et est. Nullam at leo metus. Fusce lobortis sem nulla, bibendum consequat lacus molestie eget. Curabitur lacus nunc, sollicitudin a pulvinar nec, elementum sed turpis.
+
+Ut lacinia commodo fermentum. Nam vulputate ipsum viverra turpis ultricies posuere. Nullam vel mauris fringilla, pharetra urna id, eleifend ante. Integer sagittis libero leo, vel pellentesque orci dignissim non. Aliquam massa ex, vehicula ac dolor eu, rhoncus molestie nulla. Pellentesque nec ipsum turpis. Nunc eu erat nec urna interdum cursus. Cras vel orci sem. Nullam dignissim nunc nec dui imperdiet mollis. In pulvinar odio ac metus ultrices, consequat facilisis justo scelerisque.",
+  image_url: "merrigo_mountain.png",
+  author_id: user1.id
+)
+
 pigeon = Story.create!(
   title: "How to Tame a Pigeon",
   description: "100% Guarantee",
@@ -195,19 +214,14 @@ Donec tristique sed dolor non tincidunt. Ut facilisis tincidunt fermentum. Nam c
   author_id: user1.id
 )
 
-zulu = Story.create!(
-  title: "This is a story",
-  description: "About Zulu",
-  body: "Donec laoreet odio in auctor viverra. Fusce quis auctor risus. Aliquam erat volutpat. Suspendisse justo ligula, varius vitae congue et, auctor ut leo. Ut consectetur vestibulum lacinia. Nulla enim lectus, posuere condimentum tincidunt quis, mollis eu neque. Etiam tristique sagittis vehicula.
+tiny_horse = Story.create!(
+  title: "Tiny Horse Tries His Best",
+  description: "If he can do it, you can too!",
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac rutrum eros, id cursus est. Duis auctor massa quam, et convallis neque eleifend sit amet. Nullam ex nunc, lacinia ut lobortis auctor, aliquet at quam. Praesent lobortis elementum cursus. Sed id scelerisque metus, vel condimentum quam. Praesent nulla odio, convallis sed posuere quis, feugiat vel tellus. Etiam non vulputate velit. Morbi congue et leo at condimentum. Aliquam blandit augue lectus, sit amet vestibulum quam maximus sed. Fusce nisl lectus, volutpat accumsan ante eget, imperdiet ultricies justo. Donec purus arcu, pharetra eu justo et, congue mollis elit. Vestibulum at nulla turpis. Vestibulum sollicitudin ante elit, vitae venenatis libero finibus lacinia. Proin sollicitudin ligula eu metus finibus, ut vestibulum tellus suscipit. Morbi nibh metus, semper ac ultricies eget, maximus posuere enim. Sed commodo, erat quis tempor bibendum, velit purus vehicula nisl, quis fermentum massa mi ac nunc.
 
-Vivamus mollis orci vitae porta scelerisque. Sed gravida auctor tortor, eu volutpat ligula viverra et. Etiam ut placerat diam. Praesent dictum augue metus, quis rutrum arcu egestas a. Donec ultrices interdum molestie. Sed a augue nisl. Suspendisse aliquet scelerisque dui, eu pharetra nisi eleifend ut. Nunc eu velit quis lacus auctor fringilla et ut lacus. Donec rhoncus, mi non auctor interdum, felis magna scelerisque lacus, non tempor neque sem in dui. Mauris et nunc ut nibh vehicula mollis.
-
-Integer hendrerit sapien at massa imperdiet venenatis. Aenean a massa at nunc venenatis commodo. Integer pharetra eros vel nisi tempus, at maximus sapien elementum. Praesent vitae metus purus. Sed gravida urna vitae sapien varius, ut hendrerit ipsum pellentesque. In sagittis rutrum velit, malesuada eleifend nulla volutpat sed. Sed turpis nunc, pulvinar id ipsum sit amet, varius porttitor ligula. Aenean ac placerat est.
-
-Aliquam ligula arcu, eleifend tincidunt erat eu, eleifend dignissim augue. Aliquam iaculis risus egestas rhoncus feugiat. Ut sit amet mauris velit. Vivamus purus diam, volutpat in lacus eget, faucibus volutpat elit. Etiam sit amet magna sed quam consectetur ultricies sit amet et mi. In auctor tristique risus et imperdiet. Donec arcu libero, varius at dignissim quis, faucibus ut lorem. Pellentesque id eleifend eros. Sed vehicula, arcu in mattis dapibus, urna augue varius enim, at posuere neque purus et est. Nullam at leo metus. Fusce lobortis sem nulla, bibendum consequat lacus molestie eget. Curabitur lacus nunc, sollicitudin a pulvinar nec, elementum sed turpis.
-
-Ut lacinia commodo fermentum. Nam vulputate ipsum viverra turpis ultricies posuere. Nullam vel mauris fringilla, pharetra urna id, eleifend ante. Integer sagittis libero leo, vel pellentesque orci dignissim non. Aliquam massa ex, vehicula ac dolor eu, rhoncus molestie nulla. Pellentesque nec ipsum turpis. Nunc eu erat nec urna interdum cursus. Cras vel orci sem. Nullam dignissim nunc nec dui imperdiet mollis. In pulvinar odio ac metus ultrices, consequat facilisis justo scelerisque.",
-  author_id: user1.id
+Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in aliquet lectus nunc vitae purus. Curabitur eu nibh sit amet felis mattis dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ut tempor neque. Sed condimentum elementum orci sed dapibus. Etiam imperdiet tincidunt orci, eget condimentum quam fermentum a. Integer eleifend vestibulum dui vitae egestas. Ut eget ultricies augue. Proin dapibus dolor in lectus vestibulum efficitur at at erat. Phasellus vel turpis accumsan sem sodales iaculis. Etiam ut neque mi. Nullam quis ex eget lorem vestibulum convallis.",
+  image_url: "1041uuu_deer_snow.gif",
+  author_id: user2.id
 )
 
 Comment.create!(
@@ -256,6 +270,66 @@ Comment.create!(
   body: "Clickbait",
   story_id: pigeon.id,
   author_id: user1.id
+)
+
+Like.create!(
+  user_id: user5.id,
+  story_id: great_things.id
+)
+
+Like.create!(
+  user_id: user2.id,
+  story_id: great_things.id
+)
+
+Like.create!(
+  user_id: user3.id,
+  story_id: great_things.id
+)
+
+Like.create!(
+  user_id: user4.id,
+  story_id: great_things.id
+)
+
+Like.create!(
+  user_id: user2.id,
+  story_id: ecclesiastes.id
+)
+
+Like.create!(
+  user_id: user2.id,
+  story_id: doors.id
+)
+
+Like.create!(
+  user_id: user2.id,
+  story_id: ecclesiastes.id
+)
+
+Like.create!(
+  user_id: user2.id,
+  story_id: journey.id
+)
+
+Like.create!(
+  user_id: user3.id,
+  story_id: journey.id
+)
+
+Like.create!(
+  user_id: user4.id,
+  story_id: journey.id
+)
+
+Like.create!(
+  user_id: user2.id,
+  story_id: pigeon.id
+)
+
+Like.create!(
+  user_id: user3.id,
+  story_id: pigeon.id
 )
 
 end
