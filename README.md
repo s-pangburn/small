@@ -18,9 +18,9 @@ The project was designed and built within a two-week timeframe, though I plan to
 
 ### Dynamic Feed
 
-![Small feed](docs/images/feed.png)
-
 The feed updates to display all stories that have been posted to the site. The size of each story tile adapts to display each row in the most appealing way possible, preventing hanging tiles or tiles that occupy a row by themselves. Many combinations are possible, including two rows of two, one row of two and another of three, two threes, among others.
+
+![Small feed](docs/images/feed.png)
 
 This was accomplished by breaking the feed into grouped row components, each with differing layouts, and selecting the optimal one based on the number of remaining stories, like so:
 
