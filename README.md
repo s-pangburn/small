@@ -44,7 +44,7 @@ This was accomplished by breaking the feed into grouped row components, each wit
   }
 ```
 
-Though a variety of potential approaches exist to this problem, this one stood out to me as both the simplest and most-readable solution, which translates to a cleaner and more maintainable codebase overall.
+Though a variety of potential approaches exist to this problem, this one stood out to me as both the simplest and most-readable solution, which translates to a cleaner and more maintainable codebase.
 
 ### Story editing and conditional rendering
 
