@@ -25,7 +25,6 @@ The feed updates to display all stories that have been posted to the site. The s
 This was accomplished by breaking the feed into grouped row components, each with differing layouts, and selecting the optimal one based on the number of remaining stories, like so:
 
 ```js
-  // Partial snippet
   switch(idx) {
     case (this.props.stories.length - 4):
       feedRows.push(
