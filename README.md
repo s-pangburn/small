@@ -16,6 +16,34 @@ The project was designed and built within a two-week timeframe, though I plan to
   * Users can like posts and follow other users.
   * Stories support images and animated GIFs.
 
+### Dynamic Feed
+
+![Small feed](docs/images/feed.png)
+
+The feed updates to display all stories that have been posted to the site. The size of each story tile adapts to display each row in the most appealing way possible, preventing hanging tiles or tiles that occupy a row by themselves. Many combinations are possible, including two rows of two, one row of two and another of three, two threes, among others.
+
+This was accomplished by breaking the feed into grouped row components, each with differing layouts, and selecting the optimal one based on the number of remaining stories, like so:
+
+```js
+  switch(idx) {
+    case (this.props.stories.length - 4):
+      feedRows.push(
+        <GroupOfTwo
+          key={this.props.stories[idx].id}
+          stories={this.props.stories.slice(idx, idx+2)} />
+      )
+      idx += 2;
+      break;
+    default:
+      feedRows.push(
+        <GroupOfThree
+          key={this.props.stories[idx].id}
+          stories={this.props.stories.slice(idx, idx+3)} />
+      )
+      idx += 3;
+  }
+```
+
 ### Story editing and conditional rendering
 
 Users can add stories with a minimum of the title and body. There is an optional description element as well as support for image uploading. Each story's show page contains additional information about the author as well as the date it was published.
