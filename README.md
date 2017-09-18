@@ -16,7 +16,7 @@ The project was designed and built within a two-week timeframe, though I plan to
   * Users can like posts and follow other users.
   * Stories support images and animated GIFs.
 
-### Dynamic Feed
+### Adaptive Feed
 
 The feed updates to display all stories that have been posted to the site. The size of each story tile adapts to display each row in the most appealing way possible, preventing hanging tiles or tiles that occupy a row by themselves. Many combinations are possible, including two rows of two, one row of two and another of three, and two of threes, among others.
 
@@ -121,13 +121,13 @@ This was accomplished through a hidden `<form>` element that is conditionally re
 
 ## Project Design
 
-Small was designed with simplicity and elegance as its primary goals. Considering the two-week time period, it was decided to focus on a core set of features that ran smoothly and bug-free. Keeping code manageable was prioritized over hitting every target, in the interest of providing a solid codebase to build upon for the future.
+Small was designed with simplicity and elegance as its primary goals. Considering the two-week time period, it was decided to focus on a core set of features that ran smoothly and bug-free. Keeping code manageable was prioritized over cloning every major feature of the target app, in the interest of providing a solid codebase to build upon for the future.
 
 ## Technologies
 
-Rails was chosen due to its out-of-the-box support for relational databases and RESTful architecture. Because React is being used on the frontend, the Rails API primarily serves JSON.
+Rails was chosen due to its out-of-the-box support for relational databases and RESTful architecture. As this project was a smaller-scale portfolio piece being built in a relatively short timeframe, convenience and speed was prioritized over scalability. For this reason, the chosen technologies (Heroku, Rails, etc.) were determined to be adequate for the predicted load.
 
-Frontend Flux states are set up in a way such that there are separate reducers and actions for stories, comments, users, and errors. This keeps the code modular and eases the task of keeping the state up-to-date with changes in the database.
+Frontend Redux states are set up in a way such that there are separate reducers and actions for stories, comments, likes, follows, users, and errors. This keeps the state normalized, easing the task of keeping things up-to-date with changes in the database.
 
 In addition to the included packages, [Cloudinary][cloudinary] was used for image uploading.
 
@@ -146,5 +146,4 @@ In addition to the included packages, [Cloudinary][cloudinary] was used for imag
 
 In the future I would like to add:
   * User pages/avatars
-  * Personalized feed
   * Search
