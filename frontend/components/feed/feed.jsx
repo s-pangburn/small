@@ -4,6 +4,7 @@ import FeedItem from './feed_item';
 import SplashStory from './splash_story';
 import GroupOfTwo from './group_of_two';
 import GroupOfThree from './group_of_three';
+import FeedFooter from './feed_footer';
 
 class Feed extends React.Component {
   componentDidMount() {
@@ -87,6 +88,7 @@ class Feed extends React.Component {
       return (
         <section className="feed">
           {this.generateFeedRows()}
+          <FeedFooter />
         </section>
       );
     } else {

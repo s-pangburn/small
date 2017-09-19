@@ -250,3 +250,25 @@
   color: white;
   margin-left: auto;
 }
+
+.feed-footer {
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-link {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  font-weight: normal;
+  font-size: 18px;
+  font-family: "PT Sans";
+  color: #aaa;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
