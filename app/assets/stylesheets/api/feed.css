@@ -269,6 +269,6 @@
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  color: #777;
   cursor: pointer;
 }
