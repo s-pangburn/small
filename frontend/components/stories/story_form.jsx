@@ -145,8 +145,17 @@ class StoryForm extends React.Component {
       <form className="storyForm">
         <br/>
 
-        <StoryFormHeader isEdit={isEdit} />
         <ErrorList errors={this.props.errors} />
+
+        <label className="title">
+          <input type="text" value={this.state.title} placeholder="Add a title"
+            onChange={this.update("title")} onKeyPress={this.checkSubmit}/>
+        </label>
+        <br/>
+        <label className="description">
+          <input type="text" value={this.state.description} placeholder="Add a description"
+            onChange={this.update("description")} onKeyPress={this.checkSubmit}/>
+        </label>
 
         <div className="imgPreview">
           <img src={this.state.image_url} />
@@ -162,17 +171,7 @@ class StoryForm extends React.Component {
 
         <br/>
 
-        <label>Title:<br/>
-          <input type="text" value={this.state.title} placeholder="Add a title"
-            onChange={this.update("title")} onKeyPress={this.checkSubmit}/>
-        </label>
-        <br/>
-        <label>Description:<br/>
-          <input type="text" value={this.state.description} placeholder="Add a description"
-            onChange={this.update("description")} onKeyPress={this.checkSubmit}/>
-        </label>
-
-        <label className="body">Body:<br/>
+        <label className="body">
           <textarea
             onChange={this.update("body")}
             value={this.state.body} />

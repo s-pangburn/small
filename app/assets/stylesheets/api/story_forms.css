@@ -1,10 +1,11 @@
 .storyForm {
   width: 700px;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 80px;
   margin-bottom: 70px;
   font-size: 20px;
   font-weight: bold;
+  zoom: 1;
 }
 
 .storyForm a {
@@ -26,7 +27,7 @@
 
 .storyForm .imgUpload p {
   height: 22px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: right;
 }
 
@@ -38,23 +39,40 @@
 }
 
 .storyForm input {
-  margin-top: 10px;
-  margin-bottom: 20px;
   width: 660px;
   height: 35px;
   font-size: 20px;
-  font-family: 'Titillium Web';
+  font-family: Georgia, 'PT Serif', serif;
+  padding: 0;
+  border: 2px solid white;
+}
+
+.storyForm .title input {
+  font-family: 'PT Sans';
+  margin-top: 20px;
+  margin-bottom: 1px;
+  max-width: 845px;
+  height: auto;
+  font-size: 41px;
   font-weight: bold;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 2px solid lightgrey;
-  border-radius: 10px;
+  text-align: left;
+  color: #333;
+}
+
+.storyForm .description input {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 22px;
+  text-align: left;
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .storyForm body {
   position: relative;
   top: -5px;
+  font-family: Georgia, 'PT Serif', serif;
+  color: #333;
 }
 
 .storyForm textarea {
@@ -63,14 +81,19 @@
   padding: 20px;
   width: 660px;
   height: 310px;
-  font-family: 'Titillium Web';
+  font-family: Georgia, 'PT Serif', serif;
   font-size: 20px;
-  font-weight: bold;
+  color: #333;
   border: 2px solid lightgrey;
   border-radius: 10px;
 }
 
-.storyForm input:focus, .storyForm textarea:focus {
+.storyForm input:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(50, 245, 170);
+}
+
+.storyForm textarea:focus {
   outline: none;
   border: 2px solid rgb(50, 245, 170);
 }
