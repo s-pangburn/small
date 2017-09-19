@@ -220,6 +220,22 @@ Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in ali
   author_id: user2.id
 )
 
+tenda = Story.create!(
+  title: "Overcoming Shyness",
+  description: "If it's good enough for a Tenda, it's good enough for you.",
+  body: "Aliquam erat volutpat. Morbi semper lacinia purus, eu ultricies nunc laoreet vel. Curabitur eget mattis metus. Phasellus eget ante lectus. Donec nec orci fermentum, vehicula libero fermentum, ornare tellus. Aliquam enim lorem, pellentesque et venenatis ac, eleifend at dui. Aliquam finibus leo in elit maximus, rhoncus malesuada neque lacinia. Morbi venenatis, massa eget scelerisque luctus, velit nulla luctus orci, ut faucibus libero neque in dui. Maecenas viverra odio augue. Donec tempus quis mauris sed vehicula. Donec quam eros, scelerisque vitae faucibus et, tempus in arcu. Phasellus pulvinar sapien et pulvinar condimentum. Pellentesque fringilla consequat libero, sed cursus leo tincidunt vel. Donec sagittis lectus sit amet ligula varius vehicula.",
+  image_url: "merrigo_dawn.gif",
+  author_id: user2.id
+)
+
+snails = Story.create!(
+  title: "72 Uses for Snails",
+  description: "Did you know that snails make terrible shoelaces?",
+  body: "Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in aliquet lectus nunc vitae purus. Curabitur eu nibh sit amet felis mattis dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ut tempor neque. Sed condimentum elementum orci sed dapibus. Etiam imperdiet tincidunt orci, eget condimentum quam fermentum a. Integer eleifend vestibulum dui vitae egestas. Ut eget ultricies augue. Proin dapibus dolor in lectus vestibulum efficitur at at erat. Phasellus vel turpis accumsan sem sodales iaculis. Etiam ut neque mi. Nullam quis ex eget lorem vestibulum convallis.",
+  image_url: "merrigo_powerlines.png",
+  author_id: user2.id
+)
+
 Comment.create!(
   body: "Interesting...",
   story_id: ecclesiastes.id,
