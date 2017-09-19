@@ -260,8 +260,8 @@
 }
 
 .footer-link {
-  padding-top: 15px;
-  padding-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
   font-weight: normal;
   font-size: 18px;
   font-family: "PT Sans";
