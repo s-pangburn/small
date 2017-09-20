@@ -52,7 +52,7 @@ Users can add stories with a minimum of the title and body. There is an optional
 
 The story creation and editing page is modest at first glance:
 
-![Small story editing page](docs/images/edit_story.png)
+![Small story editing page](docs/images/story_edit_new.png)
 
 To keep code DRY, similar components were combined into a singular, more adaptable component to avoid rendering multiple copies of what was essentially the same html in different classes. This was done for the story creation and update pages as well as the login and signup dialogs. While this increases the complexity of the classes somewhat, it pays off in the newfound ease of switching form types:
 
