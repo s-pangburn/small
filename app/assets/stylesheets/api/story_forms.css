@@ -99,16 +99,6 @@
   font-weight: normal;
 }
 
-/*.ql-editor p:first-child:first-letter {
-  float: left;
-  font-size: 80px;
-  line-height: 60px;
-  padding-top: 6px;
-  padding-right: 4px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-}*/
-
 .storyForm input:focus {
   outline: none;
   border-bottom: 2px solid rgb(50, 245, 170);
@@ -126,6 +116,5 @@
 }
 
 .storyForm .publishLink {
-  /*margin-top: 45px;*/
   font-size: 20px;
 }

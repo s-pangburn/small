@@ -195,9 +195,4 @@ class StoryForm extends React.Component {
   }
 }
 
-
-// <textarea
-// onChange={this.update("body")}
-// value={this.state.body} />
-
 export default StoryForm;
