@@ -88,9 +88,9 @@
   border-radius: 10px;
 }
 
-.storyForm .body {
+.storyForm .ql-container {
   width: 700px;
-  height: 310px;
+  min-height: 310px;
 }
 
 .ql-editor p {
@@ -126,6 +126,6 @@
 }
 
 .storyForm .publishLink {
-  margin-top: 45px;
+  /*margin-top: 45px;*/
   font-size: 20px;
 }
