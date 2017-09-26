@@ -50,60 +50,7 @@ user5 = User.create!(
 ecclesiastes = Story.create!(
   title: "Ecclesiastes",
   description: "There is nothing new under the sun",
-  body: "So I reflected on all this and concluded that the righteous and the wise and what they do are in God’s hands, but no one knows whether love or hate awaits them. All share a common destiny—the righteous and the wicked, the good and the bad, the clean and the unclean, those who offer sacrifices and those who do not.
-
-
-As it is with the good,
-        so with the sinful;
-
-as it is with those who take oaths,
-        so with those who are afraid to take them.
-
-
-This is the evil in everything that happens under the sun: The same destiny overtakes all. The hearts of people, moreover, are full of evil and there is madness in their hearts while they live, and afterward they join the dead. Anyone who is among the living has hope—even a live dog is better off than a dead lion!
-
-
-For the living know that they will die,
-        but the dead know nothing;
-
-they have no further reward,
-        and even their name is forgotten.
-
-Their love, their hate
-        and their jealousy have long since vanished;
-
-never again will they have a part
-        in anything that happens under the sun.
-
-
-Go, eat your food with gladness, and drink your wine with a joyful heart, for God has already approved what you do.
-
-Always be clothed in white, and always anoint your head with oil.
-
-Enjoy life with your wife, whom you love, all the days of this meaningless life that God has given you under the sun—all your meaningless days. For this is your lot in life and in your toilsome labor under the sun.
-
-Whatever your hand finds to do, do it with all your might, for in the realm of the dead, where you are going, there is neither working nor planning nor knowledge nor wisdom.
-
-
-I have seen something else under the sun:
-
-  The race is not to the swift
-          or the battle to the strong,
-
-  nor does food come to the wise
-          or wealth to the brilliant
-          or favor to the learned;
-
-but time and chance happen to them all.
-
-
-Moreover, no one knows when their hour will come:
-
-  As fish are caught in a cruel net,
-        or birds are taken in a snare,
-
-  so people are trapped by evil times
-        that fall unexpectedly upon them.",
+  body: "<p>So I reflected on all this and concluded that the righteous and the wise and what they do are in God’s hands, but no one knows whether love or hate awaits them. All share a common destiny—the righteous and the wicked, the good and the bad, the clean and the unclean, those who offer sacrifices and those who do not.</p><p><br></p><p><br></p><p>	<em>As it is with the good,</em></p><p>		<em>so with the sinful;</em></p><p><br></p><p>	<em>as it is with those who take oaths,</em></p><p>		<em>so with those who are afraid to take them.</em></p><p><br></p><p><br></p><p>This is the evil in everything that happens under the sun: The same destiny overtakes all. The hearts of people, moreover, are full of evil and there is madness in their hearts while they live, and afterward they join the dead. Anyone who is among the living has hope—even a live dog is better off than a dead lion!</p><p><br></p><p><br></p><p><em>	For the living know that they will die,</em></p><p><em>		but the dead know nothing;</em></p><p><br></p><p><em>	they have no further reward,</em></p><p><em>		and even their name is forgotten.</em></p><p><br></p><p><em>	Their love, their hate</em></p><p><em>		and their jealousy have long since vanished;</em></p><p><br></p><p><em>	never again will they have a part</em></p><p><em>		in anything that happens under the sun.</em></p><p><br></p><p><br></p><p>Go, eat your food with gladness, and drink your wine with a joyful heart, for God has already approved what you do.</p><p><br></p><p>Always be clothed in white, and always anoint your head with oil.</p><p><br></p><p>Enjoy life with your wife, whom you love, all the days of this meaningless life that God has given you under the sun—all your meaningless days. For this is your lot in life and in your toilsome labor under the sun.</p><p><br></p><p>Whatever your hand finds to do, do it with all your might, for in the realm of the dead, where you are going, there is neither working nor planning nor knowledge nor wisdom.</p><p><br></p><p><br></p><p>I have seen something else under the sun:</p><p><br></p><p><em>	The race is not to the swift</em></p><p><em>		or the battle to the strong,</em></p><p><br></p><p><em>	nor does food come to the wise</em></p><p><em>		or wealth to the brilliant</em></p><p><em>		or favor to the learned;</em></p><p><br></p><p>but time and chance happen to them all.</p><p><br></p><p><br></p><p>Moreover, no one knows when their hour will come:</p><p><br></p><p><em>	As fish are caught in a cruel net,</em></p><p><em>		or birds are taken in a snare,</em></p><p><br></p><p><em>	so people are trapped by evil times</em></p><p><em>		that fall unexpectedly upon them.</em></p>",
   image_url: "1041uuu_koi.gif",
   author_id: user2.id
 )
@@ -111,21 +58,7 @@ Moreover, no one knows when their hour will come:
 doors = Story.create!(
   title: "Fifteen Doors and How to Open Them",
   description: "The Definitive Guide",
-  body: "Duis vel odio leo. Donec et consequat odio. Nam blandit neque dictum velit pulvinar rutrum. Cras massa ligula, eleifend ut aliquam sed, vestibulum a sem. Sed in tortor hendrerit, sagittis diam at, pellentesque ligula. Sed efficitur dui nec nisl suscipit commodo. Etiam finibus et urna eu facilisis. Nunc condimentum laoreet ultricies. Sed eu mauris felis. Mauris urna nisl, volutpat quis porttitor sodales, auctor vel mauris. Mauris erat elit, hendrerit a aliquam non, suscipit quis ipsum. Aenean ultricies, leo eget faucibus euismod, metus mi mattis eros, sit amet pulvinar lorem erat ut metus. Fusce tincidunt, enim a ultrices facilisis, mauris lorem tincidunt diam, quis posuere metus lectus et leo. Nullam ut enim non ante suscipit convallis. Donec aliquet metus a mauris malesuada, ut sodales sem tempor. Quisque bibendum bibendum sodales.
-
-Nulla semper pretium lacus vel varius. Cras luctus et est a elementum. Quisque erat ipsum, placerat quis consequat in, congue in neque. Mauris sagittis est nec nulla scelerisque, aliquam tempor metus dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis congue justo. Pellentesque vel justo pretium, imperdiet sapien scelerisque, sodales lacus. Aenean quis libero hendrerit elit tempor aliquam imperdiet ac diam.
-
-Maecenas sed aliquam arcu. Curabitur malesuada tincidunt maximus. Praesent iaculis turpis vitae feugiat sollicitudin. Maecenas vel dapibus odio. Integer sit amet quam eleifend arcu bibendum pretium in et libero. Fusce accumsan, libero quis interdum malesuada, dui nunc cursus nisl, et mollis sem sapien quis enim. Vivamus odio neque, ullamcorper at sodales eget, luctus ut nunc. In augue nisi, mattis sed ipsum eget, dictum porttitor quam. Nulla non est euismod, elementum augue faucibus, ornare ante. Integer non dapibus nunc.
-
-Maecenas lobortis volutpat enim, in elementum nibh fringilla nec. Donec varius diam ac purus congue, eu vehicula lectus auctor. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam porttitor lectus a eros condimentum convallis. Duis id nisi commodo quam venenatis laoreet eu non lacus. Praesent finibus fringilla enim a mattis.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec quis lacus in turpis accumsan commodo. Etiam ullamcorper tortor ex, vitae tincidunt purus varius non. Integer varius leo non ullamcorper commodo. Morbi fringilla, neque eu bibendum mattis, erat ligula congue erat, eu gravida nisl neque non ante. Mauris lorem libero, ultricies ut aliquam vel, consectetur ac purus. Sed commodo nisl quis orci imperdiet, eu porta tellus blandit. Phasellus mauris erat, scelerisque ut tortor eu, molestie mollis nibh. Cras ac leo mi. Nam ac dictum mauris.
-
-Etiam malesuada magna metus, eget scelerisque orci efficitur et. Nunc non mauris eu lacus posuere sollicitudin. Mauris et libero felis. Curabitur fermentum porta erat, in laoreet lacus aliquet vel. Suspendisse mi ligula, pharetra ac consequat id, porttitor nec sapien. Maecenas aliquam iaculis semper. Mauris ornare ante felis, nec iaculis neque efficitur at. Proin in eros odio. Nam urna tortor, sollicitudin nec massa sit amet, aliquam faucibus quam. Sed semper sem vitae ex porttitor, non pellentesque lorem lacinia. Fusce facilisis mi nec gravida feugiat. Nam gravida dolor quam, in eleifend dui efficitur auctor.
-
-Sed orci velit, varius ac condimentum ac, suscipit facilisis nisi. Donec erat erat, dictum tristique gravida vel, ullamcorper sed eros. Nulla condimentum erat non gravida dapibus. Nulla eget sodales dolor. Pellentesque maximus finibus rhoncus. Praesent rutrum turpis ut enim tempor, eget varius velit bibendum. Duis feugiat iaculis arcu non laoreet. Vestibulum pharetra pulvinar nunc, at maximus quam feugiat ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in sodales sapien.
-
-In lorem dolor, rutrum ut laoreet vel, dignissim vitae nulla. Suspendisse molestie laoreet metus a varius. Sed nec efficitur velit. Suspendisse eu venenatis nisi. Quisque vulputate iaculis pretium. Sed egestas ex et metus porttitor, id maximus est egestas. Praesent malesuada mattis turpis sit amet rhoncus. Duis ac lacus non neque tempus finibus. Sed accumsan est mollis, hendrerit lacus nec, accumsan ex. Donec euismod eros quam, sit amet vestibulum magna tempus ac.",
+  body: "<p>Duis vel odio leo. Donec et consequat odio. Nam blandit neque dictum velit pulvinar rutrum. Cras massa ligula, eleifend ut aliquam sed, vestibulum a sem. Sed in tortor hendrerit, sagittis diam at, pellentesque ligula. Sed efficitur dui nec nisl suscipit commodo. Etiam finibus et urna eu facilisis. Nunc condimentum laoreet ultricies. Sed eu mauris felis. Mauris urna nisl, volutpat quis porttitor sodales, auctor vel mauris. Mauris erat elit, hendrerit a aliquam non, suscipit quis ipsum. Aenean ultricies, leo eget faucibus euismod, metus mi mattis eros, sit amet pulvinar lorem erat ut metus. Fusce tincidunt, enim a ultrices facilisis, mauris lorem tincidunt diam, quis posuere metus lectus et leo. Nullam ut enim non ante suscipit convallis. Donec aliquet metus a mauris malesuada, ut sodales sem tempor. Quisque bibendum bibendum sodales.</p><p><br></p><p>Nulla semper pretium lacus vel varius. Cras luctus et est a elementum. Quisque erat ipsum, placerat quis consequat in, congue in neque. Mauris sagittis est nec nulla scelerisque, aliquam tempor metus dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis congue justo. Pellentesque vel justo pretium, imperdiet sapien scelerisque, sodales lacus. Aenean quis libero hendrerit elit tempor aliquam imperdiet ac diam.</p><p><br></p><p>Maecenas sed aliquam arcu. Curabitur malesuada tincidunt maximus. Praesent iaculis turpis vitae feugiat sollicitudin. Maecenas vel dapibus odio. Integer sit amet quam eleifend arcu bibendum pretium in et libero. Fusce accumsan, libero quis interdum malesuada, dui nunc cursus nisl, et mollis sem sapien quis enim. Vivamus odio neque, ullamcorper at sodales eget, luctus ut nunc. In augue nisi, mattis sed ipsum eget, dictum porttitor quam. Nulla non est euismod, elementum augue faucibus, ornare ante. Integer non dapibus nunc.</p><p><br></p><p>Maecenas lobortis volutpat enim, in elementum nibh fringilla nec. Donec varius diam ac purus congue, eu vehicula lectus auctor. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam porttitor lectus a eros condimentum convallis. Duis id nisi commodo quam venenatis laoreet eu non lacus. Praesent finibus fringilla enim a mattis.</p><p><br></p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec quis lacus in turpis accumsan commodo. Etiam ullamcorper tortor ex, vitae tincidunt purus varius non. Integer varius leo non ullamcorper commodo. Morbi fringilla, neque eu bibendum mattis, erat ligula congue erat, eu gravida nisl neque non ante. Mauris lorem libero, ultricies ut aliquam vel, consectetur ac purus. Sed commodo nisl quis orci imperdiet, eu porta tellus blandit. Phasellus mauris erat, scelerisque ut tortor eu, molestie mollis nibh. Cras ac leo mi. Nam ac dictum mauris.</p><p><br></p><p>Etiam malesuada magna metus, eget scelerisque orci efficitur et. Nunc non mauris eu lacus posuere sollicitudin. Mauris et libero felis. Curabitur fermentum porta erat, in laoreet lacus aliquet vel. Suspendisse mi ligula, pharetra ac consequat id, porttitor nec sapien. Maecenas aliquam iaculis semper. Mauris ornare ante felis, nec iaculis neque efficitur at. Proin in eros odio. Nam urna tortor, sollicitudin nec massa sit amet, aliquam faucibus quam. Sed semper sem vitae ex porttitor, non pellentesque lorem lacinia. Fusce facilisis mi nec gravida feugiat. Nam gravida dolor quam, in eleifend dui efficitur auctor.</p><p><br></p><p>Sed orci velit, varius ac condimentum ac, suscipit facilisis nisi. Donec erat erat, dictum tristique gravida vel, ullamcorper sed eros. Nulla condimentum erat non gravida dapibus. Nulla eget sodales dolor. Pellentesque maximus finibus rhoncus. Praesent rutrum turpis ut enim tempor, eget varius velit bibendum. Duis feugiat iaculis arcu non laoreet. Vestibulum pharetra pulvinar nunc, at maximus quam feugiat ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in sodales sapien.</p><p><br></p><p>In lorem dolor, rutrum ut laoreet vel, dignissim vitae nulla. Suspendisse molestie laoreet metus a varius. Sed nec efficitur velit. Suspendisse eu venenatis nisi. Quisque vulputate iaculis pretium. Sed egestas ex et metus porttitor, id maximus est egestas. Praesent malesuada mattis turpis sit amet rhoncus. Duis ac lacus non neque tempus finibus. Sed accumsan est mollis, hendrerit lacus nec, accumsan ex. Donec euismod eros quam, sit amet vestibulum magna tempus ac.</p>",
   image_url: "1041uuu_apartment.gif",
   author_id: user3.id
 )
@@ -133,11 +66,7 @@ In lorem dolor, rutrum ut laoreet vel, dignissim vitae nulla. Suspendisse molest
 great_things = Story.create!(
   title: "If you cannot do great things, do small things in a great way",
   description: "Wisdom from Napoleon (Hill)",
-  body: "Duis vestibulum arcu at nisl feugiat, sed elementum erat dictum. Nam sit amet varius dolor, dictum fermentum diam. Vestibulum elit orci, laoreet vitae nisl rutrum, suscipit placerat urna. Vestibulum mollis neque ac vestibulum dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sit amet tempus neque, eu tempus dui. Aliquam pharetra ex nibh, sed dapibus magna iaculis eu. Fusce ornare turpis at pretium fermentum. Ut tempus condimentum eros, et venenatis felis facilisis quis. Curabitur semper nulla vel mi dapibus, a dapibus velit consectetur. Donec aliquet consectetur nisi eget faucibus. Donec eu mauris consectetur, ultrices sapien et, dictum justo. Vestibulum faucibus est sed ullamcorper finibus.
-
-Mauris id turpis sed ex placerat laoreet. In hac habitasse platea dictumst. Mauris enim ipsum, venenatis eu erat sed, pulvinar laoreet magna. Sed ullamcorper, mauris in mattis fringilla, dui mauris vulputate dui, tempus tincidunt libero sem ac nibh. Fusce vestibulum tincidunt urna, vitae vulputate tortor venenatis eget. Donec egestas orci sollicitudin, porttitor sapien sed, laoreet massa. Morbi porttitor volutpat scelerisque. Ut consectetur lorem vel vestibulum euismod. Cras ac ante metus. Praesent rhoncus justo odio, quis ultrices est porttitor viverra. Sed vestibulum vestibulum malesuada. Nam porta ut augue in bibendum. Integer pharetra ante risus, et rutrum nunc dapibus vitae. Nullam vulputate tincidunt nibh, vel finibus lectus feugiat nec. Morbi enim nisi, ultrices sit amet iaculis non, semper vitae orci. Curabitur pellentesque purus eu eros elementum feugiat.
-
-Donec venenatis augue dui, eu volutpat mi sagittis ut. Sed in elit sollicitudin, viverra lectus ut, porttitor turpis. Vestibulum ultrices consectetur urna id tempus. Nullam tempus eu justo sed tincidunt. Duis auctor elit id feugiat maximus. Fusce ullamcorper ante sit amet tincidunt sollicitudin. Praesent nec mollis massa, id porttitor arcu.",
+  body: "<p>Duis vestibulum arcu at nisl feugiat, sed elementum erat dictum. Nam sit amet varius dolor, dictum fermentum diam. Vestibulum elit orci, laoreet vitae nisl rutrum, suscipit placerat urna. Vestibulum mollis neque ac vestibulum dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sit amet tempus neque, eu tempus dui. Aliquam pharetra ex nibh, sed dapibus magna iaculis eu. Fusce ornare turpis at pretium fermentum. Ut tempus condimentum eros, et venenatis felis facilisis quis. Curabitur semper nulla vel mi dapibus, a dapibus velit consectetur. Donec aliquet consectetur nisi eget faucibus. Donec eu mauris consectetur, ultrices sapien et, dictum justo. Vestibulum faucibus est sed ullamcorper finibus. </p><p><br></p><p>Mauris id turpis sed ex placerat laoreet. In hac habitasse platea dictumst. Mauris enim ipsum, venenatis eu erat sed, pulvinar laoreet magna. Sed ullamcorper, mauris in mattis fringilla, dui mauris vulputate dui, tempus tincidunt libero sem ac nibh. Fusce vestibulum tincidunt urna, vitae vulputate tortor venenatis eget. Donec egestas orci sollicitudin, porttitor sapien sed, laoreet massa. Morbi porttitor volutpat scelerisque. Ut consectetur lorem vel vestibulum euismod. Cras ac ante metus. Praesent rhoncus justo odio, quis ultrices est porttitor viverra. Sed vestibulum vestibulum malesuada. Nam porta ut augue in bibendum. Integer pharetra ante risus, et rutrum nunc dapibus vitae. Nullam vulputate tincidunt nibh, vel finibus lectus feugiat nec. Morbi enim nisi, ultrices sit amet iaculis non, semper vitae orci. Curabitur pellentesque purus eu eros elementum feugiat. </p><p><br></p><p>Donec venenatis augue dui, eu volutpat mi sagittis ut. Sed in elit sollicitudin, viverra lectus ut, porttitor turpis. Vestibulum ultrices consectetur urna id tempus. Nullam tempus eu justo sed tincidunt. Duis auctor elit id feugiat maximus. Fusce ullamcorper ante sit amet tincidunt sollicitudin. Praesent nec mollis massa, id porttitor arcu.</p>",
   image_url: "merrigo_sun.gif",
   author_id: user4.id
 )
@@ -145,27 +74,7 @@ Donec venenatis augue dui, eu volutpat mi sagittis ut. Sed in elit sollicitudin,
 smallest = Story.create!(
   title: "World's top 10 smallest apps",
   description: "The littlest of the littlest",
-  body: "Nulla et euismod erat. Fusce at dui sodales ante vulputate convallis eu ac odio. In aliquam turpis non sagittis molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-1. Small by Stephen Pangburn
-
-2. Small by Stephen Pangburn
-
-3. Small by Stephen Pangburn
-
-4. Small by Stephen Pangburn
-
-5. Small by Stephen Pangburn
-
-6. Small by Stephen Pangburn
-
-7. Small by Stephen Pangburn
-
-8. Small by Stephen Pangburn
-
-9. Small by Stephen Pangburn
-
-10. iOS Compass",
+  body: "<p>Nulla et euismod erat. Fusce at dui sodales ante vulputate convallis eu ac odio. In aliquam turpis non sagittis molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><p><br></p><p>1. Small by Stephen Pangburn </p><p><br></p><p>2. Small by Stephen Pangburn </p><p><br></p><p>3. Small by Stephen Pangburn </p><p><br></p><p>4. Small by Stephen Pangburn </p><p><br></p><p>5. Small by Stephen Pangburn </p><p><br></p><p>6. Small by Stephen Pangburn </p><p><br></p><p>7. Small by Stephen Pangburn </p><p><br></p><p>8. Small by Stephen Pangburn </p><p><br></p><p>9. Small by Stephen Pangburn </p><p><br></p><p>10. iOS Compass</p>",
   image_url: "merrigo_smartphone.gif",
   author_id: user2.id
 )
@@ -197,9 +106,7 @@ pigeon = Story.create!(
 tiny_horse = Story.create!(
   title: "Tiny Horse Tries His Best",
   description: "If he can do it, you can too!",
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac rutrum eros, id cursus est. Duis auctor massa quam, et convallis neque eleifend sit amet. Nullam ex nunc, lacinia ut lobortis auctor, aliquet at quam. Praesent lobortis elementum cursus. Sed id scelerisque metus, vel condimentum quam. Praesent nulla odio, convallis sed posuere quis, feugiat vel tellus. Etiam non vulputate velit. Morbi congue et leo at condimentum. Aliquam blandit augue lectus, sit amet vestibulum quam maximus sed. Fusce nisl lectus, volutpat accumsan ante eget, imperdiet ultricies justo. Donec purus arcu, pharetra eu justo et, congue mollis elit. Vestibulum at nulla turpis. Vestibulum sollicitudin ante elit, vitae venenatis libero finibus lacinia. Proin sollicitudin ligula eu metus finibus, ut vestibulum tellus suscipit. Morbi nibh metus, semper ac ultricies eget, maximus posuere enim. Sed commodo, erat quis tempor bibendum, velit purus vehicula nisl, quis fermentum massa mi ac nunc.
-
-Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in aliquet lectus nunc vitae purus. Curabitur eu nibh sit amet felis mattis dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ut tempor neque. Sed condimentum elementum orci sed dapibus. Etiam imperdiet tincidunt orci, eget condimentum quam fermentum a. Integer eleifend vestibulum dui vitae egestas. Ut eget ultricies augue. Proin dapibus dolor in lectus vestibulum efficitur at at erat. Phasellus vel turpis accumsan sem sodales iaculis. Etiam ut neque mi. Nullam quis ex eget lorem vestibulum convallis.",
+  body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac rutrum eros, id cursus est. Duis auctor massa quam, et convallis neque eleifend sit amet. Nullam ex nunc, lacinia ut lobortis auctor, aliquet at quam. Praesent lobortis elementum cursus. Sed id scelerisque metus, vel condimentum quam. Praesent nulla odio, convallis sed posuere quis, feugiat vel tellus. Etiam non vulputate velit. Morbi congue et leo at condimentum. Aliquam blandit augue lectus, sit amet vestibulum quam maximus sed. Fusce nisl lectus, volutpat accumsan ante eget, imperdiet ultricies justo. Donec purus arcu, pharetra eu justo et, congue mollis elit. Vestibulum at nulla turpis. Vestibulum sollicitudin ante elit, vitae venenatis libero finibus lacinia. Proin sollicitudin ligula eu metus finibus, ut vestibulum tellus suscipit. Morbi nibh metus, semper ac ultricies eget, maximus posuere enim. Sed commodo, erat quis tempor bibendum, velit purus vehicula nisl, quis fermentum massa mi ac nunc. </p><p><br></p><p>Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in aliquet lectus nunc vitae purus. Curabitur eu nibh sit amet felis mattis dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ut tempor neque. Sed condimentum elementum orci sed dapibus. Etiam imperdiet tincidunt orci, eget condimentum quam fermentum a. Integer eleifend vestibulum dui vitae egestas. Ut eget ultricies augue. Proin dapibus dolor in lectus vestibulum efficitur at at erat. Phasellus vel turpis accumsan sem sodales iaculis. Etiam ut neque mi. Nullam quis ex eget lorem vestibulum convallis.</p>",
   image_url: "1041uuu_deer_snow.gif",
   author_id: user2.id
 )
@@ -207,7 +114,7 @@ Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in ali
 snails = Story.create!(
   title: "72 Uses for Snails",
   description: "Did you know that snails make terrible shoelaces?",
-  body: "Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in aliquet lectus nunc vitae purus. Curabitur eu nibh sit amet felis mattis dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ut tempor neque. Sed condimentum elementum orci sed dapibus. Etiam imperdiet tincidunt orci, eget condimentum quam fermentum a. Integer eleifend vestibulum dui vitae egestas. Ut eget ultricies augue. Proin dapibus dolor in lectus vestibulum efficitur at at erat. Phasellus vel turpis accumsan sem sodales iaculis. Etiam ut neque mi. Nullam quis ex eget lorem vestibulum convallis.",
+  body: "<p>Duis scelerisque, massa nec tempus consectetur, nibh elit convallis odio, in aliquet lectus nunc vitae purus. Curabitur eu nibh sit amet felis mattis dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ut tempor neque. Sed condimentum elementum orci sed dapibus. Etiam imperdiet tincidunt orci, eget condimentum quam fermentum a. Integer eleifend vestibulum dui vitae egestas. Ut eget ultricies augue. Proin dapibus dolor in lectus vestibulum efficitur at at erat. Phasellus vel turpis accumsan sem sodales iaculis. Etiam ut neque mi. Nullam quis ex eget lorem vestibulum convallis.</p>",
   image_url: "1041uuu_shoes.gif",
   author_id: user2.id
 )
@@ -215,7 +122,7 @@ snails = Story.create!(
 tenda = Story.create!(
   title: "Overcoming Shyness",
   description: "If it's good enough for a Tenda, it's good enough for you.",
-  body: "Aliquam erat volutpat. Morbi semper lacinia purus, eu ultricies nunc laoreet vel. Curabitur eget mattis metus. Phasellus eget ante lectus. Donec nec orci fermentum, vehicula libero fermentum, ornare tellus. Aliquam enim lorem, pellentesque et venenatis ac, eleifend at dui. Aliquam finibus leo in elit maximus, rhoncus malesuada neque lacinia. Morbi venenatis, massa eget scelerisque luctus, velit nulla luctus orci, ut faucibus libero neque in dui. Maecenas viverra odio augue. Donec tempus quis mauris sed vehicula. Donec quam eros, scelerisque vitae faucibus et, tempus in arcu. Phasellus pulvinar sapien et pulvinar condimentum. Pellentesque fringilla consequat libero, sed cursus leo tincidunt vel. Donec sagittis lectus sit amet ligula varius vehicula.",
+  body: "<p>Aliquam erat volutpat. Morbi semper lacinia purus, eu ultricies nunc laoreet vel. Curabitur eget mattis metus. Phasellus eget ante lectus. Donec nec orci fermentum, vehicula libero fermentum, ornare tellus. Aliquam enim lorem, pellentesque et venenatis ac, eleifend at dui. Aliquam finibus leo in elit maximus, rhoncus malesuada neque lacinia. Morbi venenatis, massa eget scelerisque luctus, velit nulla luctus orci, ut faucibus libero neque in dui. Maecenas viverra odio augue. Donec tempus quis mauris sed vehicula. Donec quam eros, scelerisque vitae faucibus et, tempus in arcu. Phasellus pulvinar sapien et pulvinar condimentum. Pellentesque fringilla consequat libero, sed cursus leo tincidunt vel. Donec sagittis lectus sit amet ligula varius vehicula.</p>",
   image_url: "merrigo_dawn.gif",
   author_id: user2.id
 )

@@ -103,6 +103,12 @@
   color: #333;
 }
 
+.story h2 {
+  text-align: center;
+  color: grey;
+  font-style: italic;
+}
+
 .story h3 {
   margin-top: 20px;
   margin-left: 80px;

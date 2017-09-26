@@ -41,7 +41,6 @@ class StoryForm extends React.Component {
   }
 
   updateQuill(value) {
-    console.log(this.state);
     this.setState({ body: value });
   }
 
