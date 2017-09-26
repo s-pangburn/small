@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactHtmlParser from 'react-html-parser';
 
 import CommentsContainer from '../comments/comments_container';
 import AuthorWidget from '../users/author_widget';
@@ -66,7 +67,7 @@ class StoryView extends React.Component {
             <StoryHeader story={this.props.story} />
 
             <section className="body" id="body" style={{"whiteSpace": "pre-wrap"}}>
-              <p>{this.props.story.body}</p>
+              {ReactHtmlParser(this.props.story.body)}
             </section>
 
             <ControlsFooter

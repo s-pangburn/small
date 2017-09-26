@@ -2,6 +2,8 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import { Link } from 'react-router-dom';
+import ReactQuill from 'react-quill';
+
 
 import ErrorList from '../errors/error_list';
 import StoryFormHeader from './story_form_header';
@@ -28,6 +30,7 @@ class StoryForm extends React.Component {
     this.determineFormType();
 
     this.update = this.update.bind(this);
+    this.updateQuill = this.updateQuill.bind(this);
     this.populateFields = this.populateFields.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.checkSubmit = this.checkSubmit.bind(this);
@@ -35,6 +38,11 @@ class StoryForm extends React.Component {
 
   update(item) {
     return event => this.setState({ [item]: event.currentTarget.value });
+  }
+
+  updateQuill(value) {
+    console.log(this.state);
+    this.setState({ body: value });
   }
 
   clearState() {
@@ -171,19 +179,25 @@ class StoryForm extends React.Component {
 
         <br/>
 
-        <label className="body">
-          <textarea
-            onChange={this.update("body")}
+        <label>
+          <ReactQuill
+            className="body"
+            onChange={this.updateQuill}
             value={this.state.body} />
         </label>
         <br/>
 
-        <span className="link" onClick={this.handleSubmit}>
+        <span className="link publishLink" onClick={this.handleSubmit}>
           { isEdit ? "Edit Story" : "Publish Story" }
         </span>
       </form>
     );
   }
 }
+
+
+// <textarea
+// onChange={this.update("body")}
+// value={this.state.body} />
 
 export default StoryForm;
