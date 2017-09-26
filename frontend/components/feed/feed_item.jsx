@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactHtmlParser from 'react-html-parser';
 
 class FeedItem extends React.Component {
   constructor(props) {
@@ -21,10 +22,10 @@ class FeedItem extends React.Component {
                 <img src={this.props.story.image_url}
                   alt={ this.state.story.title }/>
           ) : (
-            <p className="storyPreview"
+            <div className="storyPreview"
               style={{"whiteSpace": "pre-wrap"}} >
-              {this.props.story.body}
-            </p>
+              {ReactHtmlParser(this.props.story.body)}
+            </div>
           ) }
 
         </div>

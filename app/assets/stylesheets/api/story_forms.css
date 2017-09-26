@@ -8,12 +8,6 @@
   zoom: 1;
 }
 
-.storyForm a {
-  position: relative;
-  left: -57px;
-  top: 8px;
-}
-
 .storyForm .errors {
   font-size: 20px;
   margin-top: 20px;
@@ -93,7 +87,7 @@
   min-height: 310px;
 }
 
-.ql-editor p {
+.ql-editor p, .ql-editor ul, .ql-editor ol, .ql-editor a {
   font-family: Georgia, 'PT Serif', serif;
   font-size: 20px;
   font-weight: normal;
