@@ -87,6 +87,10 @@
   min-height: 310px;
 }
 
+.storyForm .ql-editor {
+  min-height: 310px;
+}
+
 .ql-editor p, .ql-editor ul, .ql-editor ol, .ql-editor a {
   font-family: Georgia, 'PT Serif', serif;
   font-size: 20px;
