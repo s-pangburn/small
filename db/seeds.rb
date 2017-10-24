@@ -127,6 +127,14 @@ tenda = Story.create!(
   author_id: user2.id
 )
 
+once = Story.create!(
+  title: "Once Upon a Time There Was a Story",
+  description: "It didn't know what it wanted to be",
+  body: "It was quite overwhelmed trying to figure out its future and forever identity on the spot. Until a wise friend came along and told it, \"It\'s okay to not know what you\'re going to be, you\'ll find out once you write yourself.\" So the story started writing itself and it\'s been growing and changing happily ever since.",
+  image_url: "once_upon_a_time.jpg",
+  author_id: user1.id
+)
+
 Comment.create!(
   body: "Interesting...",
   story_id: ecclesiastes.id,
