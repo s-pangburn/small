@@ -26,6 +26,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
 }
 
 .controls-footer {

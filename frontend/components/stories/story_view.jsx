@@ -4,7 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 import CommentsContainer from '../comments/comments_container';
 import AuthorWidget from '../users/author_widget';
-import StoryHeader from './story_header'
+import StoryHeader from './story_header';
 import ControlsSidebar from './controls_sidebar';
 import ControlsFooter from './controls_footer';
 
@@ -25,7 +25,7 @@ class StoryView extends React.Component {
     super(props);
     this.state = {
       sidebar: true
-    }
+    };
     this.handleDelete = this.handleDelete.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -45,9 +45,9 @@ class StoryView extends React.Component {
     const storyHeight = document.getElementById('body').clientHeight;
 
     if ($(document).scrollTop() > storyHeight) {
-      this.setState({ sidebar: false })
+      this.setState({ sidebar: false });
     } else {
-      this.setState({ sidebar: true })
+      this.setState({ sidebar: true });
     }
   }
 
