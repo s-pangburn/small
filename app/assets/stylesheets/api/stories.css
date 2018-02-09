@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   animation-name: fadeIn;
-  animation-duration: 0.05s;
+  animation-duration: 0.1s;
 }
 
 .fade-out {
