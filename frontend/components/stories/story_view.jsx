@@ -52,17 +52,21 @@ class StoryView extends React.Component {
   }
 
   render() {
+    let sidebarClass = "";
+    if (!this.state.sidebar) {
+      sidebarClass = "fade-out"
+    }
+
     if (this.props.story) {
       return (
         <div>
           <section className="story">
-            { this.state.sidebar ? (
               <ControlsSidebar
+                sidebarClass = {sidebarClass}
                 currentUser={this.props.currentUser}
                 story={this.props.story}
                 storyLikes={this.props.storyLikes}
                 handleDelete={this.handleDelete}/>
-            ) : null }
 
             <StoryHeader story={this.props.story} />
 

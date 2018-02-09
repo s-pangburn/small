@@ -13,7 +13,7 @@ class ControlsSidebar extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <aside className="sidebar">
+        <aside className={"sidebar " + this.props.sidebarClass}>
           <LikeButtonContainer story={this.props.story}/>
           <div className="controls">
             <UserControls
