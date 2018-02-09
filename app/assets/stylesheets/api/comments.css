@@ -4,6 +4,10 @@
   padding-bottom: 50px;
 }
 
+textarea {
+    resize: none;
+}
+
 .responsesHeader, .noResponses {
   display: block;
   width: 632px;
