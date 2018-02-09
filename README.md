@@ -107,16 +107,13 @@ In addition, editing comments occurs "directly" in the comment thread, with upda
 This was accomplished through a hidden `<form>` element that is conditionally rendered with an `autofocus` property. The autofocus property triggers an `onfocus` event that acts as a pseudo-initialization for the element, which then begins to update in real-time:
 
 ```html
-{ this.state.showForm ? (
-  <CommentEditForm
-    comment={this.props.comment}
-    toggleEdit={this.toggleEdit}
-    updateComment={this.props.updateComment}
-    authorId={this.props.currentUser.id}
-  />
-) : (
-  <p>{comment.body}</p>
-)}
+<textarea
+  className="editForm"
+  onChange={this.update("body")}
+  autoFocus
+  onFocus={this.autoSize}
+  value={this.state.body} 
+/>
 ```
 
 ## Project Design

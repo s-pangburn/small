@@ -2,14 +2,14 @@ import React from 'react';
 
 class CommentEditForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       id: this.props.comment.id,
       body: this.props.comment.body,
       author_id: this.props.comment.author.id,
       story_id: this.props.comment.story_id
-    }
+    };
 
     this.autoSize = this.autoSize.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);

@@ -33,7 +33,7 @@ class CommentItem extends React.Component {
     return this.props.loggedIn &&
       this.props.currentUser.username ===
       this.props.comment.author.username &&
-      !this.state.showForm
+      !this.state.showForm;
   }
 
   render() {
