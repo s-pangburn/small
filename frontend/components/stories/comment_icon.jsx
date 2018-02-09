@@ -7,7 +7,8 @@ class CommentIcon extends React.Component {
   }
 
   handleClick() {
-    window.scrollTo(0, document.getElementById('body').clientHeight + 300);
+    $("html, body").animate({ scrollTop: document.getElementById('body').clientHeight + 300 });
+    // window.scrollTo(0, document.getElementById('body').clientHeight + 300);
     document.getElementById('commentForm').focus();
   }
 
