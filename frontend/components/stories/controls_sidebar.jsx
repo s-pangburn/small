@@ -23,7 +23,7 @@ class ControlsSidebar extends React.Component {
             <CommentIcon />
           </div>
         </aside>
-      )
+      );
     } else {
       return null;
     }
