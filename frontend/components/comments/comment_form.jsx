@@ -9,7 +9,8 @@ class CommentForm extends React.Component {
       author_id: "",
       story_id: this.props.storyId
     };
-
+    
+    this.handleEnterKey = this.handleEnterKey.bind(this);
     this.handlePublish = this.handlePublish.bind(this);
   }
 
@@ -18,6 +19,13 @@ class CommentForm extends React.Component {
       this.setState({ [item]: event.currentTarget.value });
       this.autoSize(event);
     };
+  }
+
+  handleEnterKey(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      this.handlePublish();
+    }
   }
 
   autoSize(event) {
@@ -42,6 +50,7 @@ class CommentForm extends React.Component {
         <textarea
           id="commentForm"
           onChange={this.update("body")}
+          onKeyPressCapture={this.handleEnterKey}
           placeholder="Write a response..."
           value={this.state.body} />
         <span className="publish link" onClick={ this.handlePublish }>Publish</span>
