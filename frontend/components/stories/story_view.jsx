@@ -61,12 +61,12 @@ class StoryView extends React.Component {
       return (
         <div>
           <section className="story">
-              <ControlsSidebar
-                sidebarClass = {sidebarClass}
-                currentUser={this.props.currentUser}
-                story={this.props.story}
-                storyLikes={this.props.storyLikes}
-                handleDelete={this.handleDelete}/>
+            <ControlsSidebar
+              sidebarClass = {sidebarClass}
+              currentUser={this.props.currentUser}
+              story={this.props.story}
+              storyLikes={this.props.storyLikes}
+              handleDelete={this.handleDelete}/>
 
             <StoryHeader story={this.props.story} />
 
