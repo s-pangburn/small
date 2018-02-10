@@ -74,8 +74,8 @@ class StoryForm extends React.Component {
           this.state.formType !== "edit") {
         nextProps.requestStory(nextProps.match.params.storyId)
           .then(() => this.populateFields());
+        this.state.formType = "edit";
       }
-      this.state.formType = "edit";
     }
   }
 
