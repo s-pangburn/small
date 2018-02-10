@@ -68,6 +68,26 @@ class Feed extends React.Component {
             idx += 2;
           }
       }
+      
+      switch (idx) {
+        case (this.props.stories.length - 3):
+          feedRows.push(
+            <GroupOfThree
+              key={this.props.stories[idx].id}
+              stories={this.props.stories.slice(idx, idx + 3)} />
+          )
+          idx += 3;
+          break;
+        default:
+          if (idx <= this.props.stories.length - 2) {
+            feedRows.push(
+              <GroupOfTwo
+                key={this.props.stories[idx].id}
+                stories={this.props.stories.slice(idx, idx + 2)} />
+            )
+            idx += 2;
+          }
+      }
     }
 
     // Catch remainder of stories (if there is more than one)
