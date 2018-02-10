@@ -18,7 +18,7 @@ class CommentIcon extends React.Component {
       <div onClick={this.handleClick}>
         <img
           width="32"
-          src="http://res.cloudinary.com/dzeqeo9b3/image/upload/v1505191447/icon-comment_mg6xzj.png" />
+          src="https://res.cloudinary.com/dzeqeo9b3/image/upload/v1505191447/icon-comment_mg6xzj.png" />
       </div>
     );
   }

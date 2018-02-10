@@ -20,14 +20,14 @@ class StoryHeader extends React.Component {
       case "Tiny Horse Tries His Best":
       case "72 Uses for Snails":
         artist = "Toyoi Yuuta"
-        url = "http://1041uuu.tumblr.com/"
+        url = "https://1041uuu.tumblr.com/"
         break;
       case "If you cannot do great things, do small things in a great way":
       case "World's top 10 smallest apps":
       case "This is a story":
       case "Overcoming Shyness":
         artist = "Amanda Haddad"
-        url = "http://merrigo.tumblr.com/"
+        url = "https://merrigo.tumblr.com/"
         break;
       default:
         break;

@@ -128,7 +128,7 @@ Frontend Redux states are set up in a way such that there are separate reducers 
 
 In addition to the included packages, [Cloudinary][cloudinary] was used for image uploading.
 
-[cloudinary]: http://cloudinary.com/
+[cloudinary]: https://cloudinary.com/
 
 ### Additional Resources
   * [Proposal Wireframes][wireframes]
