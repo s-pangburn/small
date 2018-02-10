@@ -26,6 +26,8 @@ class StoryHeader extends React.Component {
       case "World's top 10 smallest apps":
       case "This is a story":
       case "Overcoming Shyness":
+      case "Sine, Cosine, Tangent":
+      case "To Link the Fire":
         artist = "Amanda Haddad"
         url = "https://merrigo.tumblr.com/"
         break;
