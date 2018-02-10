@@ -5,8 +5,10 @@ import CommentsReducer from './comments_reducer';
 import LikesReducer from './likes_reducer';
 import FollowsReducer from './follows_reducer';
 import ErrorsReducer from './errors_reducer';
+import ApiReducer from './api_reducer';
 
 const rootReducer = combineReducers({
+  api: ApiReducer,
   session: SessionReducer,
   stories: StoriesReducer,
   comments: CommentsReducer,

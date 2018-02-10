@@ -12,6 +12,7 @@ import storyForm from './story_form';
 const mapStateToProps = (state, ownProps) => ({
   story: state.stories[ownProps.match.params.storyId],
   formType: ownProps.formType,
+  cloudinaryOptions: state.api,
   errors: state.errors
 });
 

@@ -9,10 +9,15 @@ import {
   updateComment,
   deleteComment
 } from './actions/comment_actions';
+import { receiveCloudinaryKeys } from './actions/api_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
   const store = createStore();
+
+  store.dispatch(receiveCloudinaryKeys(window.cloudinaryOptions));
+  delete window.cloudinaryOptions;
+
   ReactDOM.render(<Root store={store}/>, root);
 });
 
