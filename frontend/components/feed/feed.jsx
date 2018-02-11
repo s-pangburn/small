@@ -31,6 +31,10 @@ class Feed extends React.Component {
     }
 
     while (idx <= this.props.stories.length - 3) {
+
+      // If we only have 4 stories left, prioritize starting with a 
+      // group of two so we don't have hanging tiles, otherwise,
+      // push a group of three by default
       switch(idx) {
         case (this.props.stories.length - 4):
           feedRows.push(
@@ -49,6 +53,8 @@ class Feed extends React.Component {
           idx += 3;
       }
 
+      // If, after having added a group of three or two, there are
+      // only three stories left, add them all in a group of three
       switch (idx) {
         case (this.props.stories.length - 3):
           feedRows.push(
@@ -69,6 +75,9 @@ class Feed extends React.Component {
           }
       }
       
+      // Unless there are only three stories left after the above steps,
+      // prioritize adding another group of two before looping and starting
+      // with a group of three again - this makes the ideal arrangment 3-2-2
       switch (idx) {
         case (this.props.stories.length - 3):
           feedRows.push(
