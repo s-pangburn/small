@@ -3,7 +3,7 @@ import Comments from './comments';
 import { commentsByStoryId } from '../../reducers/selectors';
 
 import {
-  requestAllComments,
+  requestStoryComments,
   updateComment,
   deleteComment
 } from '../../actions/comment_actions';
@@ -19,7 +19,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestAllComments: () => dispatch(requestAllComments()),
+  requestStoryComments: storyId => dispatch(requestStoryComments(storyId)),
   updateComment: comment => dispatch(updateComment(comment)),
   deleteComment: comment => dispatch(deleteComment(comment)),
   resetErrors: () => dispatch(resetErrors())

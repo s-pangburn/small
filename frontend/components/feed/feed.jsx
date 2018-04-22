@@ -9,7 +9,6 @@ import FeedFooter from './feed_footer';
 class Feed extends React.Component {
   componentDidMount() {
     this.props.requestAllStories();
-    this.props.requestAllComments();
   }
 
   constructor(props) {
@@ -18,8 +17,8 @@ class Feed extends React.Component {
   }
 
   generateFeedRows() {
-    let feedRows = []
-    let idx = 3
+    let feedRows = [];
+    let idx = 3;
 
     //Generate splash image
     if (this.props.stories.length > 3) {
@@ -27,7 +26,7 @@ class Feed extends React.Component {
         <SplashStory
           key={this.props.stories[0].id}
           stories={this.props.stories.slice(0,3)} />
-      )
+      );
     }
 
     while (idx <= this.props.stories.length - 3) {

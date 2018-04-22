@@ -2,7 +2,7 @@ class Api::CommentsController < ApplicationController
   before_action :require_login, only: [:create, :update, :destroy]
 
   def index
-    @comments = Comment.all
+    @comments = Comment.where(story_id: params[:story_id])
   end
 
   def create

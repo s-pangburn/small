@@ -2,7 +2,7 @@ import React from 'react';
 
 class LikeButton extends React.Component {
   componentDidMount() {
-    this.props.requestAllLikes()
+    this.props.requestAllLikes();
   }
 
   constructor(props) {
@@ -13,7 +13,7 @@ class LikeButton extends React.Component {
         story_id: this.props.story.id
       },
       liked: Boolean(this.props.storyLikes.includes(this.props.currentUser.id))
-    }
+    };
   }
 
   toggleLike() {
@@ -27,7 +27,7 @@ class LikeButton extends React.Component {
   render() {
     this.state.liked = Boolean(
       this.props.storyLikes.includes(this.props.currentUser.id)
-    )
+    );
     return (
       <div className="like-button">
         <span

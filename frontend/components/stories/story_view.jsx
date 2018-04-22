@@ -11,7 +11,6 @@ import ControlsFooter from './controls_footer';
 class StoryView extends React.Component {
   componentDidMount() {
     this.props.requestStory(this.props.match.params.storyId);
-    this.props.requestAllComments();
     window.scrollTo(0, 0);
     window.addEventListener('scroll', this.handleScroll);
   }

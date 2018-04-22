@@ -4,7 +4,7 @@ import CommentItem from './comment_item';
 
 class Comments extends React.Component {
   componentDidMount() {
-    this.props.requestAllComments();
+    this.props.requestStoryComments(this.props.storyId);
   }
 
   constructor(props) {
