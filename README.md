@@ -24,7 +24,7 @@ The feed updates to display all stories that have been posted to the site. The s
 
 This was accomplished by breaking the feed into grouped row components, each with differing layouts, and selecting the optimal one based on the number of remaining stories, like so:
 
-```js
+```jsx
   // If we only have 4 stories left, prioritize starting with a 
   // group of two so we don't have hanging tiles, otherwise,
   // push a group of three by default
@@ -72,7 +72,7 @@ To keep code DRY, similar components were combined into a singular, more adaptab
 
 Similarly, for the login form, a single modal component can be used for all session-related tasks:
 
-```js
+```jsx
   <span className="write-story"
     onClick={this.openModal('login')}>Write a story</span>
 
@@ -109,7 +109,7 @@ In addition, editing comments occurs "directly" in the comment thread, with upda
 
 This was accomplished through a hidden `<form>` element that is conditionally rendered with an `autofocus` property. The autofocus property triggers an `onfocus` event that acts as a pseudo-initialization for the element, which then begins to update in real-time:
 
-```html
+```jsx
 <textarea
   className="editForm"
   onChange={this.update("body")}
