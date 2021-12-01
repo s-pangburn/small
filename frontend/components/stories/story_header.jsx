@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 class StoryHeader extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   generateArtistCredit() {
@@ -19,8 +19,8 @@ class StoryHeader extends React.Component {
       case "How to Tame a Pigeon":
       case "Tiny Horse Tries His Best":
       case "72 Uses for Snails":
-        artist = "Toyoi Yuuta"
-        url = "https://1041uuu.tumblr.com/"
+        artist = "Toyoi Yuuta";
+        url = "https://1041uuu.tumblr.com/";
         break;
       case "If you cannot do great things, do small things in a great way":
       case "World's top 10 smallest apps":
@@ -28,16 +28,20 @@ class StoryHeader extends React.Component {
       case "Overcoming Shyness":
       case "Sine, Cosine, Tangent":
       case "To Link the Fire":
-        artist = "Amanda Haddad"
-        url = "https://merrigo.tumblr.com/"
+      case "My Very Best Friend":
+        artist = "Amanda Haddad";
+        url = "https://merrigo.tumblr.com/";
         break;
       default:
         break;
     }
 
-    return (artist) ? (
+    return artist ? (
       <figcaption>
-        Art by <a href={url} target="_blank" style={{"fontWeight": "normal"}}>{artist}</a>
+        Art by{" "}
+        <a href={url} target="_blank" style={{ fontWeight: "normal" }}>
+          {artist}
+        </a>
       </figcaption>
     ) : null;
   }
@@ -48,16 +52,16 @@ class StoryHeader extends React.Component {
         <h1>{this.props.story.title}</h1>
         <h3>{this.props.story.description}</h3>
 
-        { this.props.story.image_url ? (
+        {this.props.story.image_url ? (
           <figure>
             <div className="imageContainer">
-              <img className="splashImage" src={this.props.story.image_url}/>
+              <img className="splashImage" src={this.props.story.image_url} />
             </div>
             {this.generateArtistCredit()}
           </figure>
-        ) : null }
+        ) : null}
       </section>
-    )
+    );
   }
 }
 

@@ -17,9 +17,8 @@
 
 .sidebar {
   position: fixed;
-  top: 50%;
+  top: 160px;
   left: 50%;
-  margin-top: -340px;
   margin-left: -550px;
   width: 40px;
   height: 100px;
